@@ -181,3 +181,13 @@ Which of the following statements best describes the "stateless" nature of the H
 - [ ] Data transmitted via HTTP is encrypted by default to ensure that the state of the communication cannot be intercepted.
 - [ ] The protocol requires the client to provide a unique session ID in the standard IP header of every packet sent to the server.
 ```
+
+```masteryls
+{"id":"1f39f38c-b426-4a18-b736-a26a7f6d9e6b", "title":"Differentiating 401 and 403", "type":"multiple-choice"}
+A web developer is building an API. When a user attempts to access an administrative endpoint while logged in with a standard user account, which HTTP status code should the server return to indicate that the user's identity is recognized but they lack the necessary permissions?
+
+- [ ] 401 Unauthorized
+- [x] 403 Forbidden
+- [ ] 405 Method Not Allowed
+- [ ] 422 Unprocessable Entity
+```
