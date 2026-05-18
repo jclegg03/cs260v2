@@ -15,6 +15,12 @@
         "default": true,
         "state": "published",
         "commit": "6125bce00fded63b6c3124466f210f109e23c83b"
+      },
+      {
+        "id": "144c7d47-63e1-4e38-b3bb-17f0ae5f6898",
+        "title": "Summer 2026 Schedule",
+        "path": "schedule/summer-2026-schedule.md",
+        "default": false
       }
     ]
   },
