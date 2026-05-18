@@ -30,3 +30,13 @@ Technically you can also provide a user name and password before the domain name
 ## URL, URN, and URI
 
 You will sometimes hear the use of URN or URI when talking about web resources. A Uniform Resource Name (URN) is a unique resource name that does not specify location information. For example, a book URN might be `urn:isbn:10,0765350386`. A Uniform Resource Identifier (URI) is a general resource identifier that could refer to either a URL or a URN. With web programming you are almost always talking about URLs and therefore you should not use the more general URI.
+
+```masteryls
+{"id":"51a73679-2c34-456e-ae07-f3915333f813", "title":"URL Component Functions", "type":"multiple-choice"}
+In the URL `https://www.example.com/shop/search?category=books#top`, which component is specifically used to pass data parameters to the server-side application?
+
+- [ ] The fragment identifier (`#top`)
+- [x] The query string (`?category=books`)
+- [ ] The path (`/shop/search`)
+- [ ] The protocol (`https`)
+```
