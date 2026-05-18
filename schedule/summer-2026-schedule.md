@@ -36,10 +36,10 @@
 
 ## Special days
 
-- **Jan 7**: First day of class
-- **Jan 14**: Drop deadline
-- **Jan 19**: Holiday
-- **Feb 16**: Holiday (Monday class on 17th)
-- **Apr 1**: Withdraw deadline
-- **Apr 15**: Last day of class
-- **Apr 22**: Last day of finals
+- Thu Jun 22, 6: First day of class
+- Mon Jun 29, 2026: Drop deadline
+- Fri Jul 3, 2026: Holiday
+- Fri Jul 24, 2026: Holiday (Monday class on 17th)
+- Tue Jul 28, 2026: Withdraw deadline
+- Mon Aug 10, 2026: Last day of class
+- Thu Aug 13, 2026: Last day of finals
