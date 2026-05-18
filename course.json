@@ -1071,7 +1071,11 @@
           "title": "HTTP",
           "path": "instruction/webServices/http/http.md",
           "id": "3e4c1223-d3e3-485a-9e00-3bc2a7f71392",
-          "state": "published"
+          "state": "published",
+          "interactions": [
+            "c99bb4e7-3120-4836-a32b-a97553c2c92e"
+          ],
+          "commit": "232ec84d33d6bd8e7b452676b437c8e25cf3447b"
         },
         {
           "title": "☑ Fetch",
