@@ -1082,7 +1082,9 @@
           "title": "☑ Fetch",
           "path": "instruction/webServices/fetch/fetch.md",
           "id": "437f53a9-65b8-4139-afdb-ac604eddcc26",
-          "state": "published"
+          "state": "published",
+          "interactions": [],
+          "commit": "4c465d86f903b91009f2dace621bcc6d00f25c2b"
         },
         {
           "title": "Service design",
