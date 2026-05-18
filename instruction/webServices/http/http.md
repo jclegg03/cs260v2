@@ -171,3 +171,13 @@ HTTP continually evolves in order to increase performance and support new types 
 | 1997 | HTTP1.1 | put/patch/delete/options, persistent connection |
 | 2015 | HTTP2   | multiplex, server push, binary representation   |
 | 2022 | HTTP3   | QUIC for transport protocol, always encrypted   |
+
+```masteryls
+{"id":"c99bb4e7-3120-4836-a32b-a97553c2c92e", "title":"HTTP Statelessness", "type":"multiple-choice"}
+Which of the following statements best describes the "stateless" nature of the HTTP protocol?
+
+- [ ] The server maintains a continuous, open connection with the client to track the user's progress through a website.
+- [x] Each request is treated as an independent transaction, and the server does not inherently retain information from previous requests.
+- [ ] Data transmitted via HTTP is encrypted by default to ensure that the state of the communication cannot be intercepted.
+- [ ] The protocol requires the client to provide a unique session ID in the standard IP header of every packet sent to the server.
+```
