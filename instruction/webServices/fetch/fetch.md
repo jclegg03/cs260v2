@@ -49,7 +49,6 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
 
 ## ☑ Assignment
 
-Create a fork of this [CodePen](https://codepen.io/leesjensen/pen/ExRoqPz) and experiment.
 
 Replace the quotable service call with a different one. Here are some suggestions.
 
@@ -59,6 +58,6 @@ Replace the quotable service call with a different one. Here are some suggestion
 - **Photos** - https://picsum.photos/id/0/info
 - **Quote** - https://quote.cs260.click
 
-When you are done submit your CodePen URL to the Canvas assignment.
+
 
 Don't forget to update your GitHub startup repository notes.md with all of the things you learned and want to remember.
