@@ -48,16 +48,45 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
 ```
 
 ## ☑ Assignment
-
-
 Replace the quotable service call with a different one. Here are some suggestions.
-
 - **Random user** - https://randomuser.me/api/
 - **Jokes** - https://api.chucknorris.io/jokes/random?category=dev
 - **GitHub user** - https://api.github.com/users/octocat
 - **Photos** - https://picsum.photos/id/0/info
 - **Quote** - https://quote.cs260.click
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>webServices: Fetch</title>
+  <style>
+    pre {
+      font-size: 2em;
+    }
+  </style>
+</head>
+<body>
+
+  <pre></pre>
+
+  <script>
+    const url = "https://quote.cs260.click";
+    
+    fetch(url)
+      .then((x) => x.json())
+      .then((response) => {
+        document.querySelector("pre").textContent = JSON.stringify(
+          response,
+          null,
+          "  "
+        );
+      });
+  </script>
+</body>
+</html>
 
 
 Don't forget to update your GitHub startup repository notes.md with all of the things you learned and want to remember.
