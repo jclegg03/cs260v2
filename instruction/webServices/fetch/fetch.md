@@ -49,11 +49,6 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
 
 ## ☑ Assignment
 
-
-```html
-
-```
-
 ```masteryls
 {"id":"99869011-3a94-40f9-b48f-6e34c9127943", "title":"Modify Fetch Example", "type":"ai-web-page", "allowAiPrompt":true, "gradingCriteria":"Use another Service Call", "height":500 }
 Replace the quotable service call with a different one. Here are some suggestions.
