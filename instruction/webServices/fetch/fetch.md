@@ -48,6 +48,14 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
 ```
 
 ## ☑ Assignment
+
+
+```html
+
+```
+
+```masteryls
+{"id":"99869011-3a94-40f9-b48f-6e34c9127943", "title":"Modify Fetch Example", "type":"ai-web-page", "allowAiPrompt":true, "gradingCriteria":"Use another Service Call", "height":500 }
 Replace the quotable service call with a different one. Here are some suggestions.
 - **Random user** - https://randomuser.me/api/
 - **Jokes** - https://api.chucknorris.io/jokes/random?category=dev
@@ -55,19 +63,7 @@ Replace the quotable service call with a different one. Here are some suggestion
 - **Photos** - https://picsum.photos/id/0/info
 - **Quote** - https://quote.cs260.click
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>webServices: Fetch</title>
-  <style>
-    pre {
-      font-size: 2em;
-    }
-  </style>
-</head>
+~~~html
 <body>
 
   <pre></pre>
@@ -86,7 +82,7 @@ Replace the quotable service call with a different one. Here are some suggestion
       });
   </script>
 </body>
-</html>
+~~~
 ```
 
 Don't forget to update your GitHub startup repository notes.md with all of the things you learned and want to remember.
