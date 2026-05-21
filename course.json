@@ -1103,7 +1103,11 @@
           "title": "Node web service",
           "path": "instruction/webServices/nodeWebService/nodeWebService.md",
           "id": "c391196d-cdbe-4fd3-ac0c-118ed25b2f35",
-          "state": "published"
+          "state": "published",
+          "interactions": [
+            "npm-install-001"
+          ],
+          "commit": "ff2613814468c40f6ed2d88978d65049357e8bde"
         },
         {
           "title": "☑ Express",
