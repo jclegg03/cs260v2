@@ -1093,7 +1093,11 @@
           "title": "Service design",
           "path": "instruction/webServices/design/design.md",
           "id": "d68f9bbe-f7b0-4b8d-ba86-ce39660ab3d5",
-          "state": "published"
+          "state": "published",
+          "interactions": [
+            "3f7e1c90-c61f-4500-96d2-131d359c625b"
+          ],
+          "commit": "5de8a0250dd87373d932ad63d184390d5ef247fc"
         },
         {
           "title": "Node web service",
