@@ -404,20 +404,20 @@ Consider a Python application using a library to fetch user details.
 
 **Vulnerable Code (String Formatting):**
 This approach is dangerous because it directly embeds the `user_id` into the query string.
-```python
-# DANGEROUS: Direct string concatenation
-user_id = "105 OR 1=1"
-query = f"SELECT username, email FROM users WHERE id = {user_id}"
-cursor.execute(query) 
-```
+
+```js
+// DANGEROUS: Direct string concatenation
+const user_id = "105 OR 1=1";
+const query = `SELECT username, email FROM users WHERE id = ${user_id}`;
+cursor.execute(query);```
 
 **Secure Code (Parameterized Queries):**
 Parameterized queries (or prepared statements) ensure that the interpreter treats the input strictly as data, not as executable code.
-```python
-# SECURE: Using parameterized queries
-user_id = "105"
-query = "SELECT username, email FROM users WHERE id = %s"
-cursor.execute(query, (user_id,)) # The library handles escaping
+```js
+// SECURE: Using parameterized queries
+const user_id = "105";
+const query = "SELECT username, email FROM users WHERE id = ?";
+cursor.execute(query, [user_id]); // The library handles escaping
 ```
 
 ### Prevention Strategies
