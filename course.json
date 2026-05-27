@@ -1230,8 +1230,11 @@
           "path": "instruction/essentials/deployment/deployment.md",
           "id": "07bae28b-84f5-4464-b331-6c45092665f8",
           "state": "published",
-          "interactions": [],
-          "commit": "1494b33a4d57a5fe9b8f3eba7a37d9ab88081489"
+          "interactions": [
+            "modern-deployment-strategies",
+            "bb56649e-e767-4758-8b8e-310e4ea69026"
+          ],
+          "commit": "d2405431c71f99337af222f72f5a2b857e55bd98"
         },
         {
           "title": "Storage services",
