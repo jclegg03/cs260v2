@@ -38,6 +38,16 @@ Access control vulnerabilities typically fall into three main categories:
 The following diagram illustrates how a lack of server-side validation allows an attacker to manipulate request parameters to access unauthorized data.
 
 ```mermaid
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "primaryColor": "#ffffff",
+    "primaryBorderColor": "#000000",
+    "primaryTextColor": "#000000",
+    "lineColor": "#000000"
+  }
+}}%%
+
 sequenceDiagram
     participant Attacker
     participant Server
@@ -58,8 +68,6 @@ sequenceDiagram
     end
     
     Server-->>Attacker: 200 OK (Unauthorized Private Data)
-
-    classDef default fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1px;
 ```
 
 ### Insecure Direct Object References (IDOR)
