@@ -133,6 +133,8 @@ GraphQL helps to remove a lot of the logic for parsing endpoints and mapping req
 
 The downside of that flexibility is that the client now has significant power to consume resources on the server. There is no clear boundary on what, how much, or how complicated the aggregation of data is. It also is difficult for the server to implement authorization rights to data as they have to be baked into the data schema. However, there are standards for how to define a complex schema. Common GraphQL packages provide support for schema implementations along with database adaptors for query support.
 
+## Exercises
+
 ```masteryls
 {"id":"3f7e1c90-c61f-4500-96d2-131d359c625b", "title":"Comparing RPC, REST, and GraphQL", "type":"multiple-choice"}
 When designing a service architecture, which of the following accurately describes a key difference in how RPC, REST, and GraphQL handle data retrieval and interaction?
@@ -141,5 +143,10 @@ When designing a service architecture, which of the following accurately describ
 - [x] GraphQL allows the client to define the specific shape of the response to prevent over-fetching, whereas REST typically returns fixed data structures from resource-specific endpoints.
 - [ ] RPC relies on a single unified endpoint and a query language to fetch data, while GraphQL requires a unique URL for every individual resource type.
 - [ ] REST is designed specifically for high-performance internal microservices using binary protocols, while GraphQL and RPC are restricted to text-based JSON over HTTP/1.1.
+```
+
+```masteryls
+{"id":"24fef0c8-9ae9-4b9f-97f1-40d287fabf80", "title":"Comparing RPC, REST, and GraphQL", "type":"essay" }
+Explain the key differences between RPC, REST, and GraphQL.
 ```
 
