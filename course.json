@@ -1409,10 +1409,12 @@
           "state": "published"
         },
         {
-          "title": "UX design",
+          "title": "HCI",
+          "type": "instruction",
           "path": "instruction/uxdesign/uxdesign.md",
           "id": "b3c86a3c-512e-4e5c-9442-da0628a3a18d",
-          "state": "published"
+          "state": "published",
+          "description": ""
         },
         {
           "title": "Search Engine Optimization",
