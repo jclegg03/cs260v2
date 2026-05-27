@@ -71,6 +71,8 @@ There are also two JavaScript files that provide support for a simple delay betw
 
 ```mermaid
 classDiagram
+  classDef default fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1px;
+
   Play *-- Players
   Players --> gameNotifier
   Play *-- SimonGame
@@ -198,6 +200,8 @@ Like the play component, the **login** has child components that help it render 
 
 ```mermaid
 classDiagram
+  classDef default fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1px;
+
   App --> Login
   Login *-- Authenticated
   Login *-- Unauthenticated
