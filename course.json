@@ -1345,7 +1345,11 @@
           "title": "Debugging WebSocket",
           "path": "instruction/webServices/webSocket/debugging/debugging.md",
           "id": "a0b49825-fd67-4b10-8aac-126d5ea6f498",
-          "state": "published"
+          "state": "published",
+          "interactions": [
+            "0437a32d-6a2a-4150-8698-00c837280423"
+          ],
+          "commit": "82ca682d23bed9188bb4994bfe20871d324b9b44"
         },
         {
           "title": "WebSocket chat",
