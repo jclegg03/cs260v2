@@ -1465,6 +1465,8 @@
           "path": "instruction/webFrameworks/wrapUp/wrapUp.md",
           "id": "9f5ce2b1-4812-4b5b-94e2-eef6257e01c1",
           "state": "published",
+          "interactions": [],
+          "commit": "e3705ac2aaf925d872e3952cdc85e34e9f9672cc",
           "externalRefs": {
             "canvasPageId": 1557740
           }
