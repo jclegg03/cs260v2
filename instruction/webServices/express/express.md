@@ -308,9 +308,18 @@ Create a web service with Express using the following steps.
 
 
    ```mermaid
-    sequenceDiagram
-        classDef default fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1px;
+    %%{init: {
+      "theme": "base",
+      "themeVariables": {
+        "primaryColor": "#ffffff",
+        "primaryTextColor": "#000000",
+        "primaryBorderColor": "#000000",
+        "lineColor": "#000000",
+        "textColor": "#000000"
+      }
+    }}%%
 
+    sequenceDiagram
         title Service Requests
 
         actor Curl
