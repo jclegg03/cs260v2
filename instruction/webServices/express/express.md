@@ -335,3 +335,73 @@ Create a web service with Express using the following steps.
 1. Debug your application by setting breakpoints, inspecting variables, and walking through the code.
 
 
+```masteryls
+{"id":"a2d00756-7ce5-4890-909b-5c9844027723", "title":"Building an Express web service", "type":"multiple-select" }
+Mark all of the items that you completed in your development environment.
+
+- [x] I created the service using the provided source code.
+- [x] I made requests to the service using the browser.
+- [x] I made requests to the service using Curl.
+- [x] I attached VS Code as a debugger and stepped through the code.
+```
+
+
+## Exercises
+
+
+````masteryls
+{"id":"ee3c9493-9904-4ef9-b2f4-5e99bbda4d01", "title":"Anatomy of an Express web service", "type":"essay" }
+Explain what each line of this code is doing
+
+```js
+const express = require('express');
+const cookieParser = require('cookie-parser');
+const app = express();
+
+app.use(cookieParser());
+
+app.post('/cookie/:name/:value', (req, res) => {
+  res.cookie(req.params.name, req.params.value);
+  res.send({ cookie: `${req.params.name}:${req.params.value}` });
+});
+
+app.get('/cookie', (req, res) => {
+  res.send({ cookie: req.cookies });
+});
+```
+````
+
+
+````masteryls
+{"id":"ea3c9493-9904-4ef9-b2f4-5e99bbda4d01", "title":"Anatomy of an Express web service", "type":"essay" }
+Explain what each line of this code is doing
+
+
+```js
+app.get('/error', (req, res, next) => {
+  throw new Error('Trouble in river city');
+});
+
+app.use(function (err, req, res, next) {
+  res.status(500).send({ type: err.name, message: err.message });
+});
+
+const port = 3000;
+app.listen(port, function () {
+  console.log(`Listening on port ${port}`);
+});
+```
+````
+
+````masteryls
+{"id":"ed3c9493-9904-4ef9-b2f4-5e99bbda4d01", "title":"Anatomy of an Express web service", "type":"essay" }
+Explain what each line of this code is doing
+
+
+```js
+const port = 3000;
+app.listen(port, function () {
+  console.log(`Listening on port ${port}`);
+});
+```
+````
