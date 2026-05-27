@@ -1,5 +1,9 @@
 # Development
 
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTWDGeY5Gqel8kS9k6ojQ9iMd8etLAFkRYtesalnpHMmSsVR06CPNMUDQ4owMJ6q1bes-YSKRXEz820/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="900" height="540" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+---
+
 When working on a commercial web application, it is critical to separate where you develop your application, from where the production release of your application is made publicly available. Often times there are more environments than this, such as staging, internal testing, and external testing environments. If your company is seeking third party security certification (such as SOC2 compliance) they will require that these environments are strictly separated from each other. A developer will not have access to the production environment in order to prevent a developer from nefariously manipulating an entire company asset. Instead, automated integration processes, called continuous integration (`CI`) processes, checkout the application code, [lint it](https://www.freecodecamp.org/news/what-is-linting-and-how-can-it-save-you-time/), build it, test it, stage it, test it more, and then finally, if everything checks out, **deploy** the application to the production environment, and notify the different departments in the company of the release.
 
 ![Complex deployment](deploymentEnvironments.png)
