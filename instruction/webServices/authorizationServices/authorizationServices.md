@@ -1,5 +1,9 @@
 # Authorization services
 
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTOKTq1Yq8U6fQn4IEk0XBcu06IfPGDu6qWltqmGB2J4la4juk55Y6hNe3HsGEVbPPHxlg5Eea4UXy1/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="900" height="540" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+---
+
 If your application is going to remember a user's data then it will need a way to uniquely associate the data with a particular credential. That usually means that you `authenticate` a user by asking for information, such as an email address and password. You then remember, for some period of time, that the user has authenticated by storing an `authentication token` on the user's device. Often that token is stored in a [cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cookie) that is passed back to your web service on each request. The service can now associate data that the user supplies with a unique identifier that corresponds to their authorization token.
 
 ![authentication](authentication.png)
