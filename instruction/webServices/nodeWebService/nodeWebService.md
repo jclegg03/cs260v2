@@ -13,24 +13,6 @@ For a professional development environment, there are two primary ways to instal
 
 The following diagram illustrates the typical installation and verification workflow:
 
-```mermaid
-graph TD
-    Start[Start Installation] --> Choice{Choose Method}
-    Choice -- Official Website --> Download[Download LTS Installer]
-    Choice -- Version Manager --> NVM[Install NVM/nvm-windows]
-    
-    Download --> RunInstall[Run Executable]
-    NVM --> Command[nvm install lts]
-    
-    RunInstall --> Finish[Installation Complete]
-    Command --> Finish
-    
-    Finish --> VerifyNode[Run: node -v]
-    Finish --> VerifyNPM[Run: npm -v]
-
-    classDef default fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1px;
-```
-
 Once the installation is complete, you must verify that both the runtime and the package manager are correctly configured in your system's PATH. Open your terminal or command prompt and execute the following commands:
 
 ```bash
@@ -41,7 +23,7 @@ node -v
 npm -v
 ```
 
-If the installation was successful, these commands will output version numbers (e.g., `v20.11.0` and `10.2.4`). If you receive a "command not found" error, you may need to restart your terminal or manually add the installation directory to your environment variables.
+If the installation was successful, these commands will output version numbers (e.g., `v24.14.1` and `11.11.0`). If you receive a "command not found" error, you may need to restart your terminal or manually add the installation directory to your environment variables.
 
 ### Key Considerations
 *   **Permissions:** On macOS and Linux, avoid using `sudo` to install global packages. Using NVM helps prevent permission issues by installing Node in your user directory.
@@ -58,7 +40,9 @@ What is the most common way to install NPM on a local development machine?
 - [ ] NPM must be compiled from source code using a C++ compiler
 ```
 
-Next create your project.
+## Using Node.js
+
+Once you have installed Node.js, you are ready to create a Node based service. First you need to create a directory that you can play around with and then throw away. You can then initialize the directory as a **Node** project using the `npm init` command.
 
 ```sh
 ➜ mkdir webservicetest
