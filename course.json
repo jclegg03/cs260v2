@@ -1273,8 +1273,10 @@
           "path": "instruction/simon/simonDb/simonDb.md",
           "id": "33486581-4c0a-4167-9364-43e1ca4e5b90",
           "state": "published",
-          "interactions": [],
-          "commit": "3b99120f8898fdc1f3e46e77f4050508a0715f5e"
+          "interactions": [
+            "5aaff8d87-8a17-4b86-b2b4-1dfed2f63f9a"
+          ],
+          "commit": "007c6815f728a64cd786705d319ac37db82c99cb"
         },
         {
           "title": "Simon DB video",
