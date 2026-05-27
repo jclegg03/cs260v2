@@ -1425,15 +1425,15 @@
           "state": "published"
         },
         {
-          "title": "Device APIs",
-          "path": "instruction/webFrameworks/device/device.md",
-          "id": "5df6e8ea-ab60-4346-9343-1aba366c93a6",
-          "state": "published"
-        },
-        {
           "title": "Progressive web applications",
           "path": "instruction/webFrameworks/pwa/pwa.md",
           "id": "105f9008-73f8-4f15-95ff-eb7d59057cb4",
+          "state": "published"
+        },
+        {
+          "title": "Device APIs",
+          "path": "instruction/webFrameworks/device/device.md",
+          "id": "5df6e8ea-ab60-4346-9343-1aba366c93a6",
           "state": "published"
         },
         {
