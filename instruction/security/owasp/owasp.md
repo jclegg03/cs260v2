@@ -612,35 +612,38 @@ graph TD
 Insecure deserialization is a subset of integrity failures where the "data" being trusted is a serialized object. In Python, the `pickle` module is notoriously unsafe if used on untrusted data.
 
 **Vulnerable Code:**
-```python
-import pickle
-import base64
+```js
+const crypto = require("crypto");
 
-# This function receives a 'user_session' string from a cookie
-def load_session(session_data):
-    # DANGER: pickle.loads() executes code embedded in the byte stream
-    data = pickle.loads(base64.b64decode(session_data))
-    return data
+// This function receives a 'sessionData' string from a cookie
+function loadSession(sessionData) {
+  // DANGER: parsing untrusted serialized data without integrity checks
+  const data = JSON.parse(Buffer.from(sessionData, "base64").toString("utf8"));
+  return data;
+}
 ```
 
 **Secure Alternative:**
 Instead of serializing complex objects, use a standard, data-only format like JSON and verify the integrity using a Message Authentication Code (MAC) like HMAC.
 
-```python
-import json
-import hmac
-import hashlib
+```js
+const crypto = require("crypto");
 
-SECRET_KEY = b'super-secret-key'
+const SECRET_KEY = Buffer.from("super-secret-key");
 
-def load_secure_session(session_json, provided_mac):
-    # Verify the integrity before processing
-    expected_mac = hmac.new(SECRET_KEY, session_json.encode(), hashlib.sha256).hexdigest()
-    
-    if hmac.compare_digest(expected_mac, provided_mac):
-        return json.loads(session_json)
-    else:
-        raise Exception("Integrity check failed!")
+function loadSecureSession(sessionJson, providedMac) {
+  // Verify the integrity before processing
+  const expectedMac = crypto
+    .createHmac("sha256", SECRET_KEY)
+    .update(sessionJson)
+    .digest("hex");
+
+  if (crypto.timingSafeEqual(Buffer.from(expectedMac), Buffer.from(providedMac))) {
+    return JSON.parse(sessionJson);
+  } else {
+    throw new Error("Integrity check failed!");
+  }
+}
 ```
 
 ### Prevention Strategies
@@ -804,32 +807,36 @@ graph TD
 In the insecure example below, a failed database connection reveals the internal connection string and the specific database technology used.
 
 **Insecure Implementation (Python/Flask):**
-```python
-@app.route('/user/<id>')
-def get_user(id):
-    try:
-        user = db.execute(f"SELECT * FROM users WHERE id = {id}")
-        return jsonify(user)
-    except Exception as e:
-        # VULNERABLE: Returns the raw exception message to the client
-        return str(e), 500
+```js
+app.get("/user/:id", async (req, res) => {
+  try {
+    const user = await db.execute(`SELECT * FROM users WHERE id = ${req.params.id}`);
+    return res.json(user);
+  } catch (e) {
+    // VULNERABLE: Returns the raw exception message to the client
+    return res.status(500).send(String(e));
+  }
+});
 ```
 
 **Secure Implementation:**
-```python
-@app.route('/user/<id>')
-def get_user(id):
-    try:
-        # Use parameterized queries to prevent injection + proper handling
-        user = db.execute("SELECT * FROM users WHERE id = ?", (id,))
-        return jsonify(user)
-    except DatabaseConnectionError as e:
-        # SECURE: Log the actual error for admins, return generic message to user
-        logger.error(f"Database failure: {e}")
-        return "A temporary system error occurred. Reference ID: ERR-9921", 500
-    except Exception:
-        logger.error("Unexpected system failure.")
-        return "An internal error occurred.", 500
+```js
+app.get("/user/:id", async (req, res) => {
+  try {
+    // Use parameterized queries to prevent injection + proper handling
+    const user = await db.execute("SELECT * FROM users WHERE id = ?", [req.params.id]);
+    return res.json(user);
+  } catch (e) {
+    if (e.name === "DatabaseConnectionError") {
+      // SECURE: Log the actual error for admins, return generic message to user
+      logger.error(`Database failure: ${e.message}`);
+      return res.status(500).send("A temporary system error occurred. Reference ID: ERR-9921");
+    }
+
+    logger.error("Unexpected system failure.");
+    return res.status(500).send("An internal error occurred.");
+  }
+});
 ```
 
 ### Mitigation Strategies
