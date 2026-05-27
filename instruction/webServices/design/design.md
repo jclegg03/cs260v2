@@ -1,6 +1,6 @@
 # Service design
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS0xrJ5nQdo1CrCrPTrJhGNl6ENhWH9Ib4P-VjpsQKB6fkCFS3SyX3Gqpp3Km13k2z5E7hhpKtfLHcs/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS0xrJ5nQdo1CrCrPTrJhGNl6ENhWH9Ib4P-VjpsQKB6fkCFS3SyX3Gqpp3Km13k2z5E7hhpKtfLHcs/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="900" height="540" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ---
 
