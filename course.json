@@ -1031,10 +1031,9 @@
           "id": "e88211b3-04c9-4b3c-85f6-8d45c3ce8468",
           "state": "published",
           "interactions": [
-            "db677385-51e3-43bb-bcfe-e74d1dc925d7",
-            "bfd0c3c9-fafb-4486-985a-1396f41ad55a"
+            "3f7e1c90-c61f-4500-96d2-131d359c625b"
           ],
-          "commit": "aa22af1e1b086e591c614a44a12b4203ecb63cb4"
+          "commit": "6ebd2349f51d3241c7002b391a995ce759f01d54"
         },
         {
           "title": "Web Services Introduction",
@@ -1078,19 +1077,17 @@
             "c99bb4e7-3120-4836-a32b-a97553c2c92e",
             "1f39f38c-b426-4a18-b736-a26a7f6d9e6b"
           ],
-          "commit": "4f6fe4dae042a39b65bdc96ced4de1a98b9cde10"
+          "commit": "0fa2f2983067d471696bf3ac6b6f54b9f94f74f4"
         },
         {
-          "title": "Fetch",
-          "type": "instruction",
+          "title": "☑ Fetch",
           "path": "instruction/webServices/fetch/fetch.md",
           "id": "437f53a9-65b8-4139-afdb-ac604eddcc26",
           "state": "published",
           "interactions": [
             "99869011-3a94-40f9-b48f-6e34c9127943"
           ],
-          "description": "",
-          "commit": "c341868e28c979ef7f07bc2697de0e22a144d7f8"
+          "commit": "97300531cc754070de2670c260bebcba64162103"
         },
         {
           "title": "Service design",
