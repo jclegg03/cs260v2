@@ -63,3 +63,25 @@ Note that you can also start up Node and execute the `index.js` code directly in
 > [!NOTE]
 >
 > Make sure you complete the above steps. For the rest of the course you will be executing your code using Node.js to run your backend code and serve up your frontend code to the browser. This means you will no longer be using the `VS Code Live Server extension` to serve your frontend code in the browser.
+
+## Exercise
+
+
+````masteryls
+{"id":"d8fd3c86-0fdd-424c-8f9d-043201e81d2e", "title":"Node HTTP service", "type":"essay" }
+Explain what the following code is doing.
+
+```js
+const http = require('http');
+const server = http.createServer(function (req, res) {
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.write(`<li>${req.httpVersion}</li><li>[${req.method}]</li><li>${req.url}</li>`);
+  res.end();
+});
+
+server.listen(3000, () => {
+  console.log(`Web service listening on port 3000`);
+});
+```
+````
+
