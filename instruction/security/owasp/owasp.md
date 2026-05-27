@@ -74,39 +74,44 @@ sequenceDiagram
 
 A common manifestation of broken access control is **Insecure Direct Object Reference (IDOR)**. This occurs when an application uses user-supplied input to access objects directly without performing an authorization check.
 
-Consider the following vulnerable Python code using the Flask framework:
+Consider the following vulnerable JavaScript code using the Flask framework:
 
-```python
-# VULNERABLE CODE
-@app.route('/view_invoice')
-def view_invoice():
-    # The application trusts the 'invoice_id' provided by the user via URL
-    invoice_id = request.args.get('invoice_id')
-    invoice = db.query(f"SELECT * FROM invoices WHERE id = {invoice_id}")
-    
-    # MISSING: A check to see if the current_user owns this invoice
-    return render_template('invoice.html', invoice=invoice)
+**Insecure Implementation:**
+
+```javascript
+app.get('/view_invoice', async (req, res) => {
+  // The application trusts the 'invoice_id' provided by the user via URL
+  const invoiceId = req.query.invoice_id;
+
+  const invoice = await db.query(
+    `SELECT * FROM invoices WHERE id = ${invoiceId}`
+  );
+
+  // MISSING: A check to see if the current user owns this invoice
+  return res.render('invoice.html', { invoice });
+});
 ```
 
 To remediate this, the application must verify ownership of the record before returning data:
 
-```python
-# SECURE CODE
-@app.route('/view_invoice')
-@login_required
-def view_invoice():
-    invoice_id = request.args.get('invoice_id')
-    
-    # Authorization Check: Ensure the invoice belongs to the logged-in user
-    invoice = db.query(
-        "SELECT * FROM invoices WHERE id = ? AND owner_id = ?", 
-        (invoice_id, current_user.id)
-    )
-    
-    if not invoice:
-        abort(403) # Forbidden
-        
-    return render_template('invoice.html', invoice=invoice)
+**Secure Implementation:**
+
+```javascript
+app.get('/view_invoice', requireLogin, async (req, res) => {
+  const invoiceId = req.query.invoice_id;
+
+  // Authorization Check: Ensure the invoice belongs to the logged-in user
+  const invoice = await db.query(
+    'SELECT * FROM invoices WHERE id = ? AND owner_id = ?',
+    [invoiceId, req.user.id]
+  );
+
+  if (!invoice || invoice.length === 0) {
+    return res.status(403).send('Forbidden');
+  }
+
+  return res.render('invoice.html', { invoice: invoice[0] });
+});
 ```
 
 ### Best Practices for Prevention
@@ -400,7 +405,7 @@ graph LR
 
 ### Vulnerable vs. Secure Code Examples
 
-Consider a Python application using a library to fetch user details.
+Consider a JavaScript application using a library to fetch user details.
 
 **Vulnerable Code (String Formatting):**
 This approach is dangerous because it directly embeds the `user_id` into the query string.
@@ -609,7 +614,7 @@ graph TD
 
 ### Insecure Deserialization Example
 
-Insecure deserialization is a subset of integrity failures where the "data" being trusted is a serialized object. In Python, the `pickle` module is notoriously unsafe if used on untrusted data.
+Insecure deserialization is a subset of integrity failures where the "data" being trusted is a serialized object. In JavaScript, applications can become vulnerable when they parse or process untrusted serialized data without validating its integrity or authenticity.
 
 **Vulnerable Code:**
 ```js
@@ -806,7 +811,7 @@ graph TD
 
 In the insecure example below, a failed database connection reveals the internal connection string and the specific database technology used.
 
-**Insecure Implementation (Python/Flask):**
+**Insecure Implementation:**
 ```js
 app.get("/user/:id", async (req, res) => {
   try {
