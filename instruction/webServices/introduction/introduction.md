@@ -1,9 +1,5 @@
 # Web services introduction
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSpEZ8xcfKoxn7aURy4h6jPHlsSV9J_BnnBNLe6zxqbp8W943Jbnd3ZSGSu9zpE3M2CRwNbtChzZivi/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
----
-
 Up to this point, your entire application is loaded from your web server and runs on the user's browser. It starts when the browser requests the `index.html` file from the web server. The `index.html`, in turn, references other HTML, CSS, JavaScript, or image files. All of these files, that are running on the browser, comprise the `frontend` of your application.
 
 Notice that when the frontend requests the application files from the web server it is using the HTTPS protocol. All web programming requests between devices use HTTPS to exchange data.
@@ -25,8 +21,6 @@ The backend web service can also use `fetch` to make requests to other web servi
 ![Backend](backEndFetch.png)
 
 In following instruction we will discuss how to use fetch, HTTP, and URLs, and build a web service using the Node.js application. With all of this in place your application will be a full stack application comprised of both a frontend and a backend.
-
-## Exercises
 
 ```masteryls
 {"id":"24dca640-d993-41b1-a213-a01c4112b28e", "title":"Front-End Data Retrieval", "type":"multiple-choice"}
