@@ -70,7 +70,7 @@ Replace the quotable service call with a different one. Here are some suggestion
       .then((x) => x.json())
       .then((response) => {
         document.querySelector("pre").textContent = JSON.stringify(
-          response.value,
+          response,
           null,
           "  "
         );
