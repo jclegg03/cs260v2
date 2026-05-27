@@ -1136,7 +1136,9 @@
           "title": "Service daemons - PM2",
           "path": "instruction/webServices/pm2/pm2.md",
           "id": "a27de412-0d99-4ce1-8432-9b3350a8d341",
-          "state": "published"
+          "state": "published",
+          "interactions": [],
+          "commit": "bc3ef2d5f276fcd7d472087429e663040033ad92"
         },
         {
           "title": "Troubleshoot 502",
