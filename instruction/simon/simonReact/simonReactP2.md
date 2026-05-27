@@ -71,13 +71,11 @@ There are also two JavaScript files that provide support for a simple delay betw
 
 ```mermaid
 classDiagram
-  classDef default fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1px;
-
   Play *-- Players
-  Players --> gameNotifier
+  Players --> GameNotifier
   Play *-- SimonGame
   SimonGame *-- SimonButton
-  SimonGame --> delay
+  SimonGame --> Delay
 ```
 
 For now, the `gameNotifier.js` will just employ a timer that injects random scores from other players. When we reach the WebSocket deliverable this will be replaced with actual messages that are sent from other players.
@@ -200,8 +198,6 @@ Like the play component, the **login** has child components that help it render 
 
 ```mermaid
 classDiagram
-  classDef default fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1px;
-
   App --> Login
   Login *-- Authenticated
   Login *-- Unauthenticated
