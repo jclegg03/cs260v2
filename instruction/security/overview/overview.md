@@ -203,6 +203,16 @@ When storing session IDs in cookies, several flags must be set to protect the to
 A secure session should have a limited lifespan. This includes **idle timeouts** (logging the user out after inactivity) and **absolute timeouts** (logging the user out after a set period regardless of activity). Furthermore, session IDs should be regenerated immediately after a privilege level change, such as during a successful login. This prevents **Session Fixation** attacks, where an attacker provides a known session ID to a victim and waits for them to authenticate.
 
 ```mermaid
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "primaryColor": "#ffffff",
+    "primaryBorderColor": "#000000",
+    "primaryTextColor": "#000000",
+    "lineColor": "#000000"
+  }
+}}%%
+
 sequenceDiagram
     participant U as User/Browser
     participant S as Server
