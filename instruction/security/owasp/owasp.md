@@ -6,10 +6,24 @@
 
 The Open Web Application Security Project (OWASP) is a non-profit research entity that manages the _Top Ten_ list of the most important web application security risks. Understanding, and periodically reviewing, this list will help to keep your web applications secure.
 
+|Risk|Name|
+|-|-|
+|A01|Broken Access Control|
+|A02|Security Misconfiguration|
+|A03|Software Supply Chain Failures|
+|A04|Cryptographic Failures|
+|A05|Injection|
+|A06|Insecure Design|
+|A07|Authentication Failures|
+|A08|Software or Data Integrity Failures|
+|A09|Security Logging and Alerting Failures|
+|A10|Mishandling of Exceptional Conditions|
+
+
 The following is a discussion of each of the entries in the top ten list, along with examples, and suggested mitigations.
 
 
-## A01:2025 - Broken Access Control
+## A01 - Broken Access Control
 
 Broken Access Control has moved up from the fifth position to become the most serious web application security risk in the OWASP Top 10. Access control ensures that users cannot act outside of their intended permissions. When these checks fail, attackers can gain unauthorized access to sensitive data, modify or delete content, and even take over administrative functions.
 
@@ -108,7 +122,7 @@ A user logs into a banking application and discovers that by changing the 'accou
 
 
 
-## A02:2025 - Security Misconfiguration
+## A02 - Security Misconfiguration
 
 Security Misconfiguration is a critical vulnerability that occurs when security settings are not defined, implemented, or maintained properly. Unlike many other vulnerabilities that stem from flaws in code logic, security misconfigurations often arise from human error during the deployment and maintenance phases of the software development lifecycle (SDLC).
 
@@ -197,7 +211,7 @@ A developer deploys a new REST API to a production environment. During testing, 
 
 
 
-## A03:2025 - Software Supply Chain Failures
+## A03 - Software Supply Chain Failures
 
 Software supply chain failures occur when an application relies on plugins, libraries, or modules from untrusted sources, or when the infrastructure used to build and deploy software is compromised. In modern development, applications are rarely built from scratch; they are "assembled" using a vast ecosystem of third-party dependencies. If any component in this chain—from the developer's IDE to the production server—is tampered with, the entire application becomes a vehicle for malware or unauthorized access.
 
@@ -260,7 +274,7 @@ A developer notices that their build system automatically downloads the "latest"
 ```
 
 
-## A04:2025 – Cryptographic Failures
+## A04 – Cryptographic Failures
 
 Cryptographic failures, previously known as "Sensitive Data Exposure," represent one of the most critical categories in the OWASP Top 10. This category focuses on the failure to protect data in transit and at rest using strong, modern cryptographic practices. When cryptography is implemented incorrectly or omitted entirely, sensitive information—such as personally identifiable information (PII), health records, credit card numbers, and authentication credentials—becomes vulnerable to interception or theft.
 
@@ -349,7 +363,7 @@ A developer is building a login system. Which of the following scenarios represe
 
 
 
-## A05:2025 - Injection
+## A05 - Injection
 
 Injection vulnerabilities occur when an application sends untrusted data to an interpreter as part of a command or query. The interpreter, unable to distinguish between the intended command and the malicious data, executes the attacker's input. This can lead to unauthorized data access, data corruption, or even full system compromise. While SQL injection is the most well-known form, injection can occur in any system that uses an interpreter, including NoSQL databases, OS shells, LDAP servers, and XML parsers.
 
@@ -639,7 +653,7 @@ Which of the following scenarios best describes a Software and Data Integrity Fa
 ```
 
 
-## A09:2025 - Security Logging and Alerting Failures
+## A09 - Security Logging and Alerting Failures
 
 Security Logging and Alerting Failures occur when an application does not sufficiently record security-relevant events or fails to notify administrators of suspicious activity. Without effective logging and monitoring, attackers can maintain a long-term presence in a system (known as "dwell time") without being detected. This category is unique because it doesn't represent a specific vulnerability in the code that leads to an immediate exploit, but rather a failure in the **visibility and response** capabilities of the organization.
 
@@ -738,7 +752,7 @@ A security auditor notices that an application logs every "File Upload" event, b
 ```
 
 
-## A10:2025 - Mishandling of Exceptional Conditions
+## A10 - Mishandling of Exceptional Conditions
 
 Mishandling of Exceptional Conditions occurs when an application fails to gracefully manage unexpected states, errors, or environmental failures. This category focuses on how systems react when things go wrong—such as database timeouts, null pointer exceptions, or out-of-memory errors. If an application "fails open" or leaks sensitive implementation details through verbose error messages, it provides attackers with a roadmap of the system's internal architecture or a way to bypass security controls.
 
