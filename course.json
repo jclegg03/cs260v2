@@ -1356,8 +1356,10 @@
           "path": "instruction/webServices/webSocket/chat/chat.md",
           "id": "7d94fe22-b7ad-422c-ba77-6f3fb6be8ab7",
           "state": "published",
-          "interactions": [],
-          "commit": "f972215b92897ce0d38dbe3cfa82a646f591190a"
+          "interactions": [
+            "a135bbc5-88f3-4574-9ca3-91b033444c08"
+          ],
+          "commit": "d0c89f33df2f4d803323a43879bfef2cfce7d114"
         },
         {
           "title": "Simon WebSocket",
