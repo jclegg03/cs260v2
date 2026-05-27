@@ -1,195 +1,80 @@
-# HTTP
+# Web servers
 
-📖 **Deeper dive reading**: [MDN An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
+A web server is a computing device that is hosting a web service that knows how to accept incoming internet connections and speak the HTTP application protocol.
 
-Hypertext Transfer Protocol (`HTTP`) is how the web talks. When a web browser makes a request to a web server it does it using the HTTP protocol. In previous instruction we discussed how to use HTTP. Now, we will talk about the internals of HTTP. Just like becoming fluent in a foreign language makes a visit to another country more enjoyable, understanding how to speak HTTP helps you communicate effectively when talking on the web.
+## Monolithic web servers
 
-When a web client (e.g. a web browser) and a web server talk they exchange HTTP requests and responses. The browser will make an HTTP request and the server will generate an HTTP response. You can see the HTTP exchange by using the browser's debugger or by using a console tool like `curl`. For example, in your console you can use `curl` to make the following request.
+In the early days of web programming, you would buy a massive, complex, expensive, software program that could serve up HTML files and then install it on a hardware device. The package of server hardware and software was considered the web server because the web service software was the only thing running on the server. Eventually, open source web servers became available that made it easy to host a website. Examples of web server software include: Apache HTTP server, Nginx, or Microsoft IIS. However, the web server software was still a separate program from the content, or application, it hosted.
 
-```sh
-curl -v -s http://info.cern.ch/hypertext/WWW/Helping.html
+## Combining web and application services
+
+Today, most modern programming languages include libraries that make it easy to serve up web content. This removed the requirement to have a separate program for _hosting_ you application. Instead, your application is also the web service. For example, here is a simple HTTP service written in JavaScript can load up HTML content from a **public** directory.
+
+```go
+const express = require('express');
+const app = express();
+
+// Serve static files from the 'public' directory
+app.use(express.static('public'));
+
+app.listen(80);
 ```
 
-### Request
+![Simple server HTML](simpleServerHtml.png)
 
-The HTTP request for the above command would look like the following.
+### Web service endpoints
 
-```http
-GET /hypertext/WWW/Helping.html HTTP/1.1
-Host: info.cern.ch
-Accept: text/html
+Being able to easily create web services means that we can completely drop the monolithic web server concept and just build web support right into your application. We can also add web accessible methods, called endpoints, that provide functionality beyond simply serving up static HTML files. For example, by adding three lines of code, we can add an endpoint that returns the current time when you add path `/time` to the browser's URL.
+
+```go
+app.get('/time', (req, res) => {
+  res.json({ time: new Date().toDateString() });
+});
 ```
 
-An HTTP request has this general syntax.
+![Simple server endpoint](simpleServerEndpoint.png)
 
-```yaml
-<verb> <url path, parameters, anchor> <version>
-[<header key: value>]*
-[
+## Web service gateways
 
-  <body>
-]
+Since it is so easy to build web services it is common to find multiple web services running on the same computing device. The idea of having multiple services on a single server highlights the difference between a **web server**, the physical computing device, and a **web service**, that provides a web application functionality.
+
+Every web server allows for access to multiple services by referring to a different **port number** for each service. Think of a port as a house address on a given street, and the server as the street. In the example above, the _JavaScript_ web service was assigned port 80. A user could then talk to the image service on port 3000 and the file service on port 3002. However, this makes it difficult for the user of the services to remember what port number matches which service.
+
+To resolve this we introduce a service gateway, or sometimes called a reverse proxy, that is itself a simple web service that listens on the common HTTPS port 443. The gateway then looks at the request URL and maps it to the other services running on a different ports.
+
+
+```masteryls
+{"id":"eaecd7b7-d21c-4c2b-9a27-ec6349f1a74b", "title":"Web page", "type":"web-page", "height":800, "file":"reverseproxydemo.html"}
 ```
 
-The first line of the HTTP request contains the `verb` of the request, followed by the path, parameters, and anchor of the URL, and finally the version of HTTP being used. The following lines are optional headers that are defined by key value pairs. After the headers you have an optional body. The body start is delimited from the headers with two new lines.
+Our web server will use a web service application called `Caddy` as the gateway to our services. We will explain the details of how Caddy works later in the instruction.
 
-In the above example, we are asking to `GET` a resource found at the path `/hypertext/WWW/Helping.html`. The version used by the request is `HTTP/1.1`. This is followed by two headers. The first specifies the requested host (i.e. domain name). The second specifies what type of resources the client will accept. The resource type is always a [MIME type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) as defined by internet governing body IANA. In this case we are asking for HTML.
+## Microservices
 
-### Response
+Web services that provide a single functional purpose are referred to as microservices. By partitioning larger functionality into small logical chunks, you can develop and manage them independently from other functionality in a larger system. They can also handle large fluctuations in user demand by simply running more and more stateless copies of the microservice from multiple virtual servers hosted in a dynamic cloud environment. For example, one microservice for generating your genealogical family tree might be able to handle 1,000 users concurrently. So in order to support 1 million users, you just deploy 1,000 instances of the service running on scalable virtual hardware.
 
-The response to the above request looks like this.
+## Serverless
 
-```yaml
-HTTP/1.1 200 OK
-Date: Tue, 06 Dec 2022 21:54:42 GMT
-Server: Apache
-Last-Modified: Thu, 29 Oct 1992 11:15:20 GMT
-ETag: "5f0-28f29422b8200"
-Accept-Ranges: bytes
-Content-Length: 1520
-Connection: close
-Content-Type: text/html
-
-<TITLE>Helping -- /WWW</TITLE>
-<NEXTID 7>
-<H1>How can I help?</H1>There are lots of ways you can help if you are interested in seeing
-the <A NAME=4 HREF=TheProject.html>web</A> grow and be even more useful...
-```
-
-An HTTP response has the following syntax.
-
-```yaml
-<version> <status code> <status string>
-[<header key: value>]*
-[
-
-  <body>
-]
-```
-
-You can see that the response syntax is similar to the request syntax. The major difference is that the first line represents the version and the status of the response.
-
-Understanding the meaning of the common HTTP verbs, status codes, and headers is important for you to understand, as you will use them in developing a web application. Take some time to internalize the following common values.
-
-## Verbs
-
-There are several verbs that describe what the HTTP request is asking for. The list below only describes the most common ones.
-
-| Verb    | Meaning                                                                                                                                                                                                                                                  |
-| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET     | Get the requested resource. This can represent a request to get a single resource or a resource representing a list of resources.                                                                                                                        |
-| POST    | Create a new resource. The body of the request contains the resource. The response should include a unique ID of the newly created resource.                                                                                                             |
-| PUT     | Update a resource. Either the URL path, HTTP header, or body must contain the unique ID of the resource being updated. The body of the request should contain the updated resource. The body of the response may contain the resulting updated resource. |
-| DELETE  | Delete a resource. Either the URL path or HTTP header must contain the unique ID of the resource to delete.                                                                                                                                              |
-| OPTIONS | Get metadata about a resource. Usually only HTTP headers are returned. The resource itself is not returned.                                                                                                                                              |
-
-## Status codes
-
-It is important that you use the standard HTTP status codes in your HTTP responses so that the client of a request can know how to interpret the response. The codes are partitioned into five blocks.
-
-- 1xx - Informational.
-- 2xx - Success.
-- 3xx - Redirect to some other location, or that the previously cached resource is still valid.
-- 4xx - Client errors. The request is invalid.
-- 5xx - Server errors. The request cannot be satisfied due to an error on the server.
-
-Within those ranges here are some of the more common codes. See the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) for a full description of status codes.
-
-| Code | Text                                                                                 | Meaning                                                                                                                           |
-| ---- | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-| 100  | Continue                                                                             | The service is working on the request                                                                                             |
-| 200  | Success                                                                              | The requested resource was found and returned as appropriate.                                                                     |
-| 201  | Created                                                                              | The request was successful and a new resource was created.                                                                        |
-| 204  | No Content                                                                           | The request was successful but no resource is returned.                                                                           |
-| 304  | Not Modified                                                                         | The cached version of the resource is still valid.                                                                                |
-| 307  | Permanent redirect                                                                   | The resource is no longer at the requested location. The new location is specified in the response location header.               |
-| 308  | Temporary redirect                                                                   | The resource is temporarily located at a different location. The temporary location is specified in the response location header. |
-| 400  | Bad request                                                                          | The request was malformed or invalid.                                                                                             |
-| 401  | Unauthorized                                                                         | The request did not provide a valid authentication token.                                                                         |
-| 403  | Forbidden                                                                            | The provided authentication token is not authorized for the resource.                                                             |
-| 404  | Not found                                                                            | An unknown resource was requested.                                                                                                |
-| 408  | Request timeout                                                                      | The request takes too long.                                                                                                       |
-| 409  | Conflict                                                                             | The provided resource represents an out of date version of the resource.                                                          |
-| 418  | [I'm a teapot](https://en.wikipedia.org/wiki/Hyper_Text_Coffee_Pot_Control_Protocol) | The service refuses to brew coffee in a teapot.                                                                                   |
-| 429  | Too many requests                                                                    | The client is making too many requests in too short of a time period.                                                             |
-| 500  | Internal server error                                                                | The server failed to properly process the request.                                                                                |
-| 503  | Service unavailable                                                                  | The server is temporarily down. The client should try again with an exponential back off.                                         |
-
-## Headers
-
-📖 **Deeper dive reading**: [MDN HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
-
-HTTP headers specify metadata about a request or response. This includes things like how to handle security, caching, data formats, and cookies. Some common headers that you will use include the following.
-
-| Header                      | Example                              | Meaning                                                                                                                                                                        |
-| --------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Authorization               | Bearer bGciOiJIUzI1NiIsI             | A token that authorized the user making the request.                                                                                                                           |
-| Accept                      | image/\*                             | The format the client accepts. This may include wildcards.                                                                                                            |
-| Content-Type                | text/html; charset=utf-8             | The format of the content being sent. These are described using standard [MIME](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) types. |
-| Cookie                      | SessionID=39s8cgj34; csrftoken=9dck2 | Key value pairs that are generated by the server and stored on the client.                                                                                                     |
-| Host                        | info.cern.ch                         | The domain name of the server. This is required in all requests.                                                                                                               |
-| Origin                      | cs260.click                          | Identifies the origin that caused the request. A host may only allow requests from specific origins.                                                                           |
-| Access-Control-Allow-Origin | https://cs260.click                  | Server response of what origins can make a request. This may include a wildcard.                                                                                               |
-| Content-Length              | 368                                  | The number of bytes contained in the response.                                                                                                                                 |
-| Cache-Control               | public, max-age=604800               | Tells the client how it can cache the response.                                                                                                                                |
-| User-Agent                  | Mozilla/5.0 (Macintosh)              | The client application making the request.                                                                                                                                     |
-
-## Body
-
-The format of the body of an HTTP request or response is defined by the `Content-Type` header. For example, it may be HTML text (text/html), a binary image format (image/png), JSON (application/json), or JavaScript (text/javascript). A client may specify what formats it accepts using the `accept` header.
-
-## Cookies
-
-![Cookie](webServicesCookie.png)
-
-📖 **Deeper dive reading**: [MDN Using HTTP cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
-
-HTTP itself is stateless. This means that one HTTP request does not know anything about a previous or future request. However, that does not mean that a server or client cannot track state across requests. One common method for tracking state is the `cookie`. Cookies are generated by a server and passed to the client as an HTTP header.
-
-```http
-HTTP/2 200
-Set-Cookie: myAppCookie=tasty; SameSite=Strict; Secure; HttpOnly
-```
-
-The client then caches the cookie and returns it as an HTTP header back to the server on subsequent requests.
-
-```http
-HTTP/2 200
-Cookie: myAppCookie=tasty
-```
-
-This allows the server to remember things like the language preference of the user, or the user's authentication credentials. A server can also use cookies to track, and share, everything that a user does. However, there is nothing inherently evil about cookies; the problem comes from web applications that use them as a means to violate a user's privacy or inappropriately monetize their data.
-
-## HTTP Versions
-
-HTTP continually evolves in order to increase performance and support new types of applications. You can read about the evolution of HTTP on [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP).
-
-| Year | Version | Features                                        |
-| ---- | ------- | ----------------------------------------------- |
-| 1990 | HTTP0.9 | one line, no versions, only get                 |
-| 1996 | HTTP1   | get/post, header, status codes, content-type    |
-| 1997 | HTTP1.1 | put/patch/delete/options, persistent connection |
-| 2015 | HTTP2   | multiplex, server push, binary representation   |
-| 2022 | HTTP3   | QUIC for transport protocol, always encrypted   |
+The idea of microservices naturally evolved into the world of `serverless` functionality where the server is conceptually removed from the architecture and you just write code that represents single service endpoint. That endpoint is loaded through an gateway that maps a web request to the endpoint. The gateway automatically scales the hardware needed to host the serverless endpoint based on demand. This reduces what the web application developer needs to think about down to a single independent endpoint.
 
 ## Exercises
 
 ```masteryls
-{"id":"c99bb4e7-3120-4836-a32b-a97553c2c92e", "title":"HTTP Statelessness", "type":"multiple-choice"}
-Which of the following statements best describes the "stateless" nature of the HTTP protocol?
+{"id":"db677385-51e3-43bb-bcfe-e74d1dc925d7", "title":"Primary Function of a Web Server", "type":"multiple-choice"}
+When a client (such as a web browser) initiates a connection to a web server, what is the primary responsibility of the server software during the resulting transaction?
 
-- [ ] The server maintains a continuous, open connection with the client to track the user's progress through a website.
-- [x] Each request is treated as an independent transaction, and the server does not inherently retain information from previous requests.
-- [ ] Data transmitted via HTTP is encrypted by default to ensure that the state of the communication cannot be intercepted.
-- [ ] The protocol requires the client to provide a unique session ID in the standard IP header of every packet sent to the server.
+- [ ] Resolving the human-readable domain name into a numeric IP address via the Domain Name System (DNS)
+- [x] Processing the incoming HTTP request and returning the requested resource or an appropriate status code
+- [ ] Rendering the HTML, CSS, and JavaScript into a visual interface for the end user to interact with
+- [ ] Managing the physical routing of data packets across the global internet backbone to the user's ISP
 ```
 
 ```masteryls
-{"id":"1f39f38c-b426-4a18-b736-a26a7f6d9e6b", "title":"Differentiating 401 and 403", "type":"multiple-choice"}
-A web developer is building an API. When a user attempts to access an administrative endpoint while logged in with a standard user account, which HTTP status code should the server return to indicate that the user's identity is recognized but they lack the necessary permissions?
+{"id":"bfd0c3c9-fafb-4486-985a-1396f41ad55a", "title":"Reverse Proxy Functionality", "type":"multiple-choice"}
+In a professional web server architecture, what is the primary role of a **reverse proxy**?
 
-- [ ] 401 Unauthorized
-- [x] 403 Forbidden
-- [ ] 405 Method Not Allowed
-- [ ] 422 Unprocessable Entity
+- [ ] It acts on behalf of the client to hide the client's IP address from the public internet and filter outgoing traffic.
+- [x] It sits in front of backend servers to intercept incoming requests, providing load balancing, SSL termination, and caching.
+- [ ] It is a specialized database engine used to store session data to ensure high availability across multiple geographic regions.
+- [ ] It serves as a recursive DNS resolver that translates domain names into IP addresses for the client's browser.
 ```
