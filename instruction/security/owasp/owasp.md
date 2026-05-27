@@ -558,6 +558,278 @@ A security auditor notices that an application allows users to stay logged in in
 ```
 
 
+## A08: Software and Data Integrity Failures
+
+Software and data integrity failures occur when an application relies on code or data from untrusted sources without verifying its integrity. This category focuses on making assumptions about software updates, critical data, and CI/CD pipelines without performing adequate checks. A common example is an application that automatically downloads and executes an update from a remote server without verifying a digital signature, allowing an attacker to distribute malicious code.
+
+This category also encompasses **Insecure Deserialization**, which was previously its own category in the OWASP Top 10. When an application deserializes untrusted data, an attacker can manipulate the serialized object to execute arbitrary code or perform unauthorized actions.
+
+### Key Risk Areas
+
+*   **Software Supply Chain:** Using libraries or modules from public repositories (like NPM, PyPI, or Maven) without verifying their provenance or using a "lock file" to ensure version consistency.
+*   **CI/CD Pipelines:** If the build and deployment pipeline is not secured, an attacker can introduce malicious code into the production environment during the build process.
+*   **Unsigned Updates:** Many devices and applications check for updates automatically. If these updates are not digitally signed and verified, an attacker can perform a Man-in-the-Middle (MitM) attack to push a malicious update.
+
+### Visualizing a Supply Chain Attack
+
+The following diagram illustrates how a lack of integrity verification in a CI/CD pipeline can lead to a compromise.
+
+```mermaid
+graph TD
+    A[Developer Commits Code] --> B[Build Server/CI Pipeline]
+    B --> C{Integrity Check?}
+    C -- No Verification --> D[Attacker Injects Malicious Dependency]
+    D --> E[Production Environment Compromised]
+    C -- Validated Signature --> F[Secure Deployment]
+
+    classDef default fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1px;
+```
+
+### Insecure Deserialization Example
+
+Insecure deserialization is a subset of integrity failures where the "data" being trusted is a serialized object. In Python, the `pickle` module is notoriously unsafe if used on untrusted data.
+
+**Vulnerable Code:**
+```python
+import pickle
+import base64
+
+# This function receives a 'user_session' string from a cookie
+def load_session(session_data):
+    # DANGER: pickle.loads() executes code embedded in the byte stream
+    data = pickle.loads(base64.b64decode(session_data))
+    return data
+```
+
+**Secure Alternative:**
+Instead of serializing complex objects, use a standard, data-only format like JSON and verify the integrity using a Message Authentication Code (MAC) like HMAC.
+
+```python
+import json
+import hmac
+import hashlib
+
+SECRET_KEY = b'super-secret-key'
+
+def load_secure_session(session_json, provided_mac):
+    # Verify the integrity before processing
+    expected_mac = hmac.new(SECRET_KEY, session_json.encode(), hashlib.sha256).hexdigest()
+    
+    if hmac.compare_digest(expected_mac, provided_mac):
+        return json.loads(session_json)
+    else:
+        raise Exception("Integrity check failed!")
+```
+
+### Prevention Strategies
+
+1.  **Use Digital Signatures:** Ensure all software updates, scripts, and data transfers are signed by a trusted source and verified before execution.
+2.  **Secure the Pipeline:** Implement strict access controls and code signing within your CI/CD pipeline to ensure that only reviewed code reaches production.
+3.  **Verify Dependencies:** Use tools like `npm audit` or `OWASP Dependency-Check` to scan for known vulnerabilities in third-party libraries and always use fixed versions (pinned dependencies).
+4.  **Avoid Deserializing Untrusted Data:** If you must deserialize, use a language-agnostic format like JSON or Protobuf that does not allow for arbitrary code execution.
+
+```masteryls
+{"id":"a08-integrity-01", "title":"Identifying Integrity Failures", "type":"multiple-choice"}
+Which of the following scenarios best describes a Software and Data Integrity Failure?
+
+- [ ] A user bypasses a login screen by entering ' OR 1=1 -- into the username field.
+- [x] An application downloads a plugin from a third-party server and executes it without checking its digital signature.
+- [ ] An attacker uses a brute-force script to guess a user's password.
+- [ ] A web server returns a 404 error page that includes the server's internal version number.
+```
+
+
+## A09:2025 - Security Logging and Alerting Failures
+
+Security Logging and Alerting Failures occur when an application does not sufficiently record security-relevant events or fails to notify administrators of suspicious activity. Without effective logging and monitoring, attackers can maintain a long-term presence in a system (known as "dwell time") without being detected. This category is unique because it doesn't represent a specific vulnerability in the code that leads to an immediate exploit, but rather a failure in the **visibility and response** capabilities of the organization.
+
+The impact of these failures is often felt during the post-compromise phase. If an attacker successfully bypasses other defenses, the lack of logging ensures they can pivot through the network, exfiltrate data, or tamper with records undetected. According to industry reports, the average time to detect a breach is often over 200 days; effective logging and alerting are the primary tools used to reduce this window.
+
+### Common Logging Failures
+
+Failures in this category typically fall into one of the following patterns:
+*   **Insufficient Logging:** Auditable events, such as logins, failed login attempts, and high-value transactions, are not logged at all.
+*   **Local-Only Storage:** Logs are stored only on the local server, allowing an attacker who gains administrative access to delete the evidence of their intrusion.
+*   **Lack of Context:** Logs contain messages like "Error occurred" without recording the user ID, source IP address, or the specific resource being accessed.
+*   **Inadequate Alerting:** Security logs are generated but never reviewed, or the alerting thresholds are set so high (or low) that genuine attacks are lost in the noise.
+
+### Implementation Example: Secure vs. Insecure Logging
+
+In a typical Node.js application using a library like `winston`, developers often make the mistake of logging too little information or logging sensitive data (PII).
+
+**Insecure Implementation:**
+```javascript
+app.post('/login', (req, res) => {
+    const { username, password } = req.body;
+    if (authenticate(username, password)) {
+        res.send("Welcome!");
+    } else {
+        // FAILURE: Only logging that a failure happened, no context for security teams
+        console.log("Login failed"); 
+        res.status(401).send("Invalid credentials");
+    }
+});
+```
+
+**Secure Implementation:**
+```javascript
+const logger = require('./logger'); // Centralized logging utility
+
+app.post('/login', (req, res) => {
+    const { username, password } = req.body;
+    const clientIp = req.ip;
+
+    if (authenticate(username, password)) {
+        logger.info({
+            event: "auth_success",
+            user: username,
+            ip: clientIp,
+            timestamp: new Date().toISOString()
+        });
+        res.send("Welcome!");
+    } else {
+        // SUCCESS: Logging the attempt, the target user, and the source IP
+        // This allows for brute-force detection and alerting.
+        logger.warn({
+            event: "auth_failure",
+            user: username,
+            ip: clientIp,
+            severity: "medium",
+            timestamp: new Date().toISOString()
+        });
+        res.status(401).send("Invalid credentials");
+    }
+});
+```
+
+### The Incident Response Pipeline
+
+Effective logging is the first step in a larger security pipeline. Data must flow from the application to a centralized repository where it can be analyzed and acted upon.
+
+```mermaid
+graph TD
+    A[User Action/Event] --> B{Is it Security Relevant?}
+    B -- No --> C[Discard/Debug Log]
+    B -- Yes --> D[Generate Structured Log]
+    D --> E[Centralized Log Management/SIEM]
+    E --> F{Threshold Met?}
+    F -- Yes --> G[Trigger Alert to Security Team]
+    F -- No --> H[Store for Forensic Analysis]
+
+    classDef default fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1px;
+```
+
+### Best Practices for Remediation
+
+To mitigate logging and alerting failures, organizations should adopt a "detect and respond" mindset:
+1.  **Use Structured Logging:** Ensure logs are generated in a machine-readable format (like JSON) so they can be easily parsed by Log Management tools or SIEMs (Security Information and Event Management).
+2.  **Log Integration:** Ensure all logs are pushed to a centralized, append-only service. This prevents attackers from "clearing their tracks" on the compromised host.
+3.  **Establish Thresholds:** Define what constitutes an "incident." For example, 10 failed login attempts from a single IP in 60 seconds should trigger an immediate alert.
+4.  **Protect Log Integrity:** Ensure logs do not contain sensitive data like passwords, session tokens, or personally identifiable information (PII), which could make the logs themselves a target for attackers.
+
+```masteryls
+{"id":"a09-logging-01", "title":"Identifying Logging Failures", "type":"multiple-choice"}
+A security auditor notices that an application logs every "File Upload" event, but the logs only contain the filename and a timestamp. Which of the following best describes why this is a Logging Failure?
+
+- [ ] The logs are being generated too frequently, causing "log bloat."
+- [x] The logs lack sufficient context (such as User ID or Source IP) to identify who performed the action.
+- [ ] File uploads are not considered security-relevant events.
+- [ ] Logs should only be generated for failed events, not successful ones.
+```
+
+
+## A10:2025 - Mishandling of Exceptional Conditions
+
+Mishandling of Exceptional Conditions occurs when an application fails to gracefully manage unexpected states, errors, or environmental failures. This category focuses on how systems react when things go wrong—such as database timeouts, null pointer exceptions, or out-of-memory errors. If an application "fails open" or leaks sensitive implementation details through verbose error messages, it provides attackers with a roadmap of the system's internal architecture or a way to bypass security controls.
+
+The primary risks associated with this vulnerability include **Information Disclosure** and **Security Logic Bypass**. For instance, a stack trace sent directly to a user's browser might reveal the specific version of a library, the database schema, or internal file paths. Furthermore, if an exception occurs during a critical authorization check and the code does not explicitly handle that failure, the system might default to allowing the action, leading to an unauthorized privilege escalation.
+
+### Common Failure Scenarios
+
+Effective error handling requires a balance between providing enough information for developers to debug and keeping the end-user's view sanitized. Common mistakes include:
+
+*   **Verbose Error Messages:** Displaying full stack traces, SQL query strings, or debug information to the end-user.
+*   **Failing Open:** A security check (like `is_authenticated()`) throws an exception, and the code proceeds as if the check passed.
+*   **Inconsistent Error Responses:** Using different error messages for "User not found" vs. "Incorrect password," which allows for username enumeration.
+*   **Ignoring Exceptions:** Using empty `catch` blocks that allow the program to continue in an unstable or undefined state.
+
+### Secure vs. Insecure Error Flow
+
+The following diagram illustrates how an application should handle an exception compared to an insecure implementation that leaks data.
+
+```mermaid
+graph TD
+    A[User Request] --> B{Process Logic}
+    B -- Success --> C[Return Data]
+    B -- Exception Occurs --> D{Error Handler}
+    
+    subgraph Insecure Path
+    D -- "Option A (Bad)" --> E[Display Stack Trace to User]
+    E --> F((Attacker gains Intel))
+    end
+    
+    subgraph Secure Path
+    D -- "Option B (Good)" --> G[Log Details Internally]
+    G --> H[Return Generic Error ID to User]
+    H --> I((System Remains Secure))
+    end
+
+    classDef default fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1px;
+```
+
+### Code Example: Handling Database Failures
+
+In the insecure example below, a failed database connection reveals the internal connection string and the specific database technology used.
+
+**Insecure Implementation (Python/Flask):**
+```python
+@app.route('/user/<id>')
+def get_user(id):
+    try:
+        user = db.execute(f"SELECT * FROM users WHERE id = {id}")
+        return jsonify(user)
+    except Exception as e:
+        # VULNERABLE: Returns the raw exception message to the client
+        return str(e), 500
+```
+
+**Secure Implementation:**
+```python
+@app.route('/user/<id>')
+def get_user(id):
+    try:
+        # Use parameterized queries to prevent injection + proper handling
+        user = db.execute("SELECT * FROM users WHERE id = ?", (id,))
+        return jsonify(user)
+    except DatabaseConnectionError as e:
+        # SECURE: Log the actual error for admins, return generic message to user
+        logger.error(f"Database failure: {e}")
+        return "A temporary system error occurred. Reference ID: ERR-9921", 500
+    except Exception:
+        logger.error("Unexpected system failure.")
+        return "An internal error occurred.", 500
+```
+
+### Mitigation Strategies
+
+To defend against the mishandling of exceptional conditions, organizations should adopt a "Secure by Default" mindset regarding errors:
+
+1.  **Generic Error Pages:** Configure the web server and application framework to show custom, generic error pages (e.g., a standard 404 or 500 page) instead of default technical pages.
+2.  **Centralized Logging:** Use a centralized logging framework to capture full exception details, including stack traces and variable states, but ensure these logs are not accessible to end-users.
+3.  **Fail-Safe Defaults:** Ensure that if a security-sensitive function fails, it defaults to the most restrictive state (e.g., `access_denied = true`).
+4.  **Standardized Response Codes:** Return consistent HTTP status codes and messages to prevent side-channel attacks like timing analysis or account enumeration.
+
+```masteryls
+{"id":"a10-2025-01", "title":"Identifying Secure Exception Handling", "type":"multiple-choice"}
+An application's payment processing module encounters an unexpected timeout while communicating with a 3rd-party API. Which response demonstrates the most secure handling of this exceptional condition?
+
+- [ ] The application displays the API endpoint URL and the timeout duration to the user so they can report it to support.
+- [x] The application logs the full technical error internally and displays a generic "Transaction pending" message with a unique correlation ID to the user.
+- [ ] The application catches the exception and, to ensure a smooth user experience, proceeds as if the payment was successful.
+- [ ] The application returns a 500 Internal Server Error including the raw Java stack trace to help the user understand why the payment failed.
+```
+
+
 ## Exercises
 
 
