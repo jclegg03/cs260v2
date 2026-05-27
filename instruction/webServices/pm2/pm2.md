@@ -137,6 +137,6 @@ If you run `pm2 ls` again you should see your web service listed. You can now ac
 
 ```masteryls
 {"id":"bb981431-87f7-4c98-875f-e02787b2982f", "title":"PM2", "type":"essay" }
-Use `ssh` to shell into your web server. Type the command: `pm2 ls` and describe what you see.
+Use `ssh` to shell into your web server. Type the command: `pm2 ls` and paste the response below and describe what it means.
 ```
 
