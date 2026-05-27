@@ -1031,9 +1031,10 @@
           "id": "e88211b3-04c9-4b3c-85f6-8d45c3ce8468",
           "state": "published",
           "interactions": [
-            "npm-install-001"
+            "db677385-51e3-43bb-bcfe-e74d1dc925d7",
+            "bfd0c3c9-fafb-4486-985a-1396f41ad55a"
           ],
-          "commit": "f2e399de9a26606a44d33d628a6e6eac426251be"
+          "commit": "e45c09f1cb9244717f1e6f6f08278af460ac64de"
         },
         {
           "title": "Web Services Introduction",
