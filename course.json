@@ -1336,8 +1336,10 @@
           "path": "instruction/webServices/webSocket/webSocket/webSocket.md",
           "id": "2daf820c-fbf4-4cf6-a176-41b9ea459935",
           "state": "published",
-          "interactions": [],
-          "commit": "aefc3892865713113b0f8bc2e613b9edc0eb400f"
+          "interactions": [
+            "1c9ef4b5-ba34-4e52-a2d5-80ae6d426997"
+          ],
+          "commit": "0f506e970d9beac234d18154885174b7146c8a8c"
         },
         {
           "title": "Debugging WebSocket",
