@@ -74,6 +74,9 @@ Replace the quotable service call with a different one. Here are some suggestion
           null,
           "  "
         );
+      })
+      .catch((err) => {
+        document.querySelector("pre").textContent = err.message;
       });
   </script>
 </body>
