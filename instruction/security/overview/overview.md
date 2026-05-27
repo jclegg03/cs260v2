@@ -218,9 +218,6 @@ sequenceDiagram
     S->>DB: Look up SID
     DB-->>S: Valid User Session
     S-->>U: 200 OK (Dashboard Data)
-
-    classDef default fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1px;
-
 ```
 
 ### Implementation Example (Node.js/Express)
