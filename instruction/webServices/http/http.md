@@ -172,6 +172,8 @@ HTTP continually evolves in order to increase performance and support new types 
 | 2015 | HTTP2   | multiplex, server push, binary representation   |
 | 2022 | HTTP3   | QUIC for transport protocol, always encrypted   |
 
+## Exercises
+
 ```masteryls
 {"id":"c99bb4e7-3120-4836-a32b-a97553c2c92e", "title":"HTTP Statelessness", "type":"multiple-choice"}
 Which of the following statements best describes the "stateless" nature of the HTTP protocol?
