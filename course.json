@@ -1031,10 +1031,9 @@
           "id": "e88211b3-04c9-4b3c-85f6-8d45c3ce8468",
           "state": "published",
           "interactions": [
-            "db677385-51e3-43bb-bcfe-e74d1dc925d7",
-            "bfd0c3c9-fafb-4486-985a-1396f41ad55a"
+            "npm-install-001"
           ],
-          "commit": "d8fcf9ab84ea9ee40454e0e6d01021795b582cd1"
+          "commit": "e821261df81b6efe03a0b4afc8133b0f8545cc2a"
         },
         {
           "title": "Web Services Introduction",
@@ -1081,16 +1080,14 @@
           "commit": "0fa2f2983067d471696bf3ac6b6f54b9f94f74f4"
         },
         {
-          "title": "Fetch",
-          "type": "instruction",
+          "title": "☑ Fetch",
           "path": "instruction/webServices/fetch/fetch.md",
           "id": "437f53a9-65b8-4139-afdb-ac604eddcc26",
           "state": "published",
           "interactions": [
             "99869011-3a94-40f9-b48f-6e34c9127943"
           ],
-          "description": "",
-          "commit": "24f3fffd931464bd2f89e4f485f117552379fb8e"
+          "commit": "97300531cc754070de2670c260bebcba64162103"
         },
         {
           "title": "Service design",
