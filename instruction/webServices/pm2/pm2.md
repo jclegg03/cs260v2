@@ -131,3 +131,12 @@ pm2 save
 ```
 
 If you run `pm2 ls` again you should see your web service listed. You can now access your subdomain in the browser and see the proper response. PM2 will keep running your service even after you exit your SSH session.
+
+## Exercises
+
+
+```masteryls
+{"id":"bb981431-87f7-4c98-875f-e02787b2982f", "title":"PM2", "type":"essay" }
+Use `ssh` to shell into your web server. Type the command: `pm2 ls` and describe what you see.
+```
+
