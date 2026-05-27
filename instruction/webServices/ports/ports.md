@@ -29,6 +29,8 @@ Your web service, Caddy, is listening on ports 80 and 443. When Caddy gets a req
 
 Internally on your web server, you can have as many web services running as you would like. However, you must make sure that each one uses a different port to communicate on. You run your Simon service on port 3000 and therefore **cannot** use port 3000 for your startup service. Instead you use port 4000 for your startup service. It does not matter what high range port you use. It only matters that you are consistent and that they are only used by one service.
 
+## Exercises
+
 ```masteryls
 {"id":"1d53c5a4-3138-4fbd-96e7-51c7bdbfbcb2", "title":"Standard HTTP Port", "type":"multiple-choice"}
 By default, which port does a web server use to listen for standard, unencrypted HTTP traffic?
