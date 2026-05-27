@@ -1152,7 +1152,11 @@
           "title": "SOP and CORS",
           "path": "instruction/webServices/cors/cors.md",
           "id": "18ba2264-1ec1-41c5-85ef-18667dd71fcc",
-          "state": "published"
+          "state": "published",
+          "interactions": [
+            "208c607c-f535-4a22-89d7-0b434ece34d1"
+          ],
+          "commit": "3d94da37d33d173ded6c8424aa5749ee6ab0cec8"
         },
         {
           "title": "Authorization services",
