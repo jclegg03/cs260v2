@@ -1231,9 +1231,10 @@
           "id": "07bae28b-84f5-4464-b331-6c45092665f8",
           "state": "published",
           "interactions": [
-            "66ba8583-7045-4ef5-8dc0-497a9b582248"
+            "modern-deployment-strategies",
+            "bb56649e-e767-4758-8b8e-310e4ea69026"
           ],
-          "commit": "e4ad189fee57b70860867b85fe3c5a68b3079791"
+          "commit": "9cc5501c1a96fab3ce696ab380310564bece7c37"
         },
         {
           "title": "Storage services",
