@@ -1229,7 +1229,9 @@
           "title": "Deployment",
           "path": "instruction/essentials/deployment/deployment.md",
           "id": "07bae28b-84f5-4464-b331-6c45092665f8",
-          "state": "published"
+          "state": "published",
+          "interactions": [],
+          "commit": "1494b33a4d57a5fe9b8f3eba7a37d9ab88081489"
         },
         {
           "title": "Storage services",
