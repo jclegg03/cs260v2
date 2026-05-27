@@ -154,4 +154,11 @@ socket.onclose = (event) => {
 ### Security (WSS)
 Always use `wss://` (WebSocket Secure) in production. It uses TLS/SSL to encrypt the data stream. This not only protects data but also prevents "Man-in-the-Middle" attacks and ensures that transparent proxy servers do not interfere with or block the WebSocket traffic.
 
+## Exercises
+
+
+```masteryls
+{"id":"1c9ef4b5-ba34-4e52-a2d5-80ae6d426997", "title":"HTTP vs WebSocket", "type":"essay" }
+Explain the essential differences between the HTTP and WebSocket protocols.
+```
 
