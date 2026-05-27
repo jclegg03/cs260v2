@@ -1,5 +1,9 @@
 # WebSocket
 
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQcgglX5RnK8G9gp9fkiUluBR5J3zx4phXHh3qCEkDqDY84ofcoI_HfmxVqNFl9p6yeiZXmTQofKWvJ/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="990" height="540" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+---
+
 ![webSocket](webServicesWebSocketsLogo.png)
 
 HTTP is based on a client-server architecture. A client always initiates the request and the server responds. This is great if you are building a global document library connected by hyperlinks, but for many other use cases it just doesn't work. Applications for notifications, distributed task processing, peer-to-peer communication, or asynchronous events need communication that is initiated by two or more connected devices.
