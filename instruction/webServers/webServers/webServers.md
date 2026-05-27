@@ -145,3 +145,8 @@ When designing a service architecture, which of the following accurately describ
 - [ ] REST is designed specifically for high-performance internal microservices using binary protocols, while GraphQL and RPC are restricted to text-based JSON over HTTP/1.1.
 ```
 
+```masteryls
+{"id":"24fef0c8-9ae9-4b9f-97f1-40d287fabf80", "title":"Comparing RPC, REST, and GraphQL", "type":"essay" }
+Explain the key differences between RPC, REST, and GraphQL.
+```
+
