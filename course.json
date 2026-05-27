@@ -1257,13 +1257,15 @@
           "commit": "a88f19675e0a3f75cd6f76e43ea70f79a8df24cf"
         },
         {
-          "title": "☑ Data services",
+          "title": "Data services",
+          "type": "instruction",
           "path": "instruction/webServices/dataServices/dataServices.md",
           "id": "741b24ae-2a81-4c5c-9ab7-4941b8644bc1",
           "state": "published",
           "interactions": [
             "521eddff-0eae-4680-8bbd-09b08051ba9e"
           ],
+          "description": "",
           "commit": "78cc5e51583301157c8024bc676e4517fe1785cc"
         },
         {
