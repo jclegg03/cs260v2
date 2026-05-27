@@ -212,7 +212,7 @@ sequenceDiagram
     S->>S: Validate Credentials
     S->>S: Generate New Cryptographically Strong SID
     S->>DB: Store SID and User Data
-    S-->>U: x
+    S-->>U: Set-Cookie: SID=xyz HttpOnly Secure SameSite=Strict
     Note over U,S: Subsequent requests include the SID cookie
     U->>S: GET /dashboard (Cookie: SID=xyz)
     S->>DB: Look up SID
