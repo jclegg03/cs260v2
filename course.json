@@ -1313,7 +1313,7 @@
           "id": "2daf820c-fbf4-4cf6-a176-41b9ea459935",
           "state": "published",
           "interactions": [],
-          "commit": "c793323be14b7d9dfddfce690fdd56575265c113"
+          "commit": "1c210871dd0c256abc57af67e575e1f52d9d962f"
         },
         {
           "title": "Debugging WebSocket",
