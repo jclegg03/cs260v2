@@ -40,7 +40,9 @@ What is the most common way to install NPM on a local development machine?
 - [ ] NPM must be compiled from source code using a C++ compiler
 ```
 
-Next create your project.
+## Using Node.js
+
+Once you have installed Node.js, you are ready to create a Node based service. First you need to create a directory that you can play around with and then throw away. You can then initialize the directory as a **Node** project using the `npm init` command.
 
 ```sh
 ➜ mkdir webservicetest
