@@ -1240,7 +1240,11 @@
           "title": "Storage services",
           "path": "instruction/webServices/storageServices/storageServices.md",
           "id": "f95b3772-217e-486e-94bf-60ea3d8be8a9",
-          "state": "published"
+          "state": "published",
+          "interactions": [
+            "0ec7e6ab-6316-4e0f-a654-5df1a6f0ceb2"
+          ],
+          "commit": "1bc69b1916fb5a100f94bfd26e9577e4bec63463"
         },
         {
           "title": "Uploading files",
