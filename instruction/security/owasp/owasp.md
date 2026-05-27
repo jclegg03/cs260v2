@@ -194,3 +194,13 @@ Mitigations include:
 - Not returning data
 - Whitelisting accessible domains
 - Rejecting HTTP redirects
+
+
+## Exercises
+
+
+```masteryls
+{"id":"5bf7db24-6681-4c93-9c11-4c80b09a704a", "title":"OWASP 10", "type":"essay" }
+Describe one of the OWASP top 10. Give an example of how it is commonly exploited.
+```
+
