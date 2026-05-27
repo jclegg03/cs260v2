@@ -1415,7 +1415,11 @@
           "title": "OWASP top 10",
           "path": "instruction/security/owasp/owasp.md",
           "id": "66d77268-2bff-4130-9a73-be52957aff74",
-          "state": "published"
+          "state": "published",
+          "interactions": [
+            "5bf7db24-6681-4c93-9c11-4c80b09a704a"
+          ],
+          "commit": "979b9d935482c55c3419d683945f7d0ccc9897b2"
         },
         {
           "title": "Security practice",
