@@ -133,3 +133,13 @@ Get familiar with what this code teaches.
 
 - Update your `startup` repository notes.md with what you learned.
 - Make sure your project is visible from your production environment (e.g. https://simon.yourdomain.click).
+
+
+
+```masteryls
+{"id":"5aaff8d87-8a17-4b86-b2b4-1dfed2f63f9a", "title":"Simon DB", "type":"url-submission", "syncGrade":false, "autoGrade":false, "validateUrl":true, "gradingCriteria":"The title contains 'Simon DB'" }
+After you have deployed _Simon DB_, verify that it is accessible by providing the URL.
+
+_Example: https://simon.yourdomain.click_
+```
+
