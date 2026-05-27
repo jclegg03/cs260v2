@@ -333,4 +333,13 @@ beds: 1
 
 First, set up your MongoDB Atlas database service. Then use the instructions above. Run the example program for testing that you have things set up correctly.
 
-_If your section of this course requires that you submit assignments for grading_: Submit the hostname for your Atlas database cluster to the Canvas assignment.
+
+```masteryls
+{"id":"521eddff-0eae-4680-8bbd-09b08051ba9e", "title":"MonogDB setup", "type":"multiple-select" }
+I have completed the following:
+
+- [x] Created my MongoDB Atlas account
+- [x] Created the example data service in my development environment
+- [x] Configured my dbConfig.json file
+- [x] Ran and debugged the data service code
+```
