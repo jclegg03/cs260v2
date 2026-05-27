@@ -1,80 +1,87 @@
-# Web servers
+# Node web service
 
-A web server is a computing device that is hosting a web service that knows how to accept incoming internet connections and speak the HTTP application protocol.
+With JavaScript we can write code that listens on a network port (e.g. 80, 443, 3000, or 8080), receives HTTP requests, processes them, and then responds. We can use this to create a simple web service that we then execute using Node.js.
 
-## Monolithic web servers
+## Installing Node.js and NPM
 
-In the early days of web programming, you would buy a massive, complex, expensive, software program that could serve up HTML files and then install it on a hardware device. The package of server hardware and software was considered the web server because the web service software was the only thing running on the server. Eventually, open source web servers became available that made it easy to host a website. Examples of web server software include: Apache HTTP server, Nginx, or Microsoft IIS. However, the web server software was still a separate program from the content, or application, it hosted.
+NPM (Node Package Manager) is the world's largest software registry and the default package manager for the Node.js runtime environment. It consists of a command-line client that allows developers to install, share, and manage dependencies for their web services. Because NPM is deeply integrated with the Node.js ecosystem, it is bundled directly with the Node.js installer. When you install Node.js, you automatically get NPM installed on your system.
 
-## Combining web and application services
+For a professional development environment, there are two primary ways to install Node.js and NPM:
 
-Today, most modern programming languages include libraries that make it easy to serve up web content. This removed the requirement to have a separate program for _hosting_ you application. Instead, your application is also the web service. For example, here is a simple HTTP service written in JavaScript can load up HTML content from a **public** directory.
+1.  **The Official Installer:** You can download the installer for Windows, macOS, or Linux directly from the [Node.js website](https://nodejs.org/). It is highly recommended to choose the **LTS (Long Term Support)** version, as it provides the most stability for web services.
+2.  **Node Version Manager (NVM):** This is the preferred method for many developers. NVM allows you to install multiple versions of Node.js on the same machine and switch between them easily. This is particularly useful when maintaining different projects that require different Node.js versions.
 
-```go
-const express = require('express');
-const app = express();
+The following diagram illustrates the typical installation and verification workflow:
 
-// Serve static files from the 'public' directory
-app.use(express.static('public'));
+Once the installation is complete, you must verify that both the runtime and the package manager are correctly configured in your system's PATH. Open your terminal or command prompt and execute the following commands:
 
-app.listen(80);
+```bash
+# Check the version of Node.js installed
+node -v
+
+# Check the version of NPM installed
+npm -v
 ```
 
-![Simple server HTML](simpleServerHtml.png)
+If the installation was successful, these commands will output version numbers (e.g., `v24.14.1` and `11.11.0`). If you receive a "command not found" error, you may need to restart your terminal or manually add the installation directory to your environment variables.
 
-### Web service endpoints
+### Key Considerations
+*   **Permissions:** On macOS and Linux, avoid using `sudo` to install global packages. Using NVM helps prevent permission issues by installing Node in your user directory.
+*   **Updates:** NPM is updated more frequently than Node.js. You can update NPM to the latest version independently by running `npm install -g npm@latest`.
+*   **LTS vs. Current:** Always prioritize **LTS** for production web services to ensure you receive security patches without breaking changes.
 
-Being able to easily create web services means that we can completely drop the monolithic web server concept and just build web support right into your application. We can also add web accessible methods, called endpoints, that provide functionality beyond simply serving up static HTML files. For example, by adding three lines of code, we can add an endpoint that returns the current time when you add path `/time` to the browser's URL.
+```masteryls
+{"id":"npm-install-001", "title":"Identifying the NPM Installation Process", "type":"multiple-choice"}
+What is the most common way to install NPM on a local development machine?
 
-```go
-app.get('/time', (req, res) => {
-  res.json({ time: new Date().toDateString() });
+- [ ] NPM must be downloaded as a separate standalone executable from npmjs.com
+- [x] NPM is automatically bundled and installed when you install Node.js
+- [ ] NPM is a built-in feature of modern web browsers like Chrome and Firefox
+- [ ] NPM must be compiled from source code using a C++ compiler
+```
+
+Next create your project.
+
+```sh
+➜ mkdir webservicetest
+➜ cd webservicetest
+➜ npm init -y
+```
+
+Now, open VS Code and create a file named `index.js`. Paste the following code into the file and save.
+
+```js
+const http = require('http');
+const server = http.createServer(function (req, res) {
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.write(`<h1>Hello Node.js! [${req.method}] ${req.url}</h1>`);
+  res.end();
+});
+
+server.listen(8080, () => {
+  console.log(`Web service listening on port 8080`);
 });
 ```
 
-![Simple server endpoint](simpleServerEndpoint.png)
+This code uses the Node.js built-in `http` package to create our HTTP server using the `http.createServer` function along with a callback function that takes a request (`req`) and response (`res`) object. That function is called whenever the server receives an HTTP request. In our example, the callback always returns the same HTML snippet, with a status code of 200, and a Content-Type header, no matter what request is made. Basically this is just a simple dynamically generated HTML page. A real web service would examine the HTTP path and return meaningful content based upon the purpose of the endpoint.
 
-## Web service gateways
+The `server.listen` call starts listening on port 8080 and blocks until the program is terminated.
 
-Since it is so easy to build web services it is common to find multiple web services running on the same computing device. The idea of having multiple services on a single server highlights the difference between a **web server**, the physical computing device, and a **web service**, that provides a web application functionality.
+We execute the program by going back to our console window and running Node.js to execute our index.js file. If the service starts up correctly then it should look like the following.
 
-Every web server allows for access to multiple services by referring to a different **port number** for each service. Think of a port as a house address on a given street, and the server as the street. In the example above, the _JavaScript_ web service was assigned port 80. A user could then talk to the image service on port 3000 and the file service on port 3002. However, this makes it difficult for the user of the services to remember what port number matches which service.
-
-To resolve this we introduce a service gateway, or sometimes called a reverse proxy, that is itself a simple web service that listens on the common HTTPS port 443. The gateway then looks at the request URL and maps it to the other services running on a different ports.
-
-
-```masteryls
-{"id":"eaecd7b7-d21c-4c2b-9a27-ec6349f1a74b", "title":"Web page", "type":"web-page", "height":800, "file":"reverseproxydemo.html"}
+```sh
+➜ node index.js
+Web service listening on port 8080
 ```
 
-Our web server will use a web service application called `Caddy` as the gateway to our services. We will explain the details of how Caddy works later in the instruction.
+You can now open your browser and point it to `localhost:8080` and view the result. The interaction between the JavaScript, node, and the browser looks like this.
 
-## Microservices
+![Node HTTP](webServicesNodeHttp.jpg)
 
-Web services that provide a single functional purpose are referred to as microservices. By partitioning larger functionality into small logical chunks, you can develop and manage them independently from other functionality in a larger system. They can also handle large fluctuations in user demand by simply running more and more stateless copies of the microservice from multiple virtual servers hosted in a dynamic cloud environment. For example, one microservice for generating your genealogical family tree might be able to handle 1,000 users concurrently. So in order to support 1 million users, you just deploy 1,000 instances of the service running on scalable virtual hardware.
+Use different URL paths in the browser and note that it will echo the HTTP method and path back in the document. You can kill the process by pressing `CTRL-C` in the console.
 
-## Serverless
+Note that you can also start up Node and execute the `index.js` code directly in VS Code. To do this open index.js in VS Code and press the 'F5' key. This should ask you what program you want to run. Select `node.js`. This starts up Node.js with the `index.js` file, but also attaches a debugger so that you can set breakpoints in the code and step through each line of code.
 
-The idea of microservices naturally evolved into the world of `serverless` functionality where the server is conceptually removed from the architecture and you just write code that represents single service endpoint. That endpoint is loaded through an gateway that maps a web request to the endpoint. The gateway automatically scales the hardware needed to host the serverless endpoint based on demand. This reduces what the web application developer needs to think about down to a single independent endpoint.
-
-## Exercises
-
-```masteryls
-{"id":"db677385-51e3-43bb-bcfe-e74d1dc925d7", "title":"Primary Function of a Web Server", "type":"multiple-choice"}
-When a client (such as a web browser) initiates a connection to a web server, what is the primary responsibility of the server software during the resulting transaction?
-
-- [ ] Resolving the human-readable domain name into a numeric IP address via the Domain Name System (DNS)
-- [x] Processing the incoming HTTP request and returning the requested resource or an appropriate status code
-- [ ] Rendering the HTML, CSS, and JavaScript into a visual interface for the end user to interact with
-- [ ] Managing the physical routing of data packets across the global internet backbone to the user's ISP
-```
-
-```masteryls
-{"id":"bfd0c3c9-fafb-4486-985a-1396f41ad55a", "title":"Reverse Proxy Functionality", "type":"multiple-choice"}
-In a professional web server architecture, what is the primary role of a **reverse proxy**?
-
-- [ ] It acts on behalf of the client to hide the client's IP address from the public internet and filter outgoing traffic.
-- [x] It sits in front of backend servers to intercept incoming requests, providing load balancing, SSL termination, and caching.
-- [ ] It is a specialized database engine used to store session data to ensure high availability across multiple geographic regions.
-- [ ] It serves as a recursive DNS resolver that translates domain names into IP addresses for the client's browser.
-```
+> [!NOTE]
+>
+> Make sure you complete the above steps. For the rest of the course you will be executing your code using Node.js to run your backend code and serve up your frontend code to the browser. This means you will no longer be using the `VS Code Live Server extension` to serve your frontend code in the browser.
