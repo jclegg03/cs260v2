@@ -1,80 +1,51 @@
-# Web servers
+# URL
 
-A web server is a computing device that is hosting a web service that knows how to accept incoming internet connections and speak the HTTP application protocol.
+📖 **Deeper dive reading**: [MDN What is a URL](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL)
 
-## Monolithic web servers
+The Uniform Resource Locator (URL) represents the location of a web resource. A web resource can be anything, such as a web page, font, image, video stream, database record, or JSON object. It can also be completely ephemeral, such as a visitation counter, or gaming session.
 
-In the early days of web programming, you would buy a massive, complex, expensive, software program that could serve up HTML files and then install it on a hardware device. The package of server hardware and software was considered the web server because the web service software was the only thing running on the server. Eventually, open source web servers became available that made it easy to host a website. Examples of web server software include: Apache HTTP server, Nginx, or Microsoft IIS. However, the web server software was still a separate program from the content, or application, it hosted.
+Looking at the different parts of a URL is a good way to understand what it represents. Here is an example URL that represents the summary of accepted CS 260 BYU students that is accessible using secure HTTP.
 
-## Combining web and application services
-
-Today, most modern programming languages include libraries that make it easy to serve up web content. This removed the requirement to have a separate program for _hosting_ you application. Instead, your application is also the web service. For example, here is a simple HTTP service written in JavaScript can load up HTML content from a **public** directory.
-
-```go
-const express = require('express');
-const app = express();
-
-// Serve static files from the 'public' directory
-app.use(express.static('public'));
-
-app.listen(80);
+```js
+https://byu.edu:443/cs/260/student?filter=accepted#summary
 ```
 
-![Simple server HTML](simpleServerHtml.png)
+The URL syntax uses the following convention. Notice the delimiting punctuation between the parts of the URL. Most parts of the URL are optional. The only ones that are required are the scheme, and the domain name.
 
-### Web service endpoints
-
-Being able to easily create web services means that we can completely drop the monolithic web server concept and just build web support right into your application. We can also add web accessible methods, called endpoints, that provide functionality beyond simply serving up static HTML files. For example, by adding three lines of code, we can add an endpoint that returns the current time when you add path `/time` to the browser's URL.
-
-```go
-app.get('/time', (req, res) => {
-  res.json({ time: new Date().toDateString() });
-});
+```yaml
+<scheme>://<domain name>:<port>/<path>?<parameters>#<anchor>
 ```
 
-![Simple server endpoint](simpleServerEndpoint.png)
+| Part        | Example                              | Meaning                                                                                                                                                                                                                                                                             |
+| ----------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Scheme      | https                                | The protocol required to ask for the resource. For web applications, this is usually HTTPS. But it could be any internet protocol such as FTP or MAILTO.                                                                                                                            |
+| Domain name | byu.edu                              | The domain name that owns the resource represented by the URL.                                                                                                                                                                                                                      |
+| Port        | 3000                                 | The port specifies the numbered network port used to connect to the domain server. Lower number ports are reserved for common internet protocols, higher number ports can be used for any purpose. The default port is 80 if the scheme is HTTP, or 443 if the scheme is HTTPS.     |
+| Path        | /school/byu/user/8014                | The path to the resource on the domain. The resource does not have to physically be located on the file system with this path. It can be a logical path representing endpoint parameters, a database table, or an object schema.                                                    |
+| Parameters  | filter=names&highlight=intro,summary | The parameters represent a list of key value pairs. Usually it provides additional qualifiers on the resource represented by the path. This might be a filter on the returned resource or how to highlight the resource. The parameters are also sometimes called the query string. |
+| Anchor      | summary                              | The anchor usually represents a sub-location in the resource. For HTML pages this represents a request for the browser to automatically scroll to the element with an ID that matches the anchor. The anchor is also sometimes called the hash, or fragment ID.                     |
 
-## Web service gateways
+Technically you can also provide a user name and password before the domain name. This was used historically to authenticate access, but for security reasons this is deprecated. However, you will still see this convention for URLs that represent database connection strings.
 
-Since it is so easy to build web services it is common to find multiple web services running on the same computing device. The idea of having multiple services on a single server highlights the difference between a **web server**, the physical computing device, and a **web service**, that provides a web application functionality.
+## URL, URN, and URI
 
-Every web server allows for access to multiple services by referring to a different **port number** for each service. Think of a port as a house address on a given street, and the server as the street. In the example above, the _JavaScript_ web service was assigned port 80. A user could then talk to the image service on port 3000 and the file service on port 3002. However, this makes it difficult for the user of the services to remember what port number matches which service.
-
-To resolve this we introduce a service gateway, or sometimes called a reverse proxy, that is itself a simple web service that listens on the common HTTPS port 443. The gateway then looks at the request URL and maps it to the other services running on a different ports.
-
-
-```masteryls
-{"id":"eaecd7b7-d21c-4c2b-9a27-ec6349f1a74b", "title":"Web page", "type":"web-page", "height":800, "file":"reverseproxydemo.html"}
-```
-
-Our web server will use a web service application called `Caddy` as the gateway to our services. We will explain the details of how Caddy works later in the instruction.
-
-## Microservices
-
-Web services that provide a single functional purpose are referred to as microservices. By partitioning larger functionality into small logical chunks, you can develop and manage them independently from other functionality in a larger system. They can also handle large fluctuations in user demand by simply running more and more stateless copies of the microservice from multiple virtual servers hosted in a dynamic cloud environment. For example, one microservice for generating your genealogical family tree might be able to handle 1,000 users concurrently. So in order to support 1 million users, you just deploy 1,000 instances of the service running on scalable virtual hardware.
-
-## Serverless
-
-The idea of microservices naturally evolved into the world of `serverless` functionality where the server is conceptually removed from the architecture and you just write code that represents single service endpoint. That endpoint is loaded through an gateway that maps a web request to the endpoint. The gateway automatically scales the hardware needed to host the serverless endpoint based on demand. This reduces what the web application developer needs to think about down to a single independent endpoint.
+You will sometimes hear the use of URN or URI when talking about web resources. A Uniform Resource Name (URN) is a unique resource name that does not specify location information. For example, a book URN might be `urn:isbn:10,0765350386`. A Uniform Resource Identifier (URI) is a general resource identifier that could refer to either a URL or a URN. With web programming you are almost always talking about URLs and therefore you should not use the more general URI.
 
 ## Exercises
 
 ```masteryls
-{"id":"db677385-51e3-43bb-bcfe-e74d1dc925d7", "title":"Primary Function of a Web Server", "type":"multiple-choice"}
-When a client (such as a web browser) initiates a connection to a web server, what is the primary responsibility of the server software during the resulting transaction?
+{"id":"51a73679-2c34-456e-ae07-f3915333f813", "title":"URL Component Functions", "type":"multiple-choice"}
+In the URL `https://www.example.com/shop/search?category=books#top`, which component is specifically used to pass data parameters to the server-side application?
 
-- [ ] Resolving the human-readable domain name into a numeric IP address via the Domain Name System (DNS)
-- [x] Processing the incoming HTTP request and returning the requested resource or an appropriate status code
-- [ ] Rendering the HTML, CSS, and JavaScript into a visual interface for the end user to interact with
-- [ ] Managing the physical routing of data packets across the global internet backbone to the user's ISP
+- [ ] The anchor/fragment ID (`#top`)
+- [x] The query string (`?category=books`)
+- [ ] The path (`/shop/search`)
+- [ ] The protocol (`https`)
 ```
+
 
 ```masteryls
-{"id":"bfd0c3c9-fafb-4486-985a-1396f41ad55a", "title":"Reverse Proxy Functionality", "type":"multiple-choice"}
-In a professional web server architecture, what is the primary role of a **reverse proxy**?
-
-- [ ] It acts on behalf of the client to hide the client's IP address from the public internet and filter outgoing traffic.
-- [x] It sits in front of backend servers to intercept incoming requests, providing load balancing, SSL termination, and caching.
-- [ ] It is a specialized database engine used to store session data to ensure high availability across multiple geographic regions.
-- [ ] It serves as a recursive DNS resolver that translates domain names into IP addresses for the client's browser.
+{"id":"0880332e-43c3-4f19-9ff8-f4b9d3a4152e", "title":"URL Components", "type":"teaching" }
+What are the purposes of all the different URL components?
 ```
+
