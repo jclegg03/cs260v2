@@ -1031,10 +1031,10 @@
           "id": "e88211b3-04c9-4b3c-85f6-8d45c3ce8468",
           "state": "published",
           "interactions": [
-            "c99bb4e7-3120-4836-a32b-a97553c2c92e",
-            "1f39f38c-b426-4a18-b736-a26a7f6d9e6b"
+            "db677385-51e3-43bb-bcfe-e74d1dc925d7",
+            "bfd0c3c9-fafb-4486-985a-1396f41ad55a"
           ],
-          "commit": "b63435b21f46bd01f864bc7bdde424b8efd34dd8"
+          "commit": "aa22af1e1b086e591c614a44a12b4203ecb63cb4"
         },
         {
           "title": "Web Services Introduction",
