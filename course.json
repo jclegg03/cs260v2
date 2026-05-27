@@ -1423,9 +1423,12 @@
             "injection-prevention-01",
             "insecure-design-01",
             "auth-fail-01",
+            "a08-integrity-01",
+            "a09-logging-01",
+            "a10-2025-01",
             "5bf7db24-6681-4c93-9c11-4c80b09a704a"
           ],
-          "commit": "cc2d382358d8557e755f33a2822183e5e5abc07b"
+          "commit": "2dabca2824ca17925a9baaeca66f7812386b4539"
         },
         {
           "title": "Security practice",
