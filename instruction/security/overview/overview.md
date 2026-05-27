@@ -1,5 +1,9 @@
 # Security overview
 
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQs_pHMXafmU8T91kLMxZV39RKAP0qLkEHpQRq-6rLMii-r2DnnTrDx2r9OrrKbz96qxGsRmw9koyU-/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="900" height="540" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+---
+
 📖 **Deeper dive reading**:
 
 - [Database of publicized software vulnerabilities](https://cve.mitre.org/)
