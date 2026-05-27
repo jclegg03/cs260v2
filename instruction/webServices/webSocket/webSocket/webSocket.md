@@ -75,7 +75,7 @@ In a later instruction we will show you how to run and debug this example.
 
 Although the `ws` package makes it easy to use WebSocket in your applications, you should be aware of some of the internal details that can be easy to overlook. Without a basic understanding of how WebSocket works it can be frustrating to implement in a production system.
 
-
+![websocket.jpg](websocket.jpg)
 
 ### The WebSocket Handshake
 WebSockets begin as a standard HTTP request. To establish a connection, the client sends an "Upgrade" header to the server. If the server supports the protocol, it responds with an HTTP 101 status code (Switching Protocols). Once this handshake is successful, the TCP connection remains open, and both parties can send data at any time.
