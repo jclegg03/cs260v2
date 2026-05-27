@@ -70,6 +70,16 @@ The **play** component is significantly more complex than the About. Here we wan
 There are also two JavaScript files that provide support for a simple delay between button pushes (delay.js), and the WebSocket messages that will come in the future.
 
 ```mermaid
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "primaryColor": "#ffffff",
+    "primaryBorderColor": "#000000",
+    "primaryTextColor": "#000000",
+    "lineColor": "#000000"
+  }
+}}%%
+
 classDiagram
   Play *-- Players
   Players --> GameNotifier
@@ -197,6 +207,16 @@ Once you play a few rounds you should see a nice table being generated.
 Like the play component, the **login** has child components that help it render differently based on the authentication state of the player.
 
 ```mermaid
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "primaryColor": "#ffffff",
+    "primaryBorderColor": "#000000",
+    "primaryTextColor": "#000000",
+    "lineColor": "#000000"
+  }
+}}%%
+
 classDiagram
   App --> Login
   Login *-- Authenticated
