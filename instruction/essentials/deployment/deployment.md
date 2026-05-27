@@ -9,29 +9,28 @@ When working on a commercial web application, it is critical to separate where y
 ![Complex deployment](deploymentEnvironments.png)
 
 
-## Strategies for Modern Software Deployment
+## Software deployment strategies
 
 Modern software deployment has evolved from manual, high-risk "big bang" releases to automated, incremental strategies that prioritize system availability and user experience. The primary goal of these techniques is to reduce the "blast radius" of potential failures and ensure that new features can be rolled back instantly if issues arise.
 
-### Common Deployment Strategies
+![deploymentStrategies.jpg](deploymentStrategies.jpg)
 
 1.  **Blue-Green Deployment**: This strategy utilizes two identical production environments. "Blue" is the current live version, while "Green" is the new version. Once the Green environment is tested and ready, traffic is routed from Blue to Green at the load balancer level.
 2.  **Canary Deployment**: Named after the "canary in a coal mine," this technique involves rolling out the new version to a small subset of users (e.g., 5%) before deploying it to the entire infrastructure. This allows for real-time monitoring of performance and error rates.
+
+    The following diagram illustrates how traffic is incrementally shifted from an existing stable version to a new canary version.
+
+    ```mermaid
+    graph LR
+        User((Users)) --> LB[Load Balancer]
+        LB -- 90% Traffic --> V1[v1.0 Stable]
+        LB -- 10% Traffic --> V2[v1.1 Canary]
+        
+        classDef default fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1px;
+    ```
+
 3.  **Rolling Updates**: In this model, instances of the old version are replaced by instances of the new version one by one or in small batches. This ensures that some capacity is always available to handle traffic during the update.
 4.  **A/B Testing**: While often used for marketing, A/B testing is a deployment technique where different versions are routed to users based on specific metadata (like geography or browser type) to measure the impact of changes.
-
-#### Visualizing a Canary Rollout
-
-The following diagram illustrates how traffic is incrementally shifted from an existing stable version to a new canary version.
-
-```mermaid
-graph LR
-    User((Users)) --> LB[Load Balancer]
-    LB -- 90% Traffic --> V1[v1.0 Stable]
-    LB -- 10% Traffic --> V2[v1.1 Canary]
-    
-    classDef default fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1px;
-```
 
 ### Choosing the Right Technique
 
@@ -44,7 +43,7 @@ When selecting a strategy, consider the following trade-offs:
 | **Rolling** | Zero | Medium | Low | Slow (requires re-deployment) |
 
 ```masteryls
-{"id":"modern-deployment-strategies", "title":"Identifying Deployment Techniques", "type":"multiple-choice"}
+{"id":"modern-deployment-strategies", "title":"Identifying deployment techniques", "type":"multiple-choice"}
 A team wants to release a high-risk database migration. They decide to spin up a completely separate production-ready environment, verify it, and then switch the router to point to the new environment. Which strategy are they using?
 
 - [ ] Canary Deployment
