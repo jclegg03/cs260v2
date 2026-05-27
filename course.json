@@ -1382,7 +1382,9 @@
           "title": "Security practice",
           "path": "instruction/security/practice/practice.md",
           "id": "6c73006a-548c-4698-be4c-ba27ed881784",
-          "state": "published"
+          "state": "published",
+          "interactions": [],
+          "commit": "e3e559b0b81863094b46fbcfa45d583b79fcac98"
         }
       ]
     },
