@@ -30,8 +30,8 @@
 | 13 | Tue Mar 31 | `Security` |  | [Security](../instruction/security/overview/overview.md)</br>[OWASP top 10](../instruction/security/owasp/owasp.md) | [Security](../instruction/security/overview/overview.md) |
 |  | Thu Apr 2 |  |  | [Security practice](../instruction/security/practice/practice.md) | [Security practice](../instruction/security/practice/practice.md) |
 | 14 | Tue Apr 7 |  | [🚀 Startup WebSocket](../instruction/webServices/startupWebSocket/startupWebSocket.md)</br>[Demo day submission](../instruction/demo-day-submission/demo-day-submission.md) | [UX design](../instruction/uxdesign/uxdesign.md) | [UX sesign](../instruction/uxdesign/uxdesign.md) |
-|  | Thu Apr 9 | `Topics` |  | [Progressive web applications](../instruction/webFrameworks/pwa/pwa.md)</br>[Simon PWA](../instruction/simon/simonPwa/simonPwa.md)</br>[Demo day submission](../instruction/demo-day-submission/demo-day-submission.md) | [Progressive Web App](https://docs.google.com/presentation/d/182qlqQ8_iGhcCh9tQPIM9uU_8v1AC7ZcjO7Wkyz-JKk) |
-| 15 | Tue Apr 14 |  | 🎉 Demo Day | [Wrap up](../instruction/webFrameworks/wrapUp/wrapUp.md) | [Wrap up](https://docs.google.com/presentation/d/1KlceQIkip7jOMxUTVKcTOuC7KgVBXXeCr_qCFer7osQ) |
+|  | Thu Apr 9 | `Topics` |  | [Progressive web applications](../instruction/webFrameworks/pwa/pwa.md)</br>[Simon PWA](../instruction/simon/simonPwa/simonPwa.md)</br>[Demo day submission](../instruction/demo-day-submission/demo-day-submission.md) | [Progressive web applications](../instruction/webFrameworks/pwa/pwa.md) |
+| 15 | Tue Apr 14 |  | 🎉 Demo Day | [Wrap up](../instruction/webFrameworks/wrapUp/wrapUp.md) | [☑ Wrap up](../instruction/webFrameworks/wrapUp/wrapUp.md) |
 |  | Wed Apr 15 |  |  | _Last day of class_</br>**No assignments accepted after this day** |  |
 
 ## Special days
