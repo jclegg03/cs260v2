@@ -1146,7 +1146,11 @@
           "title": "Troubleshoot 502",
           "path": "instruction/webServices/troubleshoot502/troubleshoot502.md",
           "id": "c0148b16-5895-47a0-8f03-e6dcc584a515",
-          "state": "published"
+          "state": "published",
+          "interactions": [
+            "f312ba3c-f0b5-40b7-8641-362f6fd032d8"
+          ],
+          "commit": "dc9d51a5c64ff1e6919dfd79d9f52d7157dbc142"
         },
         {
           "title": "SOP and CORS",
