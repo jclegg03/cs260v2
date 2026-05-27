@@ -1081,13 +1081,15 @@
           "commit": "4f6fe4dae042a39b65bdc96ced4de1a98b9cde10"
         },
         {
-          "title": "☑ Fetch",
+          "title": "Fetch",
+          "type": "instruction",
           "path": "instruction/webServices/fetch/fetch.md",
           "id": "437f53a9-65b8-4139-afdb-ac604eddcc26",
           "state": "published",
           "interactions": [
             "99869011-3a94-40f9-b48f-6e34c9127943"
           ],
+          "description": "",
           "commit": "97300531cc754070de2670c260bebcba64162103"
         },
         {
