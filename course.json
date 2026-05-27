@@ -1289,7 +1289,9 @@
           "title": "Backend testing",
           "path": "instruction/webServices/backendTesting/backendTesting.md",
           "id": "9fe6b799-a83c-4c8d-913d-9427f63fe52d",
-          "state": "published"
+          "state": "published",
+          "interactions": [],
+          "commit": "e6908df31a1f5b65cccf97d8d43262a243322c62"
         },
         {
           "title": "Frontend testing",
