@@ -1245,7 +1245,11 @@
           "title": "Uploading files",
           "path": "instruction/webServices/uploadingFiles/uploadingFiles.md",
           "id": "31749e6d-1edd-4272-9640-3347f6cc8482",
-          "state": "published"
+          "state": "published",
+          "interactions": [
+            "66ba8583-7045-4ef5-8dc0-497a9b582248"
+          ],
+          "commit": "a88f19675e0a3f75cd6f76e43ea70f79a8df24cf"
         },
         {
           "title": "☑ Data services",
