@@ -1417,9 +1417,18 @@
           "id": "66d77268-2bff-4130-9a73-be52957aff74",
           "state": "published",
           "interactions": [
-            "0edff028-d213-489b-8d8e-e92e01e3daee"
+            "sec-misconfig-01",
+            "ssc-001",
+            "crypto-failures-01",
+            "injection-prevention-01",
+            "insecure-design-01",
+            "auth-fail-01",
+            "a08-integrity-01",
+            "a09-logging-01",
+            "a10-2025-01",
+            "5bf7db24-6681-4c93-9c11-4c80b09a704a"
           ],
-          "commit": "c16afb90bef2cf2153def238ea1d2aeb20a31b0b"
+          "commit": "e82c30b37a6eec4d86787949f7e5ea6cb55a0c4f"
         },
         {
           "title": "Security practice",
