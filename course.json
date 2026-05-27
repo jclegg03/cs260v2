@@ -1231,18 +1231,15 @@
           "id": "07bae28b-84f5-4464-b331-6c45092665f8",
           "state": "published",
           "interactions": [
-            "modern-deployment-strategies",
-            "bb56649e-e767-4758-8b8e-310e4ea69026"
+            "66ba8583-7045-4ef5-8dc0-497a9b582248"
           ],
-          "commit": "379164afbe82fe11504ce404cb90fbbe857dc0f0"
+          "commit": "11c19bf2f9012f197890a74d148baedc1ca68443"
         },
         {
           "title": "Storage services",
           "path": "instruction/webServices/storageServices/storageServices.md",
           "id": "f95b3772-217e-486e-94bf-60ea3d8be8a9",
-          "state": "published",
-          "interactions": [],
-          "commit": "642675c830bab9896a8f206cac4e7a80ea26b9e0"
+          "state": "published"
         },
         {
           "title": "Uploading files",
