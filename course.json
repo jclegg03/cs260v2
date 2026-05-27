@@ -1031,10 +1031,10 @@
           "id": "e88211b3-04c9-4b3c-85f6-8d45c3ce8468",
           "state": "published",
           "interactions": [
-            "db677385-51e3-43bb-bcfe-e74d1dc925d7",
-            "bfd0c3c9-fafb-4486-985a-1396f41ad55a"
+            "c99bb4e7-3120-4836-a32b-a97553c2c92e",
+            "1f39f38c-b426-4a18-b736-a26a7f6d9e6b"
           ],
-          "commit": "bc53da545f331d4eea85d205d25f53a376d11948"
+          "commit": "b63435b21f46bd01f864bc7bdde424b8efd34dd8"
         },
         {
           "title": "Web Services Introduction",
@@ -1067,7 +1067,7 @@
             "1d53c5a4-3138-4fbd-96e7-51c7bdbfbcb2",
             "5a5d6266-c4cd-431b-b6ef-2513cdbeadd5"
           ],
-          "commit": "65be4766efc4db8c2a5b80f2494bf5a0d03fd60a"
+          "commit": "343e3d81870fd565498dce3fd8af1c7584ecbe0a"
         },
         {
           "title": "HTTP",
