@@ -2,18 +2,8 @@
 
 With JavaScript we can write code that listens on a network port (e.g. 80, 443, 3000, or 8080), receives HTTP requests, processes them, and then responds. We can use this to create a simple web service that we then execute using Node.js.
 
-## Installing Node.js and NPM
+Before you get started, make sure you have properly installed [Node.js](/course/05cf2876-16ce-4db0-864e-caa5d05200ad/topic/d37bc80e-b699-4249-9a11-388e2548fd29) in your development environment. Make sure you have installed the latest **long term support (LTS)** version. You can check what version you have running with the following commands:
 
-NPM (Node Package Manager) is the world's largest software registry and the default package manager for the Node.js runtime environment. It consists of a command-line client that allows developers to install, share, and manage dependencies for their web services. Because NPM is deeply integrated with the Node.js ecosystem, it is bundled directly with the Node.js installer. When you install Node.js, you automatically get NPM installed on your system.
-
-For a professional development environment, there are two primary ways to install Node.js and NPM:
-
-1.  **The Official Installer:** You can download the installer for Windows, macOS, or Linux directly from the [Node.js website](https://nodejs.org/). It is highly recommended to choose the **LTS (Long Term Support)** version, as it provides the most stability for web services.
-2.  **Node Version Manager (NVM):** This is the preferred method for many developers. NVM allows you to install multiple versions of Node.js on the same machine and switch between them easily. This is particularly useful when maintaining different projects that require different Node.js versions.
-
-The following diagram illustrates the typical installation and verification workflow:
-
-Once the installation is complete, you must verify that both the runtime and the package manager are correctly configured in your system's PATH. Open your terminal or command prompt and execute the following commands:
 
 ```bash
 # Check the version of Node.js installed
@@ -24,21 +14,6 @@ npm -v
 ```
 
 If the installation was successful, these commands will output version numbers (e.g., `v24.14.1` and `11.11.0`). If you receive a "command not found" error, you may need to restart your terminal or manually add the installation directory to your environment variables.
-
-### Key Considerations
-*   **Permissions:** On macOS and Linux, avoid using `sudo` to install global packages. Using NVM helps prevent permission issues by installing Node in your user directory.
-*   **Updates:** NPM is updated more frequently than Node.js. You can update NPM to the latest version independently by running `npm install -g npm@latest`.
-*   **LTS vs. Current:** Always prioritize **LTS** for production web services to ensure you receive security patches without breaking changes.
-
-```masteryls
-{"id":"npm-install-001", "title":"Identifying the NPM Installation Process", "type":"multiple-choice"}
-What is the most common way to install NPM on a local development machine?
-
-- [ ] NPM must be downloaded as a separate standalone executable from npmjs.com
-- [x] NPM is automatically bundled and installed when you install Node.js
-- [ ] NPM is a built-in feature of modern web browsers like Chrome and Firefox
-- [ ] NPM must be compiled from source code using a C++ compiler
-```
 
 ## Using Node.js
 
