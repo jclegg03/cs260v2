@@ -24,6 +24,9 @@ You create an Express application by using NPM to install the Express package an
 ➜ npm install express
 ```
 
+Here is the very minimal usage of Express to create a service that listens on port 3000 and returns a 404 error for all requests.
+
+
 ```js
 const express = require('express');
 const app = express();
@@ -31,7 +34,11 @@ const app = express();
 app.listen(3000);
 ```
 
-With the `app` object you can now add HTTP routing and middleware functions to the application.
+With the `app` object in place and listening on port 3000, you are now ready to add the code that will power a real  web service.
+
+
+![express.jpg](express.jpg)
+
 
 ## Defining routes
 
