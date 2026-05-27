@@ -306,7 +306,22 @@ Create a web service with Express using the following steps.
 
 1. Develop a mental model in your head about what these commands are doing and how your service is responding. Perhaps creating a [sequence diagram](https://sequencediagram.org/index.html#initialData=C4S2BsFMAIGVIE4DcQGMYCVIEcCukBnYAgKBIENVgB7BaAYVwXDMeYFoA+eZNSALmgBtAAoBVACoBdaAHois2pAC2JAHbVgMBCADmAC2DRqAMziIU6fuQAONgHQ3cwABQByecABUs-kSUAcuTKkG4ANAA6atAuCDhh0HEEAJTQALyciYT2BJBqACYuUQDe0Lg2+eRagnHYjuQIwQQ5NHFBIdAAvsnJANwkbOAAPEPs7DyWAtDFAETllVoz-DNKyjOdJEA) will help clarify the interaction if it is still unclear.
 
-   ![HTTP request](httpRequestSequenceDiagram.jpg)
+
+   ```mermaid
+    sequenceDiagram
+        classDef default fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1px;
+
+        title Service Requests
+
+        actor Curl
+        participant Service
+
+        Curl->>Service: [PUT] /st/orem
+
+        Note right of Service: app.put('/st*/:storeName',<br/> (req, res) => res.send(<br/>{ update: req.params.storeName }));
+
+        Service-->>Curl: {"update":"orem"}
+   ```
 
 1. Debug your application by setting breakpoints, inspecting variables, and walking through the code.
 
