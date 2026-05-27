@@ -1317,7 +1317,11 @@
           "title": "Frontend testing",
           "path": "instruction/webServices/frontendTesting/frontendTesting.md",
           "id": "9ad9df20-2df1-4274-96e8-771b1a3715e9",
-          "state": "published"
+          "state": "published",
+          "interactions": [
+            "b6ca8658-e5f6-42e4-b6b3-62893ea9c57c"
+          ],
+          "commit": "e19c170bdb7acc66a2355163cc44fe1b5a10b19d"
         }
       ]
     },
