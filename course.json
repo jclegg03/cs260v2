@@ -1426,8 +1426,10 @@
           "path": "instruction/security/practice/practice.md",
           "id": "6c73006a-548c-4698-be4c-ba27ed881784",
           "state": "published",
-          "interactions": [],
-          "commit": "e3e559b0b81863094b46fbcfa45d583b79fcac98"
+          "interactions": [
+            "0edff028-d213-489b-8d8e-e92e01e3daee"
+          ],
+          "commit": "1e71bae5bc65eef8750a2a0064770b3c6f529b3c"
         }
       ]
     },
