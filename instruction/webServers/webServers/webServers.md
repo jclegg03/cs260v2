@@ -1,80 +1,147 @@
-# Web servers
+# Service design
 
-A web server is a computing device that is hosting a web service that knows how to accept incoming internet connections and speak the HTTP application protocol.
+Web services provide the interactive functionality of your web application. They commonly authenticate users, track their session state, provide, store, and analyze data, connect peers, and aggregate user information. Making your web service easy to use, performant, and extensible are factors that determine the success of your application. A good design will result in increased productivity, satisfied users, and lower processing costs.
 
-## Monolithic web servers
+## Model and sequence diagrams
 
-In the early days of web programming, you would buy a massive, complex, expensive, software program that could serve up HTML files and then install it on a hardware device. The package of server hardware and software was considered the web server because the web service software was the only thing running on the server. Eventually, open source web servers became available that made it easy to host a website. Examples of web server software include: Apache HTTP server, Nginx, or Microsoft IIS. However, the web server software was still a separate program from the content, or application, it hosted.
+When first considering your service design it is helpful to model the application's primary objects and the interactions of the objects. You should attempt to stay as close to the model that is in your user's mind as possible. Avoid introducing a model that focuses on programming constructs and infrastructure. For example, a chat program should model participants, conversations, and messages. It should not model user devices, network connections, and data blobs.
 
-## Combining web and application services
+Once you have defined your primary objects you can create sequence diagrams that show how the objects interact with each other. This will help clarify your model and define the necessary endpoints. You can use a simple tool like [SequenceDiagram.org](https://sequencediagram.org/index.html#initialData=C4S2BsFMAIGEAsCGxqIA5oFCcQY2APYBO0AguCLpDvsdAEIEBG25lkAtAHwDKkRAN34AuPikQDEIcIiZRMjJtz6CRY1JOmz5igDy6OHFUKLC2VDVJlzq5yPsPGRDZpa03Md5fxOjgiIhRcAgA7EwBnZBBQ6AB3MHgXFj0DIx8RWFCIqJiiSABHAFdIcJQQglAAM0ockIVmb1VTUlwqNBQ7aGCw-kjQUPqlXnTTHkQAT2gAIgAJSHBwAinoQjIKKkwnIm47YVn5xeXKogIAWySgA) to create and share diagrams.
 
-Today, most modern programming languages include libraries that make it easy to serve up web content. This removed the requirement to have a separate program for _hosting_ you application. Instead, your application is also the web service. For example, here is a simple HTTP service written in JavaScript can load up HTML content from a **public** directory.
+![Sequence Diagram](webServicesSequenceDiagram.jpg)
 
-```go
-const express = require('express');
-const app = express();
+## Leveraging HTTP
 
-// Serve static files from the 'public' directory
-app.use(express.static('public'));
+Web services are usually provided over HTTP, and so HTTP greatly influences the design of the service. The HTTP verbs such as GET, POST, PUT, and DELETE often mirror the designed actions of a web service. For example, a web service for managing comments might list the comments (GET), create a comment (POST), update a comment (PUT), and delete a comment (DELETE). Likewise, the MIME content types defined by IANA are a natural fit for defining the types of content that you want to provide (e.g. HTML, PNG, MP3, and MP4). The goal is to leverage those technologies as much as possible so that you don't have to recreate the functionality they provide and instead take advantage of the significant networking infrastructure built up around HTTP. This includes caching servers that increase your performance, edge servers that bring your content closer, and replication servers that provide redundant copies of your content and make your application more resilient to network failures.
 
-app.listen(80);
+![HTTP](webServicesHTTPServices.jpg)
+
+## Endpoints
+
+A web service is usually divided up into multiple service endpoints. Each endpoint provides a single functional purpose. All of the criteria that you would apply to creating well designed code functions also applies when exposing service endpoints.
+
+![HTTP](webServicesHTTPEndpoints.jpg)
+
+Note that service endpoints are often called an Application Programming Interface (API). This is a throwback to old desktop applications and the programming interfaces that they exposed. Sometimes the term API refers to the entire collection of endpoints, and sometimes it is used to refer to a single endpoint.
+
+Here are some things you should consider when designing your service's endpoints.
+
+- **Grammatical** - With HTTP everything is a resource (think noun or object). You act on the resource with an HTTP verb. For example, you might have an order resource that is contained in a store resource. You then create, get, update, and delete order resources on the store resource.
+- **Readable** - The resource you are referencing with an HTTP request should be clearly readable in the URL path. For example, an order resource might contain the path to both the order and store where the order resource resides: `/store/provo/order/28502`. This makes it easier to remember how to use the endpoint because it is human readable.
+- **Discoverable** - As you expose resources that contain other resources you can provide the endpoints for the aggregated resources. This makes it so someone using your endpoints only needs to remember the top level endpoint and then they can discover everything else. For example, if you have a store endpoint that returns information about a store you can include an endpoint for working with a store in the response.
+
+  ```http
+  GET /store/provo  HTTP/2
+  ```
+
+  ```json
+  {
+    "id": "provo",
+    "address": "Cougar blvd",
+    "orders": "https://cs260.click/store/provo/orders",
+    "employees": "https://cs260.click/store/provo/employees"
+  }
+  ```
+
+- **Compatible** - When you build your endpoints you want to make it so that you can add new functionality without breaking existing clients. Usually this means that the clients of your service endpoints should ignore anything that they don't understand. Consider the two following JSON response versions.
+
+  **Version 1**
+
+  ```js
+  {
+    "name": "John Taylor"
+  }
+  ```
+
+  **Version 2**
+
+  ```js
+  {
+    "name": "John Taylor",
+    "givenName": "John",
+    "familyName": "Taylor"
+  }
+  ```
+
+  By adding a new representation of the `name` field, you provide new functionality for clients that know how to use the new fields without harming older clients that ignore the new fields and simply use the old representation. This is all done without officially versioning the endpoint.
+
+  If you are fortunate enough to be able to control all of your client code you can mark the `name` field as deprecated and in a future version remove it once all of the clients have upgraded. Usually you want to keep compatibility with at least one previous version of the endpoint so that there is enough time for all of the clients to migrate before compatibility is removed.
+
+- **Simple** - Keeping your endpoints focused on the primary resources of your application helps to avoid the temptation to add endpoints that duplicate or create parallel access to primary resources. It is very helpful to write some simple class and sequence diagrams that outline your primary resources before you begin coding. These resources should focus on the actual resources of the system you are modeling. They should not focus on the data structure or devices used to host the resources. There should only be one way to act on a resource. Endpoints should only do one thing.
+
+- **Documented** - The [Open API Specification](https://spec.openapis.org/oas/latest.html) is a good example of tooling that helps create, use, and maintain documentation of your service endpoints. It is highly suggested that you make use of such tools in order to provide client libraries for your endpoints and a sandbox for experimentation. Creating an initial draft of your endpoint documentation before you begin coding will help you mentally clarify your design and produce a better final result. Providing access to your endpoint documentation along with your production system helps with client implementations and facilitates easier maintenance of the service. The [Swagger Petstore](https://petstore.swagger.io/) example documentation is a reasonable example to follow.
+
+There are many models for exposing endpoints. We will consider three common ones, RPC, REST, and GraphQL.
+
+## RPC
+
+Remote Procedure Calls (RPC) expose service endpoints as simple function calls. When RPC is used over HTTP it usually just leverages the POST HTTP verb. The actual verb and subject of the function call is represented by the function name. For example, `deleteOrder` or `updateOrder`. The name of the function is either the entire path of the URL or a parameter in the POST body.
+
+```http
+POST /updateOrder HTTP/2
+
+{"id": 2197, "date": "20220505"}
 ```
 
-![Simple server HTML](simpleServerHtml.png)
+or
 
-### Web service endpoints
+```http
+POST /rpc HTTP/2
 
-Being able to easily create web services means that we can completely drop the monolithic web server concept and just build web support right into your application. We can also add web accessible methods, called endpoints, that provide functionality beyond simply serving up static HTML files. For example, by adding three lines of code, we can add an endpoint that returns the current time when you add path `/time` to the browser's URL.
-
-```go
-app.get('/time', (req, res) => {
-  res.json({ time: new Date().toDateString() });
-});
+{"cmd":"updateOrder", "params":{"id": 2197, "date": "20220505"}}
 ```
 
-![Simple server endpoint](simpleServerEndpoint.png)
+One advantage of RPC is that it maps directly to function calls that might exist within the server. This could also be considered a disadvantage as it directly exposes the inner workings of the service, and thus creates a coupling between the endpoints and the implementation.
 
-## Web service gateways
+## REST
 
-Since it is so easy to build web services it is common to find multiple web services running on the same computing device. The idea of having multiple services on a single server highlights the difference between a **web server**, the physical computing device, and a **web service**, that provides a web application functionality.
+Representational State Transfer (REST) attempts to take advantage of the foundational principles of HTTP. This is not surprising considering the principle author of REST, Roy Fielding, was also a contributor to the HTTP specification. REST HTTP verbs always act upon a resource. Operations on a resource impact the state of the resource as it is transferred by a REST endpoint call. This allows for the caching functionality of HTTP to work optimally. For example, GET will always return the same resource until a PUT is executed on the resource. When PUT is used, the cached resource is replaced with the updated resource.
 
-Every web server allows for access to multiple services by referring to a different **port number** for each service. Think of a port as a house address on a given street, and the server as the street. In the example above, the _JavaScript_ web service was assigned port 80. A user could then talk to the image service on port 3000 and the file service on port 3002. However, this makes it difficult for the user of the services to remember what port number matches which service.
+With REST the updateOrder endpoint would look like the following.
 
-To resolve this we introduce a service gateway, or sometimes called a reverse proxy, that is itself a simple web service that listens on the common HTTPS port 443. The gateway then looks at the request URL and maps it to the other services running on a different ports.
+```http
+PUT /order/2197 HTTP/2
 
-
-```masteryls
-{"id":"eaecd7b7-d21c-4c2b-9a27-ec6349f1a74b", "title":"Web page", "type":"web-page", "height":800, "file":"reverseproxydemo.html"}
+{"date": "20220505"}
 ```
 
-Our web server will use a web service application called `Caddy` as the gateway to our services. We will explain the details of how Caddy works later in the instruction.
+Where the proper HTTP verb is used and the URL path uniquely identifies the resource. These seem like small differences, but maximizing HTTP pays dividends by making it easy for HTTP infrastructure, such as caching, to work properly.
 
-## Microservices
+There are several other pieces of [Fielding's dissertation](https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm) on REST, such as hypermedia, that are often quoted as being required for a truly "restful" implementation, and these are just as often ignored.
 
-Web services that provide a single functional purpose are referred to as microservices. By partitioning larger functionality into small logical chunks, you can develop and manage them independently from other functionality in a larger system. They can also handle large fluctuations in user demand by simply running more and more stateless copies of the microservice from multiple virtual servers hosted in a dynamic cloud environment. For example, one microservice for generating your genealogical family tree might be able to handle 1,000 users concurrently. So in order to support 1 million users, you just deploy 1,000 instances of the service running on scalable virtual hardware.
+## GraphQL
 
-## Serverless
+GraphQL focuses on the manipulation of data instead of a function call (RPC) or a resource (REST). The heart of GraphQL is a query that specifies the desired data and how it should be joined and filtered. GraphQL was developed to address frustration concerning the massive number of REST, or RPC calls, that a web application client needed to make in order to support even a simple UI widget.
 
-The idea of microservices naturally evolved into the world of `serverless` functionality where the server is conceptually removed from the architecture and you just write code that represents single service endpoint. That endpoint is loaded through an gateway that maps a web request to the endpoint. The gateway automatically scales the hardware needed to host the serverless endpoint based on demand. This reduces what the web application developer needs to think about down to a single independent endpoint.
+Instead of making a call for getting a store, and then a bunch of calls for getting the store's orders and employees, GraphQL would send a single query that would request all of that information in one big JSON response. The server would examine the query, join the desired data, and then filter out anything that was not wanted.
+
+Here is an example GraphQL query.
+
+```graphql
+query {
+  getOrder(id: "2197") {
+    orders(filter: { date: { allofterms: "20220505" } }) {
+      store
+      description
+      orderedBy
+    }
+  }
+}
+```
+
+GraphQL helps to remove a lot of the logic for parsing endpoints and mapping requests to specific resources. Basically in GraphQL there is only one endpoint. The query endpoint.
+
+The downside of that flexibility is that the client now has significant power to consume resources on the server. There is no clear boundary on what, how much, or how complicated the aggregation of data is. It also is difficult for the server to implement authorization rights to data as they have to be baked into the data schema. However, there are standards for how to define a complex schema. Common GraphQL packages provide support for schema implementations along with database adaptors for query support.
 
 ## Exercises
 
 ```masteryls
-{"id":"db677385-51e3-43bb-bcfe-e74d1dc925d7", "title":"Primary Function of a Web Server", "type":"multiple-choice"}
-When a client (such as a web browser) initiates a connection to a web server, what is the primary responsibility of the server software during the resulting transaction?
+{"id":"3f7e1c90-c61f-4500-96d2-131d359c625b", "title":"Comparing RPC, REST, and GraphQL", "type":"multiple-choice"}
+When designing a service architecture, which of the following accurately describes a key difference in how RPC, REST, and GraphQL handle data retrieval and interaction?
 
-- [ ] Resolving the human-readable domain name into a numeric IP address via the Domain Name System (DNS)
-- [x] Processing the incoming HTTP request and returning the requested resource or an appropriate status code
-- [ ] Rendering the HTML, CSS, and JavaScript into a visual interface for the end user to interact with
-- [ ] Managing the physical routing of data packets across the global internet backbone to the user's ISP
+- [ ] REST is primarily action-oriented and focuses on executing remote procedures, while RPC is resource-oriented and uses standard HTTP verbs to manage state.
+- [x] GraphQL allows the client to define the specific shape of the response to prevent over-fetching, whereas REST typically returns fixed data structures from resource-specific endpoints.
+- [ ] RPC relies on a single unified endpoint and a query language to fetch data, while GraphQL requires a unique URL for every individual resource type.
+- [ ] REST is designed specifically for high-performance internal microservices using binary protocols, while GraphQL and RPC are restricted to text-based JSON over HTTP/1.1.
 ```
 
-```masteryls
-{"id":"bfd0c3c9-fafb-4486-985a-1396f41ad55a", "title":"Reverse Proxy Functionality", "type":"multiple-choice"}
-In a professional web server architecture, what is the primary role of a **reverse proxy**?
-
-- [ ] It acts on behalf of the client to hide the client's IP address from the public internet and filter outgoing traffic.
-- [x] It sits in front of backend servers to intercept incoming requests, providing load balancing, SSL termination, and caching.
-- [ ] It is a specialized database engine used to store session data to ensure high availability across multiple geographic regions.
-- [ ] It serves as a recursive DNS resolver that translates domain names into IP addresses for the client's browser.
-```
