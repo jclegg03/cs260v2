@@ -1257,7 +1257,9 @@
           "title": "Simon DB",
           "path": "instruction/simon/simonDb/simonDb.md",
           "id": "33486581-4c0a-4167-9364-43e1ca4e5b90",
-          "state": "published"
+          "state": "published",
+          "interactions": [],
+          "commit": "3b99120f8898fdc1f3e46e77f4050508a0715f5e"
         },
         {
           "title": "Simon DB video",
