@@ -1,5 +1,9 @@
 # Security practice
 
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSLYWsTvgWLc_byN1mIS7sGKhwhxmiQCCIwJ5eEBLSvVNsxauR5kh-LgKPIj8_FO9vBvT8tqa4wvSYd/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="900" height="540" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+---
+
 You will not really internalize how security exploits work until you get some practice with them. One way to do this is to use a practice security web application. There are lots of practice applications, but we will discuss [Juice Shop](https://soundcloud.com/braimee/owasp-juice-shop-jingle).
 
 ## Juice Shop
