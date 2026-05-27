@@ -1414,7 +1414,9 @@
           "path": "instruction/uxdesign/uxdesign.md",
           "id": "b3c86a3c-512e-4e5c-9442-da0628a3a18d",
           "state": "published",
-          "description": ""
+          "interactions": [],
+          "description": "",
+          "commit": "c07bd2a7c036d37b591bac36d94c45bb73721571"
         },
         {
           "title": "Search Engine Optimization",
