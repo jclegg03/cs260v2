@@ -42,7 +42,10 @@ Every web server allows for access to multiple services by referring to a differ
 
 To resolve this we introduce a service gateway, or sometimes called a reverse proxy, that is itself a simple web service that listens on the common HTTPS port 443. The gateway then looks at the request URL and maps it to the other services running on a different ports.
 
-![Gateway](webServersGateway.jpg)
+
+```masteryls
+{"id":"eaecd7b7-d21c-4c2b-9a27-ec6349f1a74b", "title":"Web page", "type":"web-page", "height":800, "file":"reverseproxydemo.html"}
+```
 
 Our web server will use a web service application called `Caddy` as the gateway to our services. We will explain the details of how Caddy works later in the instruction.
 
