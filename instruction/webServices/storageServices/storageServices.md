@@ -114,3 +114,12 @@ Now you can run the code and see the result.
 node service.js
 Hello S3!
 ```
+
+## Exercises
+
+```masteryls
+{"id":"66ba8583-7045-4ef5-8dc0-497a9b582248", "title":"Storing files on your server", "type":"teaching" }
+Help me understand why I should not store user data files on my EC2 instance.
+```
+
+
