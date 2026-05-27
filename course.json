@@ -1365,7 +1365,11 @@
           "title": "Simon WebSocket",
           "path": "instruction/simon/simonWebSocket/simonWebSocket.md",
           "id": "bf85b9d9-3177-4d0b-a72f-f36f13d16e83",
-          "state": "published"
+          "state": "published",
+          "interactions": [
+            "a63b9d78-fc1c-401b-8b13-480fa63cb778"
+          ],
+          "commit": "140d1897e69369052727fa930296d43ef7a7dcd1"
         },
         {
           "title": "Simon WebSocket video",
