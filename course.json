@@ -1405,8 +1405,11 @@
           "path": "instruction/security/overview/overview.md",
           "id": "7f873ab5-9526-4455-87b8-29e5f7dd5b6f",
           "state": "published",
-          "interactions": [],
-          "commit": "edd739440234fe47ea68c30cf156273d91e4c2bc"
+          "interactions": [
+            "sec-rl-01",
+            "sec-sess-001"
+          ],
+          "commit": "0bc130e829002d1af94d8c7148c60b21228085e4"
         },
         {
           "title": "OWASP top 10",
