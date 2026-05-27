@@ -212,12 +212,15 @@ sequenceDiagram
     S->>S: Validate Credentials
     S->>S: Generate New Cryptographically Strong SID
     S->>DB: Store SID and User Data
-    S-->>U: Set-Cookie: SID=xyz; HttpOnly; Secure; SameSite=Strict
+    S-->>U: x
     Note over U,S: Subsequent requests include the SID cookie
     U->>S: GET /dashboard (Cookie: SID=xyz)
     S->>DB: Look up SID
     DB-->>S: Valid User Session
     S-->>U: 200 OK (Dashboard Data)
+
+    classDef default fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1px;
+
 ```
 
 ### Implementation Example (Node.js/Express)
