@@ -439,7 +439,7 @@ Which of the following techniques is considered the most effective primary defen
 ```
 
 
-## A06:2021 - Insecure Design
+## A06 - Insecure Design
 
 Insecure design is a category that focuses on risks related to design and architectural flaws. Unlike many other items on the OWASP Top 10, this category does not focus on "broken" code (implementation flaws) but rather on "broken" logic or missing security controls at the conceptual level. A perfectly written piece of code can still be insecure if the underlying design allows for logic abuse or fails to anticipate specific threat vectors.
 
@@ -502,7 +502,7 @@ A developer creates a web application where the password recovery system asks fo
 ```
 
 
-## A07:2021 - Identification and Authentication Failures
+## A07 - Identification and Authentication Failures
 
 Identification and Authentication Failures occur when an application fails to properly verify a user's identity, manage their session, or protect their credentials. Previously known as "Broken Authentication," this category was renamed in the 2021 OWASP Top 10 to reflect a broader scope that includes failures in identifying who the user is before authentication even takes place.
 
@@ -571,7 +571,7 @@ app.post('/api/login', loginLimiter, (req, res) => {
 
 ```masteryls
 {"id":"auth-fail-01", "title":"Identifying Authentication Vulnerabilities", "type":"multiple-choice"}
-A security auditor notices that an application allows users to stay logged in indefinitely, even after closing the browser tab, and does not require a password change for over two years. Which aspect of A07:2021 is most directly violated?
+A security auditor notices that an application allows users to stay logged in indefinitely, even after closing the browser tab, and does not require a password change for over two years. Which aspect of A07 is most directly violated?
 
 - [ ] Lack of Multi-Factor Authentication (MFA)
 - [ ] Insecure Credential Storage
