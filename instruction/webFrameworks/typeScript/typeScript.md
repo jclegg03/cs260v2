@@ -1,5 +1,9 @@
 # TypeScript
 
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQjfNA1aBzahkir-nBsWZTN7Dg5EcgKfZTE8pY9bZKQrmTBmCCNpRtYT9HUNLb1sdFEjNHDBGRRQVT0/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+---
+
 📖 **Deeper dive reading**: [Typescript in 5 minutes](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 
 TypeScript adds static type checking to JavaScript. This provides type checking while you are writing the code to prevent mistakes like using a string when a number is expected. Consider the following simplistic JavaScript code example.
