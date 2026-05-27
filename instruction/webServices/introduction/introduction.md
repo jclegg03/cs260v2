@@ -26,6 +26,8 @@ The backend web service can also use `fetch` to make requests to other web servi
 
 In following instruction we will discuss how to use fetch, HTTP, and URLs, and build a web service using the Node.js application. With all of this in place your application will be a full stack application comprised of both a frontend and a backend.
 
+## Exercises
+
 ```masteryls
 {"id":"24dca640-d993-41b1-a213-a01c4112b28e", "title":"Front-End Data Retrieval", "type":"multiple-choice"}
 In a modern web architecture, how does a front-end application typically interact with a web service to display dynamic data without reloading the entire page?
