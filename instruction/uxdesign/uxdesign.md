@@ -426,13 +426,24 @@ The Web Content Accessibility Guidelines (WCAG) are the internationally recogniz
 | **Understandable** | Information and the operation of the user interface must be clear and predictable. | Using plain language, providing helpful error messages, and maintaining consistent navigation patterns. |
 | **Robust** | Content must be compatible with a wide variety of user agents, including assistive technologies. | Using valid HTML and ARIA labels so that screen readers can accurately interpret the interface. |
 
- By following these standards—typically aiming for Level AA conformance—designers can create experiences that are not only legally compliant but also more usable for all individuals, regardless of their physical or cognitive abilities.
+### Contrast ratios
+
+The Web Content Accessibility Guidelines (WCAG) establish specific contrast ratios to ensure that text and interactive elements are sufficiently distinguishable from their backgrounds. These standards are designed to assist users with low vision, color blindness, or situational impairments—such as high-glare environments—in perceiving information clearly. Contrast is measured as a ratio of the relative luminance between the foreground and background colors, ranging from 1:1 (no contrast) to 21:1 (maximum contrast, such as black text on a white background).
+
+| WCAG Level | Text Type | Minimum Contrast Ratio |
+| :--- | :--- | :--- |
+| **AA** (Minimum) | Normal Text (under 18pt or 14pt bold) | 4.5:1 |
+| **AA** (Minimum) | Large Text (18pt+ or 14pt+ bold) | 3:1 |
+| **AAA** (Enhanced) | Normal Text (under 18pt or 14pt bold) | 7:1 |
+| **AAA** (Enhanced) | Large Text (18pt+ or 14pt+ bold) | 4.5:1 |
 
 
 ```masteryls
 {"id":"a66cc13f-5ad3-4170-bbc9-1aa1e5b2ea6c", "title":"Web page", "type":"web-page", "height":1000, "file":"wcag.html"}
 ```
 
+
+ By following these standards—typically aiming for Level AA conformance—designers can create experiences that are not only legally compliant but also more usable for all individuals, regardless of their physical or cognitive abilities.
 
 
 
