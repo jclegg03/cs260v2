@@ -221,6 +221,134 @@ console.log(statusName); // Output: "Success"
 ```
 
 
+### Generics
+Generics allow you to create reusable components that work with a variety of types rather than a single one. They act as "type variables" that capture the type provided by the user.
+
+```typescript
+function identity<T>(arg: T): T {
+  return arg;
+}
+
+let output = identity<string>("myString");
+```
+
+### Discriminated Unions
+A discriminated union is a pattern used to create a type that could be one of several different shapes. By including a common property with a literal type (the "discriminant"), TypeScript can narrow down which specific type you are working with in a conditional block.
+
+```typescript
+interface Circle {
+  kind: "circle";
+  radius: number;
+}
+
+interface Square {
+  kind: "square";
+  sideLength: number;
+}
+
+type Shape = Circle | Square;
+
+function getArea(shape: Shape) {
+  switch (shape.kind) {
+    case "circle":
+      return Math.PI * shape.radius ** 2;
+    case "square":
+      return shape.sideLength ** 2;
+  }
+}
+```
+
+### Type Guards and Type Predicates
+Type narrowing allows you to refine a type to a more specific version. While `typeof` and `instanceof` are standard JavaScript guards, TypeScript allows for custom **Type Predicates** using the `parameterName is Type` syntax.
+
+```typescript
+function isString(value: unknown): value is string {
+  return typeof value === "string";
+}
+
+const data: unknown = "Hello";
+
+if (isString(data)) {
+  console.log(data.toUpperCase()); // TypeScript knows data is a string here
+}
+```
+
+### The `unknown` vs. `any` Types
+While `any` opts out of type checking entirely, `unknown` is the type-safe counterpart. You can assign anything to `unknown`, but you cannot perform operations on it until it is narrowed to a specific type.
+
+```typescript
+let valueAny: any = 10;
+let valueUnknown: unknown = 10;
+
+valueAny.toUpperCase(); // Allowed, but might crash at runtime
+valueUnknown.toUpperCase(); // Error: Object is of type 'unknown'
+```
+
+### The `never` Type
+The `never` type represents values that should never occur. It is commonly used for functions that always throw an exception or for exhaustive checks in switch statements to ensure every possible case of a union is handled.
+
+```typescript
+function fail(message: string): never {
+  throw new Error(message);
+}
+```
+
+### Utility Types
+TypeScript provides built-in transformations called Utility Types to facilitate common type manipulations:
+
+*   **`Partial<T>`**: Makes all properties in `T` optional.
+*   **`Readonly<T>`**: Makes all properties in `T` immutable.
+*   **`Pick<T, K>`**: Creates a type by picking a set of properties `K` from `T`.
+*   **`Omit<T, K>`**: Creates a type by removing a set of properties `K` from `T`.
+*   **`Record<K, T>`**: Constructs an object type with keys `K` and values `T`.
+
+### Mapped Types
+Mapped types allow you to create new types based on the properties of an existing type. They use a syntax similar to index signatures.
+
+```typescript
+type OptionsFlags<Type> = {
+  [Property in keyof Type]: boolean;
+};
+
+type FeatureFlags = {
+  darkMode: () => void;
+  newUser: () => void;
+};
+
+type FeatureOptions = OptionsFlags<FeatureFlags>;
+// Result: { darkMode: boolean; newUser: boolean; }
+```
+
+### Template Literal Types
+Template literal types build on string literal types and have the ability to expand into many strings via unions. They use the same syntax as template literals in JavaScript but are used in type positions.
+
+```typescript
+type World = "world";
+type Greeting = `hello ${World}`; // "hello world"
+
+type Color = "red" | "blue";
+type Intensity = "light" | "dark";
+type Palette = `${Intensity}-${Color}`; 
+// "light-red" | "light-blue" | "dark-red" | "dark-blue"
+```
+
+### Indexed Access Types
+You can use an indexed access type to look up a specific property on another type.
+
+```typescript
+type Person = { age: number; name: string; alive: boolean };
+type Age = Person["age"]; // number
+```
+
+### Const Assertions
+Using `as const` signals to TypeScript that a specific object should be treated as a literal type rather than a general version of that type (e.g., making an array a read-only tuple).
+
+```typescript
+let colors = ["red", "green", "blue"] as const;
+// colors is now of type readonly ["red", "green", "blue"]
+```
+
+
 ## Using TypeScript
 
 ### Experimenting
