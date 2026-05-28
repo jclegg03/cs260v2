@@ -96,3 +96,22 @@ This tool provided by [DotComTools](https://www.dotcom-tools.com) allows you to 
 ![DotCom Tools](webFrameworksDotComTools.jpg)
 
 Here you can see we perform acceptably from the United States and Europe, but are struggling in Asia. That makes sense considering that our server is located in North Virginia. In order to correct this, we need to use a Content Delivery Network (CDN) with an additional location closer to our target users in China.
+
+## Exercises
+
+
+```masteryls
+{"id":"4ccf8c71-194b-4e81-b256-8f7011ae355a", "title":"Timing for Code Optimization", "type":"multiple-choice"}
+According to best practices in performance monitoring and the principle of avoiding premature optimization, when is it most appropriate to invest resources into optimizing a specific section of code?
+
+- [ ] Immediately after writing the initial logic to ensure the most efficient implementation is committed to the codebase
+- [x] Once performance monitoring data identifies a specific bottleneck that significantly impacts user experience or system stability
+- [ ] Whenever a developer identifies an algorithm that could theoretically be replaced by one with a better Big O complexity, regardless of current load
+- [ ] During the final phase of every development cycle to ensure that all new functions meet a generic, pre-defined execution time threshold
+```
+
+```masteryls
+{"id":"8b71562e-1f85-446f-8814-add7c56e0fef", "title":"Performance", "type":"essay" }
+You are coding a new component for a complex application.
+```
+
