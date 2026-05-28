@@ -84,11 +84,14 @@ The following diagram illustrates how the number of operations increases as the 
 
 ```mermaid
 graph TD
-    A[O(1) - Constant] --> B[O(log n) - Logarithmic]
-    B --> C[O(n) - Linear]
-    C --> D[O(n log n) - Linearithmic]
-    D --> E[O(n^2) - Quadratic]
-    
+    A["O(1) - Constant"] --> B["O(log n) - Logarithmic"]
+    B --> C["O(n) - Linear"]
+    C --> D["O(n log n) - Linearithmic"]
+    D --> E["O(n^2) - Quadratic"]
+
+    style A stroke:#00ff00
+    style E stroke:#ff0000
+
     classDef default fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1px;
 ```
 
