@@ -197,7 +197,7 @@ These sizes are just suggestions but they serve as a good place to start. If you
 
 Limiting the number of characters displayed on a line makes it easier to read paragraphs of text. The browser will automatically wrap text based on the viewport width, but having a line spread across a 4K monitor that is hundreds of characters long will make your application look clunky and drive the user crazy as they try and find the start of the next line in a long paragraph.
 
-Instead you want to specify a maximum width for your paragraphs. Usually a width of 60 to 80 characters is optimal. You can set this with the `max-width` property set to something like `35em`. The `em` unit is the approximately the width of the `m` character in the font and so about half of an 'm' is about the average character width.
+Instead you want to specify a maximum width for your paragraphs. Usually a width of 60 to 80 characters is optimal. You can set this with the `max-width` property set to something like `35em`. The `em` unit is relative to the font size of the element (e.g., if the font size is 16px, `1em` is 16px). Since the average character width is approximately `0.5em`, a `35em` limit helps maintain that ideal character count.
 
 The following shows the visual and cognitive impact of different line lengths.
 
