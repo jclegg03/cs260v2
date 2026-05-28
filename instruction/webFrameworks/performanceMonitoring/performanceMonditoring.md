@@ -119,18 +119,6 @@ function findSharedInterests(users) {
 }
 ```
 
-
-```masteryls
-{"id":"793a7bb2-75c5-44f4-a4a2-1ab5b0a1c8d5", "title":"Identifying Linear Complexity", "type":"multiple-choice"}
-A developer is monitoring a function that iterates through a list of 'n' DOM elements once to add a specific CSS class to each. Which Big O notation best describes this operation?
-
-- [ ] O(1)
-- [ ] O(log n)
-- [x] O(n)
-- [ ] O(n^2)
-```
-
-
 ## Performance tools
 
 📖 **Deeper dive reading**: [Chrome performance tools](https://developer.chrome.com/docs/devtools/performance/)
@@ -193,5 +181,17 @@ According to best practices in performance monitoring and the principle of avoid
 ```masteryls
 {"id":"8b71562e-1f85-446f-8814-add7c56e0fef", "title":"Performance", "type":"essay" }
 You are coding a new component for a complex application. What performance considerations should you make? How can you determine the impact of any performance modifications? 
+```
+
+
+
+```masteryls
+{"id":"793a7bb2-75c5-44f4-a4a2-1ab5b0a1c8d5", "title":"Identifying Linear Complexity", "type":"multiple-choice"}
+A developer is monitoring a function that iterates through a list of 'n' DOM elements once to add a specific CSS class to each. Which Big O notation best describes this operation?
+
+- [ ] O(1)
+- [ ] O(log n)
+- [x] O(n)
+- [ ] O(n^2)
 ```
 
