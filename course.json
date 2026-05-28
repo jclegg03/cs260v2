@@ -1480,13 +1480,10 @@
           "id": "b3c86a3c-512e-4e5c-9442-da0628a3a18d",
           "state": "published",
           "interactions": [
-            "e1a5b678-044f-4e0b-9231-c604ac54f424",
-            "591a2b3a-020a-44e0-bd59-dd12d4fd9271",
-            "3d32eb56-a523-40ce-bf6a-3919754cd0d0",
-            "874ca32f-0894-4cf6-897f-276848f55620"
+            "a14b34c6-20f9-48a8-983e-a19908465697"
           ],
           "description": "",
-          "commit": "0e044edbfcd5f45b4bbac65a0bf122e06d72a38a"
+          "commit": "39b0fa20974b168a71db7709e3c1b3ae532439d7"
         },
         {
           "title": "Search Engine Optimization",
