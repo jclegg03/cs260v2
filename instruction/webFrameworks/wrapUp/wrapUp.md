@@ -8,6 +8,25 @@ We hope that you have enjoyed learning how to build a web application. The conce
 
 Always remember to continually invest in your capabilities, collaboration, curiosity, creativity, and Christlike skills as you make the world a better place.
 
+
+
+```masteryls
+{"id":"ef2f9d20-99b5-4adc-ab98-3a6536234103", "title":"Course Outcomes", "type":"likert", "showResults":"editor", "required":"true"}
+After completing the course, how familiar are you with the course outcomes?
+
+Scale: Beginner|Intermediate|Proficient|Advanced|Expert
+
+
+| id | statement |
+|----|-----------|
+|dev|**Full-Stack Web Application Development**|
+|arch|**Web Architecture**|
+|ai|**AI-Augmented Development**|
+|sec|**Security and Societal Impact**|
+|devop|**Deployment and Application Management**|
+```
+
+
 ## Clean up AWS
 
 After everything has been graded, you should consider cleaning up your resources on AWS.
