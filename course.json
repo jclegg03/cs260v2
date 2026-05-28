@@ -1467,11 +1467,11 @@
           "id": "fb55794d-fc0c-4e9f-af54-01ae994aa859",
           "state": "published",
           "interactions": [
-            "793a7bb2-75c5-44f4-a4a2-1ab5b0a1c8d5",
             "4ccf8c71-194b-4e81-b256-8f7011ae355a",
-            "8b71562e-1f85-446f-8814-add7c56e0fef"
+            "8b71562e-1f85-446f-8814-add7c56e0fef",
+            "793a7bb2-75c5-44f4-a4a2-1ab5b0a1c8d5"
           ],
-          "commit": "e749e8a3c0e8145623d1168a500ac6737279a91d"
+          "commit": "2c24e297466df6743352cacc1d6aaa8a87cab82f"
         },
         {
           "title": "UX design",
