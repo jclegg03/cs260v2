@@ -121,3 +121,17 @@ To get started with the Google Search Console, you need to add a DNS `TXT` recor
 ![Google Search Console Verify](seoGoogleSearchConsoleVerify.jpg)
 
 Once your ownership of the domain name is verified, the Google Search Console will start tracking statistics for your domain. Check back often to gain insight on how you can improve your search ranking.
+
+## Exercises
+
+
+```masteryls
+{"id":"a14b34c6-20f9-48a8-983e-a19908465697", "title":"Primary SEO Ranking Factors", "type":"multiple-choice"}
+Which of the following practices is considered a primary "off-page" SEO factor that significantly impacts a website's perceived authority and search engine ranking?
+
+- [ ] Optimizing internal linking structures to guide users to high-value pages
+- [ ] Ensuring that the website’s CSS and JavaScript files are minified for speed
+- [x] Acquiring high-quality, relevant backlinks from reputable external websites
+- [ ] Increasing the keyword density within the meta description to over 5%
+```
+
