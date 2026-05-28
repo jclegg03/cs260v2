@@ -69,6 +69,7 @@ The following table defines the most common complexities you will encounter when
 | **O(n)** | Linear | Proportional | Iterating through a list of users to find a specific ID. |
 | **O(n log n)** | Linearithmic | Moderate | Efficient sorting algorithms like `Array.prototype.sort()`. |
 | **O(n²)** | Quadratic | Fast | Comparing every item in a list to every other item (nested loops). |
+| **O(2ⁿ)** | Exponential | Very Fast | Recursive calculation of Fibonacci numbers. |
 
 ### Why Big O Matters in Web Development
 
