@@ -297,6 +297,12 @@ Use the following interaction to experiment with different animation speeds and 
 
 You need to consider the impact of the choices that you present to a user. [Hick's Law](https://en.wikipedia.org/wiki/Hick%27s_law) states that the time necessary to make a decision increases logarithmically with the number of choices presented. That doesn't mean that you should not provide options to the user, but that you should limit the number of choices given at any point in time.
 
+
+```masteryls
+{"id":"76fbfe66-0470-4284-a685-3aeceaf03956", "title":"Web page", "type":"web-page", "height":650, "file":"hicks.html"}
+```
+
+
 For example, the process of building a pizza involves many steps. First you must pick the location you want to order from, then the pizza size, cheese, meats, and veggies. Finally you need to provide payment. Each of those choices require a lot of input from the user, and so limiting the number of choices displayed at one time will help reduce decision fatigue and you will have better odds of them completing the ordering process.
 
 ![Decision pizza making](designDecisionFatiguePizza.gif)
@@ -328,35 +334,6 @@ On a smaller device, such as a mobile phone, the table of contents or chat panes
 The following website demonstrates what happens when an application fails to properly adapt to the orientation of the device. When viewed in portrait mode the application only uses a small portion of the display to show a health warning, but when rotated, the warning completely occupies the display. This creates a confusing experience where the original context of the application is obscured, and leaves the user wondering what should be done next.
 
 ![Orientation](designDeviceOrientation.jpg)
-
-## Performance
-
-📖 **Suggesting reading**:
-
-- [Google site performance](https://www.youtube.com/watch?v=OpMfx_Zie2g)
-- [MDN Performance](https://developer.mozilla.org/en-US/docs/Web/Performance)
-
-Application performance is an important aspect of your design that often gets overlooked until it is too late. Your application can be visually stunning, have intuitive navigation, and have amazing interactivity, but if it takes minutes to load or react to a user's actions, it will completely fail. Many studies have analyzed the relationship between performance and user retention. One [study](https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/) showed that as load times increase from one second to five seconds it causes 90% more users to bounce, or leave the application.
-
-![Bounce rates](designPerformanceBounceRates.jpg)
-
-> Source: thinkwithgoogle.com
-
-You need to set performance goals for your application and consistently monitor how your application is doing. Generally you want your application to load in under a second. However, with modern single page web applications it can take several seconds to do the initial load. You can mitigate the appearance of a slow application by giving the impression of progress, by partially loading some content or displaying a loading animation.
-
-The Chrome debugging tools provide a lot of help for diagnosing your application performance. The network tab will show you the size of your application files and the amount of time it takes to transfer them.
-
-![Performance](designPerformanceNetwork.jpg)
-
-You can use the Chrome debugging Lighthouse tool to run an analysis of your application. This will give you an average performance rating based upon the initial load time, longest content paint, and time before the user can interact with the page.
-
-![Performance](designPerformance.jpg)
-
-## Short circuit
-
-Sometimes factors such as network latency will impact the performance of your application or make it partially unavailable. You want to consider how you can create a meaningful experience for your users even when you cannot provide full functionality. For example, your application might rely on a third party service for processing payment before they can access the application. Rather than deny the user access when the payment service is down, you could collect the payment information and attempt to process it later. In the meantime the user is allowed to continue working. If later, the payment processing fails, then you handle the problem just as if their credit card was cancelled after accepting payment.
-
-This ability to provide an alternative path is sometimes called short circuit or fallback functionality. This removes barriers from your application that otherwise would turn away customers, and they are usually not difficult to implement. You just need to consider each functional piece of your application and provide an alternative if that functionality is not available.
 
 ## Accessibility
 
