@@ -18,7 +18,7 @@
       }
 
       .container {
-        max-width: 560px;
+        max-width: 700px;
         margin: auto;
         padding: 14px;
         background: white;
@@ -28,16 +28,24 @@
 
       .scale-control {
         margin-bottom: 12px;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(236, 236, 236);
+        max-width: 560px;
+        margin: 24px auto 18px auto;
+        padding: 10px 16px 8px 16px;
+        border-radius: 8px;
+        border: thin solid #ccc;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.17);
       }
 
       .scale-control label {
-        display: block;
-        margin-bottom: 6px;
+        margin-bottom: 0;
       }
 
       .scale-control input[type='range'] {
-        width: 100%;
-        margin: 0;
+        width: 200px;
+        margin: 0 0 0 12px;
       }
 
       .container h1 {
@@ -86,9 +94,8 @@
         font-weight: bold;
       }
 
-      .container input,
-      .container textarea {
-        width: 100%;
+      .container input {
+        width: 20em;
         font-size: calc(18px * var(--scale));
         padding: 8px;
         margin-top: 5px;
@@ -98,6 +105,7 @@
       }
 
       .container button {
+        display: block;
         font-size: calc(18px * var(--scale));
         padding: 8px 14px;
         background-color: #007bff;
@@ -135,11 +143,10 @@
     </style>
   </head>
   <body>
-    <div class="scale-control" style="max-width: 560px; margin: 24px auto 18px auto; padding: 10px 16px 8px 16px; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07)">
+    <div class="scale-control">
       <label for="scaleSlider">Scale: <span id="scaleValue">50%</span></label>
       <input id="scaleSlider" type="range" min="30" max="100" step="5" value="50" />
     </div>
-
     <div class="container">
       <h1>Page Title (72px)</h1>
       <h2>Main Section Title (42px)</h2>
