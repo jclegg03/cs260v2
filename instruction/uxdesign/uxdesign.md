@@ -285,6 +285,14 @@ However, too much animation can physically make your users sick. Here is an exam
 
 > Source: fireart.studio
 
+Use the following interaction to experiment with different animation speeds and layout.
+
+
+```masteryls
+{"id":"1f60c33b-02f4-42d3-9e1f-62f04d3034e4", "title":"Web page", "type":"web-page", "height":800, "file":"animation.html"}
+```
+
+
 ## Decision fatigue
 
 You need to consider the impact of the choices that you present to a user. [Hick's Law](https://en.wikipedia.org/wiki/Hick%27s_law) states that the time necessary to make a decision increases logarithmically with the number of choices presented. That doesn't mean that you should not provide options to the user, but that you should limit the number of choices given at any point in time.
