@@ -1479,9 +1479,12 @@
           "path": "instruction/uxdesign/uxdesign.md",
           "id": "b3c86a3c-512e-4e5c-9442-da0628a3a18d",
           "state": "published",
-          "interactions": [],
+          "interactions": [
+            "e1a5b678-044f-4e0b-9231-c604ac54f424",
+            "591a2b3a-020a-44e0-bd59-dd12d4fd9271"
+          ],
           "description": "",
-          "commit": "5850bbc814b5cdb535cf1612bf22452fa670f756"
+          "commit": "5aadcc7a6710b0e0a2cc351e38585c4db0de297a"
         },
         {
           "title": "Search Engine Optimization",
