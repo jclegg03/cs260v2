@@ -110,6 +110,29 @@ const myBook = { title: 'Essentials', id: 2938 };
 catalog(myBook);
 ```
 
+### Declaration merging
+
+Declaration merging is a unique TypeScript feature where the compiler merges multiple declarations with the same name into a single definition. While `type` aliases cannot be changed once created, **interfaces** are "open-ended," meaning they can be defined multiple times across different modules or blocks, and TypeScript will automatically combine their properties. This allows for the non-destructive extension of existing types, which is particularly useful when augmenting global objects or third-party library definitions without modifying the original source code.
+
+```typescript
+interface Product {
+  id: string;
+  price: number;
+}
+
+// TypeScript merges this second declaration into the original Product interface
+interface Product {
+  description: string;
+}
+
+const item: Product = {
+  id: "A101",
+  price: 29.99,
+  description: "A high-quality wireless mouse."
+};
+```
+
+
 ## Beyond type checking
 
 TypeScript also provides other benefits, such as warning you of potential uses of an uninitialized variable. Here is an example of when a function may return null, but the code fails to check for this case.
