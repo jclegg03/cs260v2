@@ -57,6 +57,25 @@ One easy way to build an application that uses current design trends is to use a
 
 ## UX principles
 
+
+### Hick's Law
+
+You need to consider the impact of the choices that you present to a user. [Hick's Law](https://en.wikipedia.org/wiki/Hick%27s_law) states that the time necessary to make a decision increases logarithmically with the number of choices presented. That doesn't mean that you should not provide options to the user, but that you should limit the number of choices given at any point in time.
+
+
+```masteryls
+{"id":"76fbfe66-0470-4284-a685-3aeceaf03956", "title":"Web page", "type":"web-page", "height":650, "file":"hicks.html"}
+```
+
+
+For example, the process of building a pizza involves many steps. First you must pick the location you want to order from, then the pizza size, cheese, meats, and veggies. Finally you need to provide payment. Each of those choices require a lot of input from the user, and so limiting the number of choices displayed at one time will help reduce decision fatigue and you will have better odds of them completing the ordering process.
+
+![Decision pizza making](designDecisionFatiguePizza.gif)
+
+> Source: Papa Johns
+
+
+
 ### Miller's Law
 
 Miller’s Law states that the average person can only keep approximately seven (plus or minus two) items in their working memory at any given time. In UX design, this principle highlights the importance of **chunking**, which involves organizing complex information into smaller, manageable groups. By limiting the number of elements presented simultaneously, designers can reduce cognitive load, making interfaces easier to navigate and information more efficient to process.
@@ -324,23 +343,6 @@ Use the following interaction to experiment with different animation speeds and 
 ```masteryls
 {"id":"1f60c33b-02f4-42d3-9e1f-62f04d3034e4", "title":"Web page", "type":"web-page", "height":800, "file":"animation.html"}
 ```
-
-
-## Decision fatigue
-
-You need to consider the impact of the choices that you present to a user. [Hick's Law](https://en.wikipedia.org/wiki/Hick%27s_law) states that the time necessary to make a decision increases logarithmically with the number of choices presented. That doesn't mean that you should not provide options to the user, but that you should limit the number of choices given at any point in time.
-
-
-```masteryls
-{"id":"76fbfe66-0470-4284-a685-3aeceaf03956", "title":"Web page", "type":"web-page", "height":650, "file":"hicks.html"}
-```
-
-
-For example, the process of building a pizza involves many steps. First you must pick the location you want to order from, then the pizza size, cheese, meats, and veggies. Finally you need to provide payment. Each of those choices require a lot of input from the user, and so limiting the number of choices displayed at one time will help reduce decision fatigue and you will have better odds of them completing the ordering process.
-
-![Decision pizza making](designDecisionFatiguePizza.gif)
-
-> Source: Papa Johns
 
 ## Device aware
 
