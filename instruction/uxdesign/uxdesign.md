@@ -598,3 +598,20 @@ To meet the WCAG 2.1 Success Criterion 1.4.3 (Contrast Minimum) at the **Level A
 - [ ] 7:1
 - [ ] 2.1:1
 ```
+
+
+```masteryls
+{"id":"3d32eb56-a523-40ce-bf6a-3919754cd0d0", "title":"The Role of Whitespace", "type":"multiple-choice"}
+When designing a web interface, how does the strategic application of whitespace (negative space) primarily impact a user's interaction with the content?
+
+- [ ] It minimizes the overall page length to ensure all content remains "above the fold" for faster access.
+- [x] It enhances readability and visual hierarchy by defining relationships between elements and reducing cognitive overload.
+- [ ] It acts as a technical buffer to ensure that high-resolution images do not overlap during browser window resizing.
+- [ ] It is used to intentionally slow down the user's scanning speed to increase the "time on page" metric for SEO purposes.
+```
+
+
+```masteryls
+{"id":"874ca32f-0894-4cf6-897f-276848f55620", "title":"Bad UX example", "type":"essay" }
+Provide the URL for a website that violates principles of good UX design. Describe what the problem is an how it could be resolved.
+```
