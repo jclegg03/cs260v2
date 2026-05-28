@@ -417,15 +417,7 @@ Note that this example makes up for the lack of accessibility controls in the st
 
 ### WCAG
 
-The Web Content Accessibility Guidelines (WCAG) are the internationally recognized standards for digital accessibility, developed by the World Wide Web Consortium (W3C). In UX design, adhering to WCAG ensures that digital products are inclusive for users with a diverse range of disabilities, including visual, auditory, motor, and cognitive impairments. These guidelines are organized around four foundational principles known as **POUR**: Perceivable, Operable, Understandable, and Robust. By following these standards—typically aiming for Level AA conformance—designers can create experiences that are not only legally compliant but also more usable for all individuals, regardless of their physical or cognitive abilities.
-
-
-```masteryls
-{"id":"a66cc13f-5ad3-4170-bbc9-1aa1e5b2ea6c", "title":"Web page", "type":"web-page", "height":1000, "file":"wcag.html"}
-```
-
-
-The Web Content Accessibility Guidelines (WCAG) serve as the international standard for digital accessibility, ensuring that web content is usable for individuals with a wide range of disabilities. In UX design, these guidelines are organized under four foundational principles known as POUR: Perceivable, Operable, Understandable, and Robust. By adhering to these standards, designers create inclusive experiences that accommodate diverse needs, including visual impairments, hearing loss, limited mobility, and cognitive challenges.
+The Web Content Accessibility Guidelines (WCAG) are the internationally recognized standards for digital accessibility, developed by the World Wide Web Consortium (W3C). In UX design, adhering to WCAG ensures that digital products are inclusive for users with a diverse range of disabilities, including visual, auditory, motor, and cognitive impairments. These guidelines are organized around four foundational principles known as **POUR**: Perceivable, Operable, Understandable, and Robust.
 
 | Principle | Definition | UX Design Application |
 | :--- | :--- | :--- |
@@ -433,6 +425,16 @@ The Web Content Accessibility Guidelines (WCAG) serve as the international stand
 | **Operable** | User interface components and navigation must be functional and easy to use. | Ensuring all site features are accessible via keyboard and providing users enough time to complete tasks. |
 | **Understandable** | Information and the operation of the user interface must be clear and predictable. | Using plain language, providing helpful error messages, and maintaining consistent navigation patterns. |
 | **Robust** | Content must be compatible with a wide variety of user agents, including assistive technologies. | Using valid HTML and ARIA labels so that screen readers can accurately interpret the interface. |
+
+ By following these standards—typically aiming for Level AA conformance—designers can create experiences that are not only legally compliant but also more usable for all individuals, regardless of their physical or cognitive abilities.
+
+
+```masteryls
+{"id":"a66cc13f-5ad3-4170-bbc9-1aa1e5b2ea6c", "title":"Web page", "type":"web-page", "height":1000, "file":"wcag.html"}
+```
+
+
+
 
 
 ### Best Practices for UX Accessibility
