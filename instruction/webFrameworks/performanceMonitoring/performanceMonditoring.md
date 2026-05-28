@@ -124,6 +124,13 @@ function findSharedInterests(users) {
 
 📖 **Deeper dive reading**: [Chrome performance tools](https://developer.chrome.com/docs/devtools/performance/)
 
+
+Performance optimization must be a data-driven discipline; it should never be conducted without empirical evidence to justify the change and validate the outcome. Without precise metrics from monitoring tools, developers risk introducing complexity into the system to solve perceived issues that do not contribute to actual bottlenecks. Establishing a baseline through rigorous measurement is the only way to ensure that an optimization has achieved its intended goal and has not introduced regressions elsewhere. Put another way: _If you haven't measure it in the context of the entire system, don't try to improvement it._
+
+> “Premature optimization is the root of all evil.”
+>
+> — Donald Knuth
+
 ### Chrome network tab
 
 You can see the network requests made by your application and the time necessary for each request, by using the browser's debugging tools. This will show you what files and endpoints are requested and how long they are taking. If you sort by `time` or `size`, it will be clearer what areas need your attention. Make sure you clear your cache before running tests so that you can see what the real latency is and not just the time it takes to load from the browser's cache.
