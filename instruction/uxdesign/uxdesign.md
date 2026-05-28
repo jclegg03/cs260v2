@@ -240,7 +240,7 @@ These sizes are just suggestions but they serve as a good place to start. If you
 
 
 ```masteryls
-{"id":"114ea268-bff2-4d3a-986d-5eead3651698", "title":"Web page", "type":"web-page", "height":250, "file":"fontSize.html"}
+{"id":"114ea268-bff2-4d3a-986d-5eead3651698", "title":"Web page", "type":"web-page", "height":400, "file":"fontSize.html"}
 ```
 
 
@@ -255,27 +255,8 @@ The following shows the visual and cognitive impact of different line lengths.
 
 
 ```masteryls
-{"id":"f29ba02a-ae57-4509-84cc-9273ab72e0ad", "title":"Web page", "type":"web-page", "height":350, "file":"columnWidth.html"}
+{"id":"f29ba02a-ae57-4509-84cc-9273ab72e0ad", "title":"Web page", "type":"web-page", "height":450, "file":"columnWidth.html"}
 ```
-
-
-## Internationalization
-
-Designing a global international application requires careful consideration from the beginning. Attempting to internationalize a complex, mature application after it has a domestic presence is very difficult.
-
-One of the most important aspects to consider is the translation of textual content and the ability of the user to select their desired language.
-
-![Unicode](designInternationalizationUnicode.jpg)
-
-Successful translation also requires the text to be rendered properly. For example, several languages are read from right to left. Therefore the content, and the application itself, must be displayed in that orientation.
-
-![Right to left](designInternationalizationRtl.jpg)
-
-Likewise the format for displaying dates, times, numbers, and currency varies greatly between nationalities. This includes country specific currency symbols (¥, $, €, or ฿), the order of date fields (MM/DD/YY or DD/MM/YY), and numerical separators (1,000.50 or 1.000,50).
-
-Iconography can also be a concern. An owl in the United States represents wisdom, but in some Asian countries it symbolizes stupidity. Icons that carry religious representations can be even more disruptive.
-
-Proper international design requires thought across the full technology stack. If data is not properly passed, stored, and rendered at every level of the stack it will fail to properly work globally. For example, dates and times should always be stored in a format that properly represents time zones (e.g. ISO 8601) and rendered based upon the user's location. That way when users do things like global calendaring or traveling between countries their data is not corrupted.
 
 ## Space
 
@@ -458,6 +439,26 @@ The Web Content Accessibility Guidelines (WCAG) serve as the international stand
 1.  **Prefer Native HTML:** Only use ARIA if a native element cannot achieve the required design or behavior. For example, a standard `<input type="checkbox">` provides built-in keyboard support and state reporting without extra code.
 2.  **Keyboard Interactivity:** When using `role="switch"` on a non-button element (like a `div`), you must manually add `tabindex="0"` and handle "Enter" or "Space" key presses via JavaScript.
 3.  **State Synchronization:** Ensure the visual state (CSS) and the ARIA state (`aria-checked`) are always synchronized. Assistive technology relies solely on the ARIA attribute, not the visual CSS styles.
+
+
+
+## Internationalization
+
+Designing a global international application requires careful consideration from the beginning. Attempting to internationalize a complex, mature application after it has a domestic presence is very difficult.
+
+One of the most important aspects to consider is the translation of textual content and the ability of the user to select their desired language.
+
+![Unicode](designInternationalizationUnicode.jpg)
+
+Successful translation also requires the text to be rendered properly. For example, several languages are read from right to left. Therefore the content, and the application itself, must be displayed in that orientation.
+
+![Right to left](designInternationalizationRtl.jpg)
+
+Likewise the format for displaying dates, times, numbers, and currency varies greatly between nationalities. This includes country specific currency symbols (¥, $, €, or ฿), the order of date fields (MM/DD/YY or DD/MM/YY), and numerical separators (1,000.50 or 1.000,50).
+
+Iconography can also be a concern. An owl in the United States represents wisdom, but in some Asian countries it symbolizes stupidity. Icons that carry religious representations can be even more disruptive.
+
+Proper international design requires thought across the full technology stack. If data is not properly passed, stored, and rendered at every level of the stack it will fail to properly work globally. For example, dates and times should always be stored in a format that properly represents time zones (e.g. ISO 8601) and rendered based upon the user's location. That way when users do things like global calendaring or traveling between countries their data is not corrupted.
 
 ## Legal
 
