@@ -54,7 +54,7 @@ You want to reduce the latency of your endpoints as much as possible. Ideally yo
 
 ## Understanding Performance impact with Big O Notation
 
-In the world of performance monitoring, we need a standardized way to talk about how code performs as it scales. **Big O notation** is a mathematical symbolic representation used to describe the efficiency of an algorithm. Specifically, it characterizes the execution time or space requirements of an algorithm based on the size of the input data (usually represented as $n$). 
+In the world of performance monitoring, we need a standardized way to talk about how code performs as it scales. **Big O notation** is a mathematical symbolic representation used to describe the efficiency of an algorithm. Specifically, it characterizes the execution time or space requirements of an algorithm based on the size of the input data (usually represented as _n_). 
 
 Instead of measuring performance in seconds—which varies based on the hardware, background processes, and CPU speed—Big O focuses on the **growth rate**. It answers the question: "As the input grows, how much slower does the code get?" In web development, understanding this helps prevent "jank" in the UI and ensures that backend services can handle thousands of concurrent users without crashing.
 
@@ -74,9 +74,9 @@ The following table defines the most common complexities you will encounter when
 
 Web developers often deal with data processing on both the client and server sides. Monitoring the Big O complexity of your functions is critical for several reasons:
 
-1.  **UI Responsiveness:** If a frontend filter function has a complexity of $O(n^2)$, a user with 10,000 items in their dashboard might experience several seconds of "freezing" every time they type in a search bar.
+1.  **UI Responsiveness:** If a frontend filter function has a complexity of _O(n^2)_, a user with 10,000 items in their dashboard might experience several seconds of "freezing" every time they type in a search bar.
 2.  **Scalability:** A backend endpoint that works perfectly with 100 database records might time out when the database grows to 1,000,000 records if the query logic is inefficient.
-3.  **Cost Management:** In cloud environments (like AWS Lambda or Google Cloud Functions), you pay for execution time. Moving from $O(n^2)$ to $O(n)$ can literally save thousands of dollars in monthly infrastructure costs.
+3.  **Cost Management:** In cloud environments (like AWS Lambda or Google Cloud Functions), you pay for execution time. Moving from _O(n^2)_ to _O(n)_ can literally save thousands of dollars in monthly infrastructure costs.
 
 ### Visualizing Complexity Growth
 
