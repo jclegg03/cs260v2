@@ -112,6 +112,6 @@ According to best practices in performance monitoring and the principle of avoid
 
 ```masteryls
 {"id":"8b71562e-1f85-446f-8814-add7c56e0fef", "title":"Performance", "type":"essay" }
-You are coding a new component for a complex application.
+You are coding a new component for a complex application. What performance considerations should you make? How can you determine the impact of any performance modifications? 
 ```
 
