@@ -51,6 +51,98 @@ When a web application makes a request to a service endpoint there is usually so
 
 You want to reduce the latency of your endpoints as much as possible. Ideally you want to keep the endpoint latency to less than 10 milliseconds (ms). This may seem like a very short time, but commonly, an application will make dozens of endpoint requests to render a component. If each of those endpoints take 10 ms, then you are looking at 100 to 200 ms. When you add network latency to the time it takes for the application to process the response, and then add the time it takes for the browser to render, you can easily exceed the desired 1 second load time.
 
+
+## Understanding Performance impact with Big O Notation
+
+In the world of performance monitoring, we need a standardized way to talk about how code performs as it scales. **Big O notation** is a mathematical symbolic representation used to describe the efficiency of an algorithm. Specifically, it characterizes the execution time or space requirements of an algorithm based on the size of the input data (usually represented as $n$). 
+
+Instead of measuring performance in seconds—which varies based on the hardware, background processes, and CPU speed—Big O focuses on the **growth rate**. It answers the question: "As the input grows, how much slower does the code get?" In web development, understanding this helps prevent "jank" in the UI and ensures that backend services can handle thousands of concurrent users without crashing.
+
+### Common Big O Values
+
+The following table defines the most common complexities you will encounter when monitoring and optimizing web applications:
+
+| Notation | Name | Growth Rate | Common Example |
+| :--- | :--- | :--- | :--- |
+| **O(1)** | Constant | Flat | Accessing an element in an array by its index. |
+| **O(log n)** | Logarithmic | Very Slow | Searching for a value in a sorted array using Binary Search. |
+| **O(n)** | Linear | Proportional | Iterating through a list of users to find a specific ID. |
+| **O(n log n)** | Linearithmic | Moderate | Efficient sorting algorithms like `Array.prototype.sort()`. |
+| **O(n²)** | Quadratic | Fast | Comparing every item in a list to every other item (nested loops). |
+
+### Why Big O Matters in Web Development
+
+Web developers often deal with data processing on both the client and server sides. Monitoring the Big O complexity of your functions is critical for several reasons:
+
+1.  **UI Responsiveness:** If a frontend filter function has a complexity of $O(n^2)$, a user with 10,000 items in their dashboard might experience several seconds of "freezing" every time they type in a search bar.
+2.  **Scalability:** A backend endpoint that works perfectly with 100 database records might time out when the database grows to 1,000,000 records if the query logic is inefficient.
+3.  **Cost Management:** In cloud environments (like AWS Lambda or Google Cloud Functions), you pay for execution time. Moving from $O(n^2)$ to $O(n)$ can literally save thousands of dollars in monthly infrastructure costs.
+
+### Visualizing Complexity Growth
+
+The following diagram illustrates how the number of operations increases as the input size (**n**) grows for different complexities.
+
+```mermaid
+graph TD
+    A[O(1) - Constant] --> B[O(log n) - Logarithmic]
+    B --> C[O(n) - Linear]
+    C --> D[O(n log n) - Linearithmic]
+    D --> E[O(n^2) - Quadratic]
+    
+    style A stroke:#00ff00
+    style E stroke:#ff0000
+
+    
+    classDef default fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1px;
+```
+
+### Code Examples
+
+#### Constant Time: O(1)
+This function always takes the same amount of time, regardless of how large the `settings` object is.
+```javascript
+function getTheme(settings) {
+  return settings.theme; // One operation
+}
+```
+
+#### Linear Time: O(n)
+The time taken grows linearly with the number of items in the `products` array.
+```javascript
+function findProduct(products, targetId) {
+  for (let i = 0; i < products.length; i++) {
+    if (products[i].id === targetId) return products[i];
+  }
+  return null;
+}
+```
+
+#### Quadratic Time: O(n²)
+This is common in "brute force" algorithms. If the `users` array has 1,000 items, the code might perform 1,000,000 comparisons.
+```javascript
+function findSharedInterests(users) {
+  for (let i = 0; i < users.length; i++) { // Outer loop
+    for (let j = 0; j < users.length; j++) { // Inner loop
+      if (i !== j && users[i].interest === users[j].interest) {
+        console.log("Match found!");
+      }
+    }
+  }
+}
+```
+
+
+```masteryls
+{"id":"793a7bb2-75c5-44f4-a4a2-1ab5b0a1c8d5", "title":"Identifying Linear Complexity", "type":"multiple-choice"}
+A developer is monitoring a function that iterates through a list of 'n' DOM elements once to add a specific CSS class to each. Which Big O notation best describes this operation?
+
+- [ ] O(1)
+- [ ] O(log n)
+- [x] O(n)
+- [ ] O(n^2)
+```
+
+
 ## Performance tools
 
 📖 **Deeper dive reading**: [Chrome performance tools](https://developer.chrome.com/docs/devtools/performance/)
