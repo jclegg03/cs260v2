@@ -2,6 +2,8 @@
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQNrqzNYjHcEbSENqwiPRAOHqwaz2FvIJxm6kv5GeBCwHT1_Its-ZfmFo4c-xQyFThoI4CiP64iUa88/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="900" height="540" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
+---
+
 Properly considering the user experience (UX) of your application will make all the difference in your success. Focusing first on technology, cost, or revenue tends to lead to an unsatisfying user experience. Instead you want to consider why someone is using your application, how they want to interact, how visually appealing it is, and how easy it is to get something done.
 
 ## Design as a story
@@ -53,6 +55,16 @@ There is a tension that exists with web applications between being consistent wi
 What a `standard layout` is defined to be will migrate over time as new trends in application fashion seek to make things look fresh. However, if you follow current trends, your users are more likely to engage in your application.
 
 One easy way to build an application that uses current design trends is to use a web framework that provides standard layouts, colors, and iconography.
+
+## Gestalt
+
+Gestalt principles are psychological theories that describe how the human brain naturally organizes individual visual elements into collective patterns or unified wholes. In web UX design, these principles—such as proximity, similarity, continuity, and closure—serve as a framework for creating intuitive interfaces that align with how users perceive information. By applying Gestalt theory, designers can effectively group related content, establish a clear visual hierarchy, and reduce cognitive load, ensuring that users can navigate a website effortlessly without having to consciously process every distinct element.
+
+
+```masteryls
+{"id":"5ef3467a-6064-401b-8356-5e465d4e1128", "title":"Web page", "type":"web-page", "height":600, "file":"gestalt.html"}
+```
+
 
 ## Affordance, Signifiers, and Feedback
 
