@@ -48,13 +48,11 @@ You can also include significant amounts of content. You just need to keep thing
 
 There is a tension that exists with web applications between being consistent with how other applications work and being unique so that your experience stands out. What you want to avoid is being so different that a user has to think hard in order to use your application. This is usually avoided by using the standard conventions that a user expects to find on a web application. The following image describes the `standard layout` and navigation controls of an application.
 
-![Holy grail](designConsistencyHolyGrail.jpg)
+![standardLayout.jpg](standardLayout.jpg)
 
 What a `standard layout` is defined to be will migrate over time as new trends in application fashion seek to make things look fresh. However, if you follow current trends, your users are more likely to engage in your application.
 
-One easy way to build an application that uses current design trends is to use a web framework that provides standard layouts, colors, and iconography. Here is an example of a template application built using a web framework with just a few minutes of work.
-
-![Frameworks](designConsistencyFramework.jpg)
+One easy way to build an application that uses current design trends is to use a web framework that provides standard layouts, colors, and iconography.
 
 ## Affordance, Signifiers, and Feedback
 
