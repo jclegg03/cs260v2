@@ -186,12 +186,13 @@ You are coding a new component for a complex application. What performance consi
 
 
 ```masteryls
-{"id":"793a7bb2-75c5-44f4-a4a2-1ab5b0a1c8d5", "title":"Identifying Linear Complexity", "type":"multiple-choice"}
-A developer is monitoring a function that iterates through a list of 'n' DOM elements once to add a specific CSS class to each. Which Big O notation best describes this operation?
+{"id":"793a7bb2-75c5-44f4-a4a2-1ab5b0a1c8d5", "title":"Identifying Complexity", "type":"multiple-choice"}
+A developer is monitoring a recursive function that calculates the nth Fibonacci number by calling itself twice for each non-base case. Which Big O notation best describes the growth rate of this operation?
 
 - [ ] O(1)
+- [ ] O(n)
 - [ ] O(log n)
-- [x] O(n)
 - [ ] O(n^2)
+- [x] O(2^n)
 ```
 
