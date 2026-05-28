@@ -58,7 +58,12 @@ One easy way to build an application that uses current design trends is to use a
 
 Interactions between the interface and the user are a common point of failure when aligning the mental model of a user and the application designer. Interactions are often times describe in terms of affordance, signifiers, and feedback. An affordance is a relationship between an object and a person; it is what the object can do (e.g., a button "affords" clicking). A signifier is the visual cue that tells the user where and how to act (e.g., the shadow or color of that button). Feedback informs the user that the action has completed with a given result.
 
-![Affordance](affordance.gif)
+
+```masteryls
+{"id":"ee3c3a47-7636-4d74-b353-c6b9fa7f8973", "title":"Affordance", "type":"web-page", "height":250, "file":"affordance.html"}
+```
+
+
 
 ## Navigation
 
@@ -181,6 +186,13 @@ You want to be consistent in the size of the text that you use as well as the nu
 
 These sizes are just suggestions but they serve as a good place to start. If you are using an application framework then they will have default text sizes defined. The important thing is that you are consistent with the sizing. Titles should not be one size for a particular view and a different size on another one. Inconsistency confuses the user and makes the application feel haphazardly designed.
 
+
+```masteryls
+{"id":"114ea268-bff2-4d3a-986d-5eead3651698", "title":"Web page", "type":"web-page", "height":250, "file":"fontSize.html"}
+```
+
+
+
 ### Limiting line length
 
 Limiting the number of characters displayed on a line makes it easier to read paragraphs of text. The browser will automatically wrap text based on the viewport width, but having a line spread across a 4K monitor that is hundreds of characters long will make your application look clunky and drive the user crazy as they try and find the start of the next line in a long paragraph.
@@ -189,7 +201,11 @@ Instead you want to specify a maximum width for your paragraphs. Usually a width
 
 The following shows the visual and cognitive impact of different line lengths.
 
-![Line length](designLineLength.jpg)
+
+```masteryls
+{"id":"f29ba02a-ae57-4509-84cc-9273ab72e0ad", "title":"Web page", "type":"web-page", "height":350, "file":"columnWidth.html"}
+```
+
 
 ## Internationalization
 
