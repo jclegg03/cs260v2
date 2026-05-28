@@ -23,17 +23,19 @@ When this code executes the console will log `one1` because the count variable w
 
 The following table defines the most common types. If you don't explicitly provide a type then it defaults to `any`. This means that it can represent any possible type. Usually you want to avoid using `any` because it defeats one of the main reasons for using TypeScript.
 
-| Type        | Description                                                               |
-| ----------- | ------------------------------------------------------------------------- |
-| `string`    | Represents textual data.                                                  |
-| `number`    | Represents numeric values, including integers and floating-point numbers. |
-| `boolean`   | Represents `true` or `false`.                                             |
-| `bigint`    | Represents large integers beyond the `number` type limit.                 |
-| `null`      | Represents an explicitly empty value.                                     |
-| `undefined` | Represents a variable that has been declared but not assigned a value.    |
-| `any`       | A dynamic type that disables type checking.                               |
-| `never`     | Represents values that never occur, such as functions that always throw.  |
-| `type[]`    | Represents a collection (array) of elements of a specific type.           |
+| Type           | Description                                                                              |
+| -------------- | ---------------------------------------------------------------------------------------- |
+| `string`       | Represents textual data.                                                                 |
+| `number`       | Represents numeric values, including integers and floating-point numbers.                |
+| `boolean`      | Represents `true` or `false`.                                                            |
+| `bigint`       | Represents large integers beyond the `number` type limit.                                |
+| `null`         | Represents an explicitly empty value.                                                    |
+| `undefined`    | Represents a variable that has been declared but not assigned a value.                   |
+| `any`          | A dynamic type that disables type checking.                                              |
+| `never`        | Represents values that never occur, such as functions that always throw.                 |
+| `type[]`       | Represents a collection (array) of elements of a specific type.                          |
+| `[type, type]` | Represents an array with a fixed number of elements where each element has a known type. |
+
 ## Using types
 
 With TypeScript you explicitly define the types, and as the JavaScript is transpiled (with something like Babel) an error will be generate long before the code is seen by a user. To provide type safety for our increment function, it would look like this:
