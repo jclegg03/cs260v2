@@ -266,3 +266,23 @@ npm install -D typescript
 ```
 
 This will only include typescript package when you are developing and will not distribute it with a production bundle.
+
+## Exercises
+
+
+````masteryls
+{"id":"b29ccd86-7a25-4df9-a356-85ca4a5720d5", "title":"Naked Type Parameters and Distribution", "type":"multiple-choice"}
+In TypeScript, conditional types are distributive when the type being checked is a "naked" type parameter. Given the specific behavior of the `never` type in this context, what is the resulting type of `Result`?
+
+```typescript
+type IsItNever<T> = T extends never ? "Yes" : "No";
+
+type Result = IsItNever<never>;
+```
+
+- [ ] `"Yes"`
+- [ ] `"No"`
+- [x] `never`
+- [ ] `"Yes" | "No"`
+````
+
