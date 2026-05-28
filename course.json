@@ -1453,8 +1453,10 @@
           "path": "instruction/webFrameworks/typeScript/typeScript.md",
           "id": "4c655e0b-ce2c-490a-b4a7-17e6e7808d4a",
           "state": "published",
-          "interactions": [],
-          "commit": "6c94242d545d20f8a41104990eaa89a712a3f296"
+          "interactions": [
+            "b29ccd86-7a25-4df9-a356-85ca4a5720d5"
+          ],
+          "commit": "c851929c7af5d9798a95339dcbaff42f0660daf6"
         },
         {
           "title": "Performance monitoring",
