@@ -271,19 +271,14 @@ This will only include typescript package when you are developing and will not d
 ## Exercises
 
 
-````masteryls
-{"id":"b29ccd86-7a25-4df9-a356-85ca4a5720d5", "title":"Naked Type Parameters and Distribution", "type":"multiple-choice"}
-In TypeScript, conditional types are distributive when the type being checked is a "naked" type parameter. Given the specific behavior of the `never` type in this context, what is the resulting type of `Result`?
 
-```typescript
-type IsItNever<T> = T extends never ? "Yes" : "No";
+```masteryls
+{"id":"6f48a958-b994-44f4-a682-230e7563ece9", "title":"Defining a Tuple", "type":"multiple-choice"}
+In TypeScript, which of the following is the correct syntax to define a **tuple** that must contain exactly two elements: a `string` followed by a `number`?
 
-type Result = IsItNever<never>;
+- [ ] `let user: (string, number) = ["Alice", 30];`
+- [x] `let user: [string, number] = ["Alice", 30];`
+- [ ] `let user: Array<string, number> = ["Alice", 30];`
+- [ ] `let user: string | number[] = ["Alice", 30];`
 ```
-
-- [ ] `"Yes"`
-- [ ] `"No"`
-- [x] `never`
-- [ ] `"Yes" | "No"`
-````
 
