@@ -349,7 +349,65 @@ You can help users with visual impairments by considering color blindness when s
 | Audio    | Closed captions, textual alternatives, visual animation |
 | Physical | Keyboard navigation, element ordering                   |
 
-Many of the accessibility tools that users employ require that your HTML is well structured and has attributes that support [WAI-ARIA](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) standards. Make sure you understand the proper use of elements and aria when you design a production application.
+```masteryls
+{"id":"73326d7c-77e2-450a-9b71-3bb0bae11045", "title":"Web page", "type":"web-page", "height":700, "file":"colorBlind.html"}
+```
+
+### ARIA
+
+ARIA (Accessible Rich Internet Applications) is a set of technical attributes defined by the W3C that enhances the accessibility of web content, particularly for dynamic components and advanced user interface controls. In UX design, ARIA serves as a critical bridge between complex interactive elements—such as custom sliders, modal windows, or real-time status updates—and assistive technologies like screen readers. By applying ARIA roles, states, and properties to HTML, designers and developers provide the necessary semantic context to ensure that users with disabilities can navigate and interact with digital products effectively, even when standard HTML elements lack the built-in functionality to describe a specific UI behavior.
+
+When standard HTML5 elements (like `<button>` or `<input type="checkbox">`) do not meet specific design requirements, ARIA (Accessible Rich Internet Applications) attributes must be used to communicate the role, state, and properties of custom components to assistive technologies.
+
+#### Example: Accessible Custom Toggle Switch
+
+In this example, a custom toggle switch is built using a `<button>`. While it looks like a switch visually, screen readers need ARIA to understand its function and current state.
+
+```html
+<!-- The label is associated with the button via aria-labelledby -->
+<span id="notifications-label" class="label-text">Enable Notifications</span>
+
+<button 
+  type="button" 
+  role="switch" 
+  aria-checked="false" 
+  aria-labelledby="notifications-label"
+  class="toggle-switch"
+  onclick="toggleState(this)">
+  <span class="thumb"></span>
+</button>
+
+<script>
+  function toggleState(element) {
+    // Toggle the aria-checked attribute between "true" and "false"
+    const isChecked = element.getAttribute('aria-checked') === 'true';
+    element.setAttribute('aria-checked', !isChecked);
+    
+    // Update visual styles via CSS classes if necessary
+    element.classList.toggle('is-active');
+  }
+</script>
+```
+
+Note that this example makes up for the lack of accessibility controls in the standard HTML button element. You must be careful not to overuse, or incorrectly use, ARIA attributes in your applications. Doing so make the code less maintainable.
+
+#### Key ARIA Attributes Explained
+
+| Attribute | Purpose |
+| :--- | :--- |
+| `role="switch"` | Informs the screen reader that the element is a type of checkbox that represents an "on/off" state rather than a simple "checked/unchecked" state. |
+| `aria-checked` | Indicates the current state of the switch. This must be updated dynamically via JavaScript when the user interacts with the component. |
+| `aria-labelledby` | Points to the ID of the text element that labels the switch, providing an "accessible name" so the user knows what they are toggling. |
+
+### WCAG
+
+The Web Content Accessibility Guidelines (WCAG) are the internationally recognized standards for digital accessibility, developed by the World Wide Web Consortium (W3C). In UX design, adhering to WCAG ensures that digital products are inclusive for users with a diverse range of disabilities, including visual, auditory, motor, and cognitive impairments. These guidelines are organized around four foundational principles known as **POUR**: Perceivable, Operable, Understandable, and Robust. By following these standards—typically aiming for Level AA conformance—designers can create experiences that are not only legally compliant but also more usable for all individuals, regardless of their physical or cognitive abilities.
+
+
+### Best Practices for UX Accessibility
+1.  **Prefer Native HTML:** Only use ARIA if a native element cannot achieve the required design or behavior. For example, a standard `<input type="checkbox">` provides built-in keyboard support and state reporting without extra code.
+2.  **Keyboard Interactivity:** When using `role="switch"` on a non-button element (like a `div`), you must manually add `tabindex="0"` and handle "Enter" or "Space" key presses via JavaScript.
+3.  **State Synchronization:** Ensure the visual state (CSS) and the ARIA state (`aria-checked`) are always synchronized. Assistive technology relies solely on the ARIA attribute, not the visual CSS styles.
 
 ## Legal
 
