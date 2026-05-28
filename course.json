@@ -1513,6 +1513,12 @@
           "commit": "ed36962ae2ecfd06a58c7350b593e52c2c0bbff7"
         },
         {
+          "title": "Simon PWA",
+          "path": "instruction/simon/simonPwa/simonPwa.md",
+          "id": "2dafc42e-ce62-4804-9453-47f5ddd680d6",
+          "state": "published"
+        },
+        {
           "title": "Demo day submission",
           "type": "project",
           "points": 5,
@@ -1527,12 +1533,6 @@
           "externalRefs": {
             "canvasAssignmentId": 1358327
           }
-        },
-        {
-          "title": "Simon PWA",
-          "path": "instruction/simon/simonPwa/simonPwa.md",
-          "id": "2dafc42e-ce62-4804-9453-47f5ddd680d6",
-          "state": "published"
         },
         {
           "title": "☑ Wrap up",
