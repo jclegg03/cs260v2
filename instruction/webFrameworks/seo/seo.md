@@ -4,6 +4,9 @@
 
 Once Google became the de facto search engine for the internet, a new industry was created to help websites get the top search result spots. Modifying your application for search results is called search engine optimization (SEO). While SEO has nothing to do with the functionality of your application, it has everything to do with its success. You can save millions of dollars in marketing if your application appears in the top search ranking for common user searches.
 
+![seo.jpg](seo.jpg)
+
+
 There are several factors that are major contributors to your search rank. These include:
 
 1. Content
