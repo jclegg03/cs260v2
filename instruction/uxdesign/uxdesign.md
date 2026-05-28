@@ -21,7 +21,6 @@ Consider the tourism application for the city of Philadelphia. They know a user 
 Google broke all the rules for web application design when they released their homepage in 1998.
 
 ![Simplicity](designSimplicityGoogle.jpg)
-
 > Source: Google.com 2022
 
 Previous to that, it was common for app designers to pile everything they could into the initial view of the application. This includes multiple advertisements, navigation options, lots of hyperlinks, and color choices. Here is an example from a competitor around the same time period.
@@ -56,7 +55,29 @@ What a `standard layout` is defined to be will migrate over time as new trends i
 
 One easy way to build an application that uses current design trends is to use a web framework that provides standard layouts, colors, and iconography.
 
-## Gestalt
+## UX principles
+
+### Miller's Law
+
+Miller’s Law states that the average person can only keep approximately seven (plus or minus two) items in their working memory at any given time. In UX design, this principle highlights the importance of **chunking**, which involves organizing complex information into smaller, manageable groups. By limiting the number of elements presented simultaneously, designers can reduce cognitive load, making interfaces easier to navigate and information more efficient to process.
+
+
+```masteryls
+{"id":"24b8f96d-90f4-40f9-a199-856f334ae11d", "title":"Web page", "type":"web-page", "height":800, "file":"millers.html"}
+```
+
+### Fitts's Law
+
+Fitts's Law is a fundamental principle in UX design that predicts the time required to rapidly move to a target area. Established by psychologist Paul Fitts in 1954, the law states that the time to acquire a target is a function of the distance to the target and the size of the target. In the digital realm, this means that the larger and closer a UI element is to the user's current cursor or thumb position, the easier and faster it is to interact with.
+
+When applying Fitts's Law, designers focus on two primary levers: **Target Size** and **Distance**. By increasing the clickable area of a button, you reduce the precision required by the user, thereby decreasing the likelihood of errors. Conversely, placing related interactive elements close to each other minimizes the travel time required to complete a sequence of actions.
+
+```masteryls
+{"id":"d6a55c62-dbe1-4ecc-9111-630201602713", "title":"Web page", "type":"web-page", "height":700, "file":"fitts.html"}
+```
+
+
+### Gestalt
 
 Gestalt principles are psychological theories that describe how the human brain naturally organizes individual visual elements into collective patterns or unified wholes. In web UX design, these principles—such as proximity, similarity, continuity, and closure—serve as a framework for creating intuitive interfaces that align with how users perceive information. By applying Gestalt theory, designers can effectively group related content, establish a clear visual hierarchy, and reduce cognitive load, ensuring that users can navigate a website effortlessly without having to consciously process every distinct element.
 
@@ -515,3 +536,18 @@ Legal walls usually only protect the application vendor and provide little or no
 ![Cookie acceptance wall](designWallsLegal.png)
 
 Another common example of a legal wall is an application that requires the acceptance of terms and conditions before you can use the application. You want to minimize the impact of legal walls as much as possible since they lessen the user's experience and encourage the user to question why a legal consent is required in the first place.
+
+
+## Exercises
+
+
+```masteryls
+{"id":"", "title":"Applying Fitts's Law", "type":"multiple-choice"}
+According to Fitts's Law, which of the following changes would most effectively improve the usability of a primary Call-to-Action (CTA) button?
+
+- [ ] Increasing the white space (padding) between the button and the user's focus area.
+- [x] Increasing the clickable area of the button and placing it closer to the user's expected cursor path.
+- [ ] Changing the button's color to a low-contrast shade to make it less distracting.
+- [ ] Making the button smaller to ensure it doesn't interfere with the surrounding text content.
+```
+
