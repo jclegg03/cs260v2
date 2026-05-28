@@ -1465,7 +1465,12 @@
           "title": "Performance monitoring",
           "path": "instruction/webFrameworks/performanceMonitoring/performanceMonditoring.md",
           "id": "fb55794d-fc0c-4e9f-af54-01ae994aa859",
-          "state": "published"
+          "state": "published",
+          "interactions": [
+            "4ccf8c71-194b-4e81-b256-8f7011ae355a",
+            "8b71562e-1f85-446f-8814-add7c56e0fef"
+          ],
+          "commit": "b9b3e5a84a3222027c32f0a0e830fd9074d37565"
         },
         {
           "title": "UX design",
