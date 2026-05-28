@@ -50,7 +50,7 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
 ## ☑ Assignment
 
 ```masteryls
-{"id":"99869011-3a94-40f9-b48f-6e34c9127943", "title":"Modify Fetch Example", "type":"ai-web-page", "allowAiPrompt":true, "gradingCriteria":"Use another Service Call", "height":150 }
+{"id":"99869011-3a94-40f9-b48f-6e34c9127943", "title":"Modify Fetch Example", "type":"ai-web-page", "allowAiPrompt":false, "gradingCriteria":"Use another Service Call", "height":150 }
 Replace the quotable service call with a different one. Here are some suggestions.
 - **Random user** - https://randomuser.me/api/
 - **Jokes** - https://api.chucknorris.io/jokes/random?category=dev
