@@ -444,6 +444,16 @@ The Web Content Accessibility Guidelines (WCAG) are the internationally recogniz
 ```
 
 
+The Web Content Accessibility Guidelines (WCAG) serve as the international standard for digital accessibility, ensuring that web content is usable for individuals with a wide range of disabilities. In UX design, these guidelines are organized under four foundational principles known as POUR: Perceivable, Operable, Understandable, and Robust. By adhering to these standards, designers create inclusive experiences that accommodate diverse needs, including visual impairments, hearing loss, limited mobility, and cognitive challenges.
+
+| Principle | Definition | UX Design Application |
+| :--- | :--- | :--- |
+| **Perceivable** | Information and interface components must be presented in ways that users can sense. | Providing text alternatives for non-text content (alt text) and ensuring sufficient color contrast. |
+| **Operable** | User interface components and navigation must be functional and easy to use. | Ensuring all site features are accessible via keyboard and providing users enough time to complete tasks. |
+| **Understandable** | Information and the operation of the user interface must be clear and predictable. | Using plain language, providing helpful error messages, and maintaining consistent navigation patterns. |
+| **Robust** | Content must be compatible with a wide variety of user agents, including assistive technologies. | Using valid HTML and ARIA labels so that screen readers can accurately interpret the interface. |
+
+
 ### Best Practices for UX Accessibility
 1.  **Prefer Native HTML:** Only use ARIA if a native element cannot achieve the required design or behavior. For example, a standard `<input type="checkbox">` provides built-in keyboard support and state reporting without extra code.
 2.  **Keyboard Interactivity:** When using `role="switch"` on a non-button element (like a `div`), you must manually add `tabindex="0"` and handle "Enter" or "Space" key presses via JavaScript.
@@ -547,9 +557,30 @@ Another common example of a legal wall is an application that requires the accep
 {"id":"", "title":"Applying Fitts's Law", "type":"multiple-choice"}
 According to Fitts's Law, which of the following changes would most effectively improve the usability of a primary Call-to-Action (CTA) button?
 
-- [ ] Increasing the white space (padding) between the button and the user's focus area.
 - [x] Increasing the clickable area of the button and placing it closer to the user's expected cursor path.
+- [ ] Increasing the white space (padding) between the button and the user's focus area.
 - [ ] Changing the button's color to a low-contrast shade to make it less distracting.
 - [ ] Making the button smaller to ensure it doesn't interfere with the surrounding text content.
 ```
 
+
+```masteryls
+{"id":"e1a5b678-044f-4e0b-9231-c604ac54f424", "title":"The Role of Functional Animation", "type":"multiple-choice"}
+In UX design, what is the primary purpose of "functional animation" as opposed to decorative animation?
+
+- [ ] To keep the user's attention on the screen for as long as possible by using constant motion
+- [ ] To hide slow back-end processing speeds by distracting the user with complex visual effects
+- [x] To explain state changes, provide feedback, and reduce the user's cognitive load
+- [ ] To ensure that the website meets the minimum requirements for modern CSS framework compliance
+```
+
+
+```masteryls
+{"id":"591a2b3a-020a-44e0-bd59-dd12d4fd9271", "title":"WCAG Text Contrast Standards", "type":"multiple-choice"}
+To meet the WCAG 2.1 Success Criterion 1.4.3 (Contrast Minimum) at the **Level AA** standard, what is the minimum required contrast ratio for standard-sized body text (less than 18pt or 14pt bold)?
+
+- [ ] 3:1
+- [x] 4.5:1
+- [ ] 7:1
+- [ ] 2.1:1
+```
