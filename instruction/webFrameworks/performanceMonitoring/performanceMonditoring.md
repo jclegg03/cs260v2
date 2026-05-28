@@ -52,7 +52,7 @@ When a web application makes a request to a service endpoint there is usually so
 You want to reduce the latency of your endpoints as much as possible. Ideally you want to keep the endpoint latency to less than 10 milliseconds (ms). This may seem like a very short time, but commonly, an application will make dozens of endpoint requests to render a component. If each of those endpoints take 10 ms, then you are looking at 100 to 200 ms. When you add network latency to the time it takes for the application to process the response, and then add the time it takes for the browser to render, you can easily exceed the desired 1 second load time.
 
 
-## Understanding Performance impact with Big O Notation
+## Representing performance impact with Big O Notation
 
 In the world of performance monitoring, we need a standardized way to talk about how code performs as it scales. **Big O notation** is a mathematical symbolic representation used to describe the efficiency of an algorithm. Specifically, it characterizes the execution time or space requirements of an algorithm based on the size of the input data (usually represented as _n_). 
 
