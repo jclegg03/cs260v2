@@ -195,7 +195,7 @@ Do the following steps to set up your `Startup application repository` in GitHub
 
 
 ```masteryls
-{"id":"4134acb2-3190-49b2-a22f-c31c1d9b51c2", "title":"GitHub repo URL", "type":"url-submission" }
+{"id":"4134acb2-3190-49b2-a22f-c31c1d9b51c2", "title":"GitHub repo URL", "type":"url-submission",  "validateUrl":true }
 My GitHub repository URL is:
 
 _Example: https://github.com/myaccount/startup_
