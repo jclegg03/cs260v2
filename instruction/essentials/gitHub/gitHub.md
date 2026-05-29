@@ -219,7 +219,7 @@ Your notes file is meant as a place to remember all the things you have learned 
 
 
 ```masteryls
-{"id":"eb260e82-1162-494d-9d9c-21ed68b68d16", "title":"Modifying notes.md", "type":"url-submission" }
+{"id":"eb260e82-1162-494d-9d9c-21ed68b68d16", "title":"Modifying notes.md", "type":"url-submission", "validateUrl":true }
 I have modified my notes.md file with the required text and the URL to my modified **notes.md** file is:
 
 _Example: https://github.com/myaccount/startup/notes.md_
