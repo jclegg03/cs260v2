@@ -2,7 +2,6 @@
 
 📖 **Recommended reading**: [Reactjs.org - Hooks Overview](https://reactjs.org/docs/hooks-overview.html)
 
-
 React Hooks are specialized functions that allow developers to "hook into" React state and lifecycle features directly from functional components. They enable the management of local state, side effects, and context. React utilizes hooks to promote the reuse of stateful logic across components and to simplify code by grouping related logic together.
 
 You have already seen one use of hooks to declare and update state in a function component with the `useState` hook.
@@ -97,12 +96,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Clicker />);
 ```
 
-
 ## useContext hook
 
 In React, data usually flows from top to bottom via props. However, as an application grows, you may find yourself passing props through many components that don't actually need the data, just to get it to a deeply nested child. This phenomenon is known as **prop drilling**. The `useContext` hook provides a way to share values like themes, user authentication, or preferred language between components without explicitly passing a prop through every level of the tree.
 
 ### The Problem: Prop Drilling
+
 When you have a piece of state in a root component that is needed by a component five levels deep, every intermediate component must act as a "middleman." This makes the code harder to maintain and refactor.
 
 ```mermaid
@@ -113,7 +112,7 @@ graph TD
     Main --> Sidebar
     Main --> Content
     Content --> UserProfile
-    
+
     subgraph PropDrilling
     App -.->|user prop| Layout
     Layout -.->|user prop| Main
@@ -129,12 +128,15 @@ graph TD
 ```
 
 ### How to use useContext
+
 To implement context in your application, you generally follow three steps:
+
 1.  **Create the Context:** Use `createContext()` to create a context object.
 2.  **Provide the Context:** Wrap your component tree with a `Provider` and pass the data into the `value` prop.
 3.  **Consume the Context:** Use the `useContext` hook in any child component to access that value.
 
 ### Implementation Example: Theme Switching
+
 Below is a practical example of how to implement a light/dark mode toggle using `useContext`.
 
 ```jsx
@@ -151,23 +153,19 @@ export function ThemeProvider({ children }) {
   };
 
   // 2. Provide the Context
-  return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>;
 }
 
 function ThemedButton() {
   // 3. Consume the Context
   const { theme, toggleTheme } = useContext(ThemeContext);
-  
+
   return (
-    <button 
+    <button
       onClick={toggleTheme}
-      style={{ 
-        background: theme === 'light' ? '#fff' : '#333', 
-        color: theme === 'light' ? '#000' : '#fff' 
+      style={{
+        background: theme === 'light' ? '#fff' : '#333',
+        color: theme === 'light' ? '#000' : '#fff',
       }}
     >
       Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode
@@ -185,12 +183,13 @@ export default function App() {
 ```
 
 ### Key Considerations
-*   **Performance:** When the `value` of a Provider changes, all components calling `useContext` for that specific context will re-render. To optimize this, keep your context values as granular as possible.
-*   **Default Values:** When calling `createContext(defaultValue)`, the default value is only used if a component does not have a matching Provider above it in the tree.
-*   **Composition:** Context is best used for "global" data. If you are only passing props down one or two levels, standard prop passing is often cleaner and easier to trace.
+
+- **Performance:** When the `value` of a Provider changes, all components calling `useContext` for that specific context will re-render. To optimize this, keep your context values as granular as possible.
+- **Default Values:** When calling `createContext(defaultValue)`, the default value is only used if a component does not have a matching Provider above it in the tree.
+- **Composition:** Context is best used for "global" data. If you are only passing props down one or two levels, standard prop passing is often cleaner and easier to trace.
 
 ```masteryls
-{"id":"usecontext-purpose", "title":"Understanding useContext", "type":"multiple-choice"}
+{"id":"16073f88-fc50-4a77-9a94-57144690f2bd", "title":"Understanding useContext", "type":"multiple-choice"}
 What is the primary problem that the useContext hook is designed to solve in React applications?
 
 - [ ] It is used to fetch data from external APIs asynchronously.
@@ -198,7 +197,6 @@ What is the primary problem that the useContext hook is designed to solve in Rea
 - [x] It prevents "prop drilling" by allowing components to access global data without intermediate props.
 - [ ] It is used to directly manipulate the browser's DOM elements.
 ```
-
 
 ## useMemo hook
 
@@ -214,7 +212,7 @@ graph TD
   Store --> Return[Return New Value]
   Check -- No --> Cache[Retrieve from Cache]
   Cache --> Return
-  
+
   classDef default fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1px;
 ```
 
@@ -238,24 +236,18 @@ const UserList = ({ users }) => {
 
   // This calculation only re-runs if 'users' or 'query' changes
   const filteredUsers = useMemo(() => {
-    console.log("Filtering users...");
-    return users.filter(user => 
-      user.name.toLowerCase().includes(query.toLowerCase())
-    );
+    console.log('Filtering users...');
+    return users.filter((user) => user.name.toLowerCase().includes(query.toLowerCase()));
   }, [users, query]);
 
   return (
     <div className={isDarkMode ? 'dark' : 'light'}>
-      <button onClick={() => setIsDarkMode(!isDarkMode)}>
-        Toggle Theme
-      </button>
-      <input 
-        value={query} 
-        onChange={(e) => setQuery(e.target.value)} 
-        placeholder="Search users..." 
-      />
+      <button onClick={() => setIsDarkMode(!isDarkMode)}>Toggle Theme</button>
+      <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search users..." />
       <ul>
-        {filteredUsers.map(user => <li key={user.id}>{user.name}</li>)}
+        {filteredUsers.map((user) => (
+          <li key={user.id}>{user.name}</li>
+        ))}
       </ul>
     </div>
   );
@@ -266,12 +258,12 @@ const UserList = ({ users }) => {
 
 While it might be tempting to wrap everything in `useMemo`, it comes with its own overhead. Memory must be allocated to store the cached value, and React must perform a comparison on the dependency array during every render.
 
-*   **Don't over-optimize:** For simple arithmetic or small array manipulations, the overhead of `useMemo` may exceed the performance gain.
-*   **Keep it pure:** The function passed to `useMemo` should be a pure function. Side effects (like API calls) belong in `useEffect`, not `useMemo`.
-*   **Dependency accuracy:** Always include every variable from the component scope that is used inside the memoized function in the dependency array. Failing to do so will result in "stale" values.
+- **Don't over-optimize:** For simple arithmetic or small array manipulations, the overhead of `useMemo` may exceed the performance gain.
+- **Keep it pure:** The function passed to `useMemo` should be a pure function. Side effects (like API calls) belong in `useEffect`, not `useMemo`.
+- **Dependency accuracy:** Always include every variable from the component scope that is used inside the memoized function in the dependency array. Failing to do so will result in "stale" values.
 
 ```masteryls
-{"id":"usememo-mechanics", "title":"Understanding useMemo", "type":"multiple-choice"}
+{"id":"25c9b6d0-0074-458e-9cdf-2878abe27bb4", "title":"Understanding useMemo", "type":"multiple-choice"}
 What happens if you provide an empty dependency array `[]` to the useMemo hook?
 
 - [ ] The calculation runs on every single render.

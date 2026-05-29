@@ -8,7 +8,6 @@ When working on a commercial web application, it is critical to separate where y
 
 ![Complex deployment](deploymentEnvironments.png)
 
-
 ## Software deployment strategies
 
 Modern software deployment has evolved from manual, high-risk "big bang" releases to automated, incremental strategies that prioritize system availability and user experience. The primary goal of these techniques is to reduce the "blast radius" of potential failures and ensure that new features can be rolled back instantly if issues arise.
@@ -25,7 +24,7 @@ Modern software deployment has evolved from manual, high-risk "big bang" release
         User((Users)) --> LB[Load Balancer]
         LB -- 90% Traffic --> V1[v1.0 Stable]
         LB -- 10% Traffic --> V2[v1.1 Canary]
-        
+
         classDef default fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1px;
     ```
 
@@ -36,14 +35,14 @@ Modern software deployment has evolved from manual, high-risk "big bang" release
 
 When selecting a strategy, consider the following trade-offs:
 
-| Strategy | Downtime | Risk | Cost | Rollback Speed |
-| :--- | :--- | :--- | :--- | :--- |
-| **Blue-Green** | Zero | Low | High (2x hardware) | Instant |
-| **Canary** | Zero | Lowest | Medium | Fast |
-| **Rolling** | Zero | Medium | Low | Slow (requires re-deployment) |
+| Strategy       | Downtime | Risk   | Cost               | Rollback Speed                |
+| :------------- | :------- | :----- | :----------------- | :---------------------------- |
+| **Blue-Green** | Zero     | Low    | High (2x hardware) | Instant                       |
+| **Canary**     | Zero     | Lowest | Medium             | Fast                          |
+| **Rolling**    | Zero     | Medium | Low                | Slow (requires re-deployment) |
 
 ```masteryls
-{"id":"modern-deployment-strategies", "title":"Identifying deployment techniques", "type":"multiple-choice"}
+{"id":"4a02626f-2fe6-47b4-b73c-777967832ec1", "title":"Identifying deployment techniques", "type":"multiple-choice"}
 A team wants to release a high-risk database migration. They decide to spin up a completely separate production-ready environment, verify it, and then switch the router to point to the new environment. Which strategy are they using?
 
 - [ ] Canary Deployment
@@ -52,13 +51,11 @@ A team wants to release a high-risk database migration. They decide to spin up a
 - [ ] A/B Testing
 ```
 
-
 ## Deploying Simon and your startup
 
 For our work, you will use and manage both your _development environment_ (your personal computer) and your _production environment_ (your AWS server). However, you should never consider your production environment as a place to develop, or experiment with, your application. You may shell into the production environment to configure your server or to debug a production problem, but the deployment of your application should happen using an automated CI process. For our CI process, we will use a very simple console shell script.
 
 ![Simple deployment](deploymentSimple.png)
-
 
 ## Automating your deployment
 
@@ -154,9 +151,7 @@ A deployment script exists for each of the Simon projects and you can use them, 
 
 If you want to learn more about shell scripting you can [read this tutorial](https://ryanstutorials.net/bash-scripting-tutorial/bash-script.php). Shell scripting is a powerful tool for automating common development tasks and is well worth adding to your bucket of skills.
 
-
 ## Exercises
-
 
 ````masteryls
 {"id":"bb56649e-e767-4758-8b8e-310e4ea69026", "title":"Essay", "type":"essay" }
@@ -170,4 +165,3 @@ pm2 restart ${service}
 ENDSSH
 ```
 ````
-

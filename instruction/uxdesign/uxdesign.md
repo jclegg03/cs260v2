@@ -21,6 +21,7 @@ Consider the tourism application for the city of Philadelphia. They know a user 
 Google broke all the rules for web application design when they released their homepage in 1998.
 
 ![Simplicity](designSimplicityGoogle.jpg)
+
 > Source: Google.com 2022
 
 Previous to that, it was common for app designers to pile everything they could into the initial view of the application. This includes multiple advertisements, navigation options, lots of hyperlinks, and color choices. Here is an example from a competitor around the same time period.
@@ -57,16 +58,13 @@ One easy way to build an application that uses current design trends is to use a
 
 ## UX principles
 
-
 ### Hick's Law
 
 You need to consider the impact of the choices that you present to a user. [Hick's Law](https://en.wikipedia.org/wiki/Hick%27s_law) states that the time necessary to make a decision increases logarithmically with the number of choices presented. That doesn't mean that you should not provide options to the user, but that you should limit the number of choices given at any point in time.
 
-
 ```masteryls
 {"id":"76fbfe66-0470-4284-a685-3aeceaf03956", "title":"Web page", "type":"web-page", "height":650, "file":"hicks.html"}
 ```
-
 
 For example, the process of building a pizza involves many steps. First you must pick the location you want to order from, then the pizza size, cheese, meats, and veggies. Finally you need to provide payment. Each of those choices require a lot of input from the user, and so limiting the number of choices displayed at one time will help reduce decision fatigue and you will have better odds of them completing the ordering process.
 
@@ -74,12 +72,9 @@ For example, the process of building a pizza involves many steps. First you must
 
 > Source: Papa Johns
 
-
-
 ### Miller's Law
 
 Miller’s Law states that the average person can only keep approximately seven (plus or minus two) items in their working memory at any given time. In UX design, this principle highlights the importance of **chunking**, which involves organizing complex information into smaller, manageable groups. By limiting the number of elements presented simultaneously, designers can reduce cognitive load, making interfaces easier to navigate and information more efficient to process.
-
 
 ```masteryls
 {"id":"24b8f96d-90f4-40f9-a199-856f334ae11d", "title":"Web page", "type":"web-page", "height":800, "file":"millers.html"}
@@ -95,27 +90,21 @@ When applying Fitts's Law, designers focus on two primary levers: **Target Size*
 {"id":"d6a55c62-dbe1-4ecc-9111-630201602713", "title":"Web page", "type":"web-page", "height":700, "file":"fitts.html"}
 ```
 
-
 ### Gestalt
 
 Gestalt principles are psychological theories that describe how the human brain naturally organizes individual visual elements into collective patterns or unified wholes. In web UX design, these principles—such as proximity, similarity, continuity, and closure—serve as a framework for creating intuitive interfaces that align with how users perceive information. By applying Gestalt theory, designers can effectively group related content, establish a clear visual hierarchy, and reduce cognitive load, ensuring that users can navigate a website effortlessly without having to consciously process every distinct element.
-
 
 ```masteryls
 {"id":"5ef3467a-6064-401b-8356-5e465d4e1128", "title":"Web page", "type":"web-page", "height":600, "file":"gestalt.html"}
 ```
 
-
 ## Affordance, Signifiers, and Feedback
 
 Interactions between the interface and the user are a common point of failure when aligning the mental model of a user and the application designer. Interactions are often times describe in terms of affordance, signifiers, and feedback. An affordance is a relationship between an object and a person; it is what the object can do (e.g., a button "affords" clicking). A signifier is the visual cue that tells the user where and how to act (e.g., the shadow or color of that button). Feedback informs the user that the action has completed with a given result.
 
-
 ```masteryls
 {"id":"ee3c3a47-7636-4d74-b353-c6b9fa7f8973", "title":"Affordance", "type":"web-page", "height":250, "file":"affordance.html"}
 ```
-
-
 
 ## Navigation
 
@@ -238,12 +227,9 @@ You want to be consistent in the size of the text that you use as well as the nu
 
 These sizes are just suggestions but they serve as a good place to start. If you are using an application framework then they will have default text sizes defined. The important thing is that you are consistent with the sizing. Titles should not be one size for a particular view and a different size on another one. Inconsistency confuses the user and makes the application feel haphazardly designed.
 
-
 ```masteryls
 {"id":"114ea268-bff2-4d3a-986d-5eead3651698", "title":"Web page", "type":"web-page", "height":400, "file":"fontSize.html"}
 ```
-
-
 
 ### Limiting line length
 
@@ -252,7 +238,6 @@ Limiting the number of characters displayed on a line makes it easier to read pa
 Instead you want to specify a maximum width for your paragraphs. Usually a width of 60 to 80 characters is optimal. You can set this with the `max-width` property set to something like `35em`. The `em` unit is relative to the font size of the element (e.g., if the font size is 16px, `1em` is 16px). Since the average character width is approximately `0.5em`, a `35em` limit helps maintain that ideal character count.
 
 The following shows the visual and cognitive impact of different line lengths.
-
 
 ```masteryls
 {"id":"f29ba02a-ae57-4509-84cc-9273ab72e0ad", "title":"Web page", "type":"web-page", "height":450, "file":"columnWidth.html"}
@@ -320,7 +305,6 @@ However, too much animation can physically make your users sick. Here is an exam
 
 Use the following interaction to experiment with different animation speeds and layout.
 
-
 ```masteryls
 {"id":"1f60c33b-02f4-42d3-9e1f-62f04d3034e4", "title":"Web page", "type":"web-page", "height":800, "file":"animation.html"}
 ```
@@ -383,13 +367,7 @@ In this example, a custom toggle switch is built using a `<button>`. While it lo
 <!-- The label is associated with the button via aria-labelledby -->
 <span id="notifications-label" class="label-text">Enable Notifications</span>
 
-<button 
-  type="button" 
-  role="switch" 
-  aria-checked="false" 
-  aria-labelledby="notifications-label"
-  class="toggle-switch"
-  onclick="toggleState(this)">
+<button type="button" role="switch" aria-checked="false" aria-labelledby="notifications-label" class="toggle-switch" onclick="toggleState(this)">
   <span class="thumb"></span>
 </button>
 
@@ -398,7 +376,7 @@ In this example, a custom toggle switch is built using a `<button>`. While it lo
     // Toggle the aria-checked attribute between "true" and "false"
     const isChecked = element.getAttribute('aria-checked') === 'true';
     element.setAttribute('aria-checked', !isChecked);
-    
+
     // Update visual styles via CSS classes if necessary
     element.classList.toggle('is-active');
   }
@@ -409,51 +387,45 @@ Note that this example makes up for the lack of accessibility controls in the st
 
 #### Key ARIA Attributes Explained
 
-| Attribute | Purpose |
-| :--- | :--- |
-| `role="switch"` | Informs the screen reader that the element is a type of checkbox that represents an "on/off" state rather than a simple "checked/unchecked" state. |
-| `aria-checked` | Indicates the current state of the switch. This must be updated dynamically via JavaScript when the user interacts with the component. |
-| `aria-labelledby` | Points to the ID of the text element that labels the switch, providing an "accessible name" so the user knows what they are toggling. |
+| Attribute         | Purpose                                                                                                                                            |
+| :---------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `role="switch"`   | Informs the screen reader that the element is a type of checkbox that represents an "on/off" state rather than a simple "checked/unchecked" state. |
+| `aria-checked`    | Indicates the current state of the switch. This must be updated dynamically via JavaScript when the user interacts with the component.             |
+| `aria-labelledby` | Points to the ID of the text element that labels the switch, providing an "accessible name" so the user knows what they are toggling.              |
 
 ### WCAG
 
 The Web Content Accessibility Guidelines (WCAG) are the internationally recognized standards for digital accessibility, developed by the World Wide Web Consortium (W3C). In UX design, adhering to WCAG ensures that digital products are inclusive for users with a diverse range of disabilities, including visual, auditory, motor, and cognitive impairments. These guidelines are organized around four foundational principles known as **POUR**: Perceivable, Operable, Understandable, and Robust.
 
-| Principle | Definition | UX Design Application |
-| :--- | :--- | :--- |
-| **Perceivable** | Information and interface components must be presented in ways that users can sense. | Providing text alternatives for non-text content (alt text) and ensuring sufficient color contrast. |
-| **Operable** | User interface components and navigation must be functional and easy to use. | Ensuring all site features are accessible via keyboard and providing users enough time to complete tasks. |
-| **Understandable** | Information and the operation of the user interface must be clear and predictable. | Using plain language, providing helpful error messages, and maintaining consistent navigation patterns. |
-| **Robust** | Content must be compatible with a wide variety of user agents, including assistive technologies. | Using valid HTML and ARIA labels so that screen readers can accurately interpret the interface. |
+| Principle          | Definition                                                                                       | UX Design Application                                                                                     |
+| :----------------- | :----------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
+| **Perceivable**    | Information and interface components must be presented in ways that users can sense.             | Providing text alternatives for non-text content (alt text) and ensuring sufficient color contrast.       |
+| **Operable**       | User interface components and navigation must be functional and easy to use.                     | Ensuring all site features are accessible via keyboard and providing users enough time to complete tasks. |
+| **Understandable** | Information and the operation of the user interface must be clear and predictable.               | Using plain language, providing helpful error messages, and maintaining consistent navigation patterns.   |
+| **Robust**         | Content must be compatible with a wide variety of user agents, including assistive technologies. | Using valid HTML and ARIA labels so that screen readers can accurately interpret the interface.           |
 
 ### Contrast ratios
 
 The Web Content Accessibility Guidelines (WCAG) establish specific contrast ratios to ensure that text and interactive elements are sufficiently distinguishable from their backgrounds. These standards are designed to assist users with low vision, color blindness, or situational impairments—such as high-glare environments—in perceiving information clearly. Contrast is measured as a ratio of the relative luminance between the foreground and background colors, ranging from 1:1 (no contrast) to 21:1 (maximum contrast, such as black text on a white background).
 
-| WCAG Level | Text Type | Minimum Contrast Ratio |
-| :--- | :--- | :--- |
-| **AA** (Minimum) | Normal Text (under 18pt or 14pt bold) | 4.5:1 |
-| **AA** (Minimum) | Large Text (18pt+ or 14pt+ bold) | 3:1 |
-| **AAA** (Enhanced) | Normal Text (under 18pt or 14pt bold) | 7:1 |
-| **AAA** (Enhanced) | Large Text (18pt+ or 14pt+ bold) | 4.5:1 |
-
+| WCAG Level         | Text Type                             | Minimum Contrast Ratio |
+| :----------------- | :------------------------------------ | :--------------------- |
+| **AA** (Minimum)   | Normal Text (under 18pt or 14pt bold) | 4.5:1                  |
+| **AA** (Minimum)   | Large Text (18pt+ or 14pt+ bold)      | 3:1                    |
+| **AAA** (Enhanced) | Normal Text (under 18pt or 14pt bold) | 7:1                    |
+| **AAA** (Enhanced) | Large Text (18pt+ or 14pt+ bold)      | 4.5:1                  |
 
 ```masteryls
 {"id":"a66cc13f-5ad3-4170-bbc9-1aa1e5b2ea6c", "title":"Web page", "type":"web-page", "height":1000, "file":"wcag.html"}
 ```
 
-
- By following these standards—typically aiming for Level AA conformance—designers can create experiences that are not only legally compliant but also more usable for all individuals, regardless of their physical or cognitive abilities.
-
-
-
+By following these standards—typically aiming for Level AA conformance—designers can create experiences that are not only legally compliant but also more usable for all individuals, regardless of their physical or cognitive abilities.
 
 ### Best Practices for UX Accessibility
+
 1.  **Prefer Native HTML:** Only use ARIA if a native element cannot achieve the required design or behavior. For example, a standard `<input type="checkbox">` provides built-in keyboard support and state reporting without extra code.
 2.  **Keyboard Interactivity:** When using `role="switch"` on a non-button element (like a `div`), you must manually add `tabindex="0"` and handle "Enter" or "Space" key presses via JavaScript.
 3.  **State Synchronization:** Ensure the visual state (CSS) and the ARIA state (`aria-checked`) are always synchronized. Assistive technology relies solely on the ARIA attribute, not the visual CSS styles.
-
-
 
 ## Internationalization
 
@@ -563,12 +535,10 @@ Legal walls usually only protect the application vendor and provide little or no
 
 Another common example of a legal wall is an application that requires the acceptance of terms and conditions before you can use the application. You want to minimize the impact of legal walls as much as possible since they lessen the user's experience and encourage the user to question why a legal consent is required in the first place.
 
-
 ## Exercises
 
-
 ```masteryls
-{"id":"", "title":"Applying Fitts's Law", "type":"multiple-choice"}
+{8bd04a4c-d49f-48d0-b334-93f1f9264df9:"Applying Fitts's Law", "type":"multiple-choice"}
 According to Fitts's Law, which of the following changes would most effectively improve the usability of a primary Call-to-Action (CTA) button?
 
 - [x] Increasing the clickable area of the button and placing it closer to the user's expected cursor path.
@@ -576,7 +546,6 @@ According to Fitts's Law, which of the following changes would most effectively 
 - [ ] Changing the button's color to a low-contrast shade to make it less distracting.
 - [ ] Making the button smaller to ensure it doesn't interfere with the surrounding text content.
 ```
-
 
 ```masteryls
 {"id":"e1a5b678-044f-4e0b-9231-c604ac54f424", "title":"The Role of Functional Animation", "type":"multiple-choice"}
@@ -588,7 +557,6 @@ In UX design, what is the primary purpose of "functional animation" as opposed t
 - [ ] To ensure that the website meets the minimum requirements for modern CSS framework compliance
 ```
 
-
 ```masteryls
 {"id":"591a2b3a-020a-44e0-bd59-dd12d4fd9271", "title":"WCAG Text Contrast Standards", "type":"multiple-choice"}
 To meet the WCAG 2.1 Success Criterion 1.4.3 (Contrast Minimum) at the **Level AA** standard, what is the minimum required contrast ratio for standard-sized body text (less than 18pt or 14pt bold)?
@@ -599,7 +567,6 @@ To meet the WCAG 2.1 Success Criterion 1.4.3 (Contrast Minimum) at the **Level A
 - [ ] 2.1:1
 ```
 
-
 ```masteryls
 {"id":"3d32eb56-a523-40ce-bf6a-3919754cd0d0", "title":"The Role of Whitespace", "type":"multiple-choice"}
 When designing a web interface, how does the strategic application of whitespace (negative space) primarily impact a user's interaction with the content?
@@ -609,7 +576,6 @@ When designing a web interface, how does the strategic application of whitespace
 - [ ] It acts as a technical buffer to ensure that high-resolution images do not overlap during browser window resizing.
 - [ ] It is used to intentionally slow down the user's scanning speed to increase the "time on page" metric for SEO purposes.
 ```
-
 
 ```masteryls
 {"id":"874ca32f-0894-4cf6-897f-276848f55620", "title":"Bad UX example", "type":"essay" }

@@ -12,20 +12,20 @@ Arrow functions allow for implicit returns when the function body consists of a 
 
 This makes them ideal for functional programming patterns like `map`, `filter`, and `reduce`.
 
-*   **Standard Function:** Requires the `function` keyword, curly braces, and a `return` statement.
-*   **Arrow Function (Explicit):** Uses `=>` but retains curly braces and `return`.
-*   **Arrow Function (Implicit):** Removes curly braces and `return` for one-liners.
+- **Standard Function:** Requires the `function` keyword, curly braces, and a `return` statement.
+- **Arrow Function (Explicit):** Uses `=>` but retains curly braces and `return`.
+- **Arrow Function (Implicit):** Removes curly braces and `return` for one-liners.
 
 ```javascript
 const numbers = [1, 2, 3, 4];
 
 // Standard Function
-const doubled1 = numbers.map(function(n) {
+const doubled1 = numbers.map(function (n) {
   return n * 2;
 });
 
 // Arrow Function (Implicit return)
-const doubled2 = numbers.map(n => n * 2);
+const doubled2 = numbers.map((n) => n * 2);
 
 // Returning an object implicitly requires parentheses
 const makeObject = (id, name) => ({ id: id, name: name });
@@ -52,10 +52,9 @@ Arrow functions also have special rules for the `return` keyword. The return key
 // RETURNS: 3
 ```
 
-
 ## Lexical `this` and Scoping
 
-The most significant technical difference between arrow functions and regular functions is how they handle the `this` context. In a regular function, `this` is defined by *how* the function is called (dynamic scoping). In an arrow function, `this` is **lexically scoped**, meaning it inherits `this` from the surrounding code block where it was defined.
+The most significant technical difference between arrow functions and regular functions is how they handle the `this` context. In a regular function, `this` is defined by _how_ the function is called (dynamic scoping). In an arrow function, `this` is **lexically scoped**, meaning it inherits `this` from the surrounding code block where it was defined.
 
 ```mermaid
 graph TD
@@ -63,7 +62,7 @@ graph TD
     B --> C{Call Type}
     C -->|Method Call| D[this = The Object]
     C -->|Simple Call| E[this = Window/Undefined]
-    
+
     A --> F[Enclosing Scope]
     F --> G[Arrow Function]
     G --> H[this = Inherited from Enclosing Scope]
@@ -80,7 +79,7 @@ Arrow functions interact seamlessly with closures. Because they capture the lexi
 ```javascript
 function Timer() {
   this.seconds = 0;
-  
+
   // The arrow function creates a closure over 'this' from Timer
   setInterval(() => {
     this.seconds++;
@@ -133,15 +132,15 @@ const person = {
   name: 'Alice',
   // PROBLEM: 'this' will not be the person object
   sayHi: () => {
-    console.log(`Hi, I am ${this.name}`); 
-  }
+    console.log(`Hi, I am ${this.name}`);
+  },
 };
 
 person.sayHi(); // Output: "Hi, I am undefined"
 ```
 
 ```masteryls
-{"id":"js-arrow-functions-01", "title":"Understanding Lexical this", "type":"multiple-choice"}
+{"id":"2c99a226-2eea-4382-b74d-dd609e1be0a1", "title":"Understanding Lexical this", "type":"multiple-choice"}
 What is the primary difference in how arrow functions handle the `this` keyword compared to regular functions?
 
 - [ ] Arrow functions bind `this` to the object that calls the function at runtime.
@@ -149,13 +148,6 @@ What is the primary difference in how arrow functions handle the `this` keyword 
 - [ ] Arrow functions always set `this` to the global window object.
 - [ ] Arrow functions allow you to manually rebind `this` using the .bind() method.
 ```
-
-
-
-
-
-
-
 
 ## Using arrow functions with React
 
@@ -252,18 +244,13 @@ function App() {
 
 This results in concise, simple, thread safe code in a functional programming style.
 
-
-
 ## Experiment
 
 Use the **JavaScript Interpreter**, or the console pane in the browser debugger, to experiment with arrow functions.
 
-
 ```masteryls
 {"id":"a92239de-b212-437c-becf-f42950a9b999", "type":"web-page", "height":650, "file":"../introduction/javascriptPlayground.html" }
 ```
-
-
 
 ## An advanced example
 
@@ -280,7 +267,7 @@ window.addEventListener(
   'scroll',
   debounce(500, () => {
     console.log('Executed an expensive calculation');
-  })
+  }),
 );
 ```
 

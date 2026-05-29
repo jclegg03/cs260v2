@@ -170,10 +170,9 @@ Snapshots:   0 total
 Time:        0.237 s, estimated 1 s
 ```
 
-
 ## Fundamentals of Jest Matchers
 
-Jest is a powerful JavaScript testing framework designed with a focus on simplicity and support for large-scale applications. At the core of every Jest test is the assertion—a statement that validates whether your code behaves as expected. In Jest, assertions are constructed using the `expect` function paired with a "matcher" method. 
+Jest is a powerful JavaScript testing framework designed with a focus on simplicity and support for large-scale applications. At the core of every Jest test is the assertion—a statement that validates whether your code behaves as expected. In Jest, assertions are constructed using the `expect` function paired with a "matcher" method.
 
 The basic syntax follows a natural language pattern: `expect(actualValue).toBe(expectedValue)`. When Jest runs, it evaluates the expression inside `expect()`, compares it using the matcher, and reports a failure if the condition isn't met.
 
@@ -192,22 +191,21 @@ graph LR
 
 Jest provides a wide variety of matchers to handle different data types and scenarios. Understanding which matcher to use is critical for writing precise tests.
 
-*   **Equality and Identity:**
-    *   `.toBe(value)`: Uses `Object.is` to test exact equality. Ideal for primitives (strings, numbers, booleans).
-    *   `.toEqual(value)`: Recursively checks every field of an object or array. This is known as "deep equality."
-*   **Truthiness:**
-    *   `.toBeNull()`: Matches only `null`.
-    *   `.toBeUndefined()`: Matches only `undefined`.
-    *   `.toBeDefined()`: The opposite of `toBeUndefined`.
-    *   `.toBeTruthy()`: Matches anything that an `if` statement treats as true.
-    *   `.toBeFalsy()`: Matches anything that an `if` statement treats as false.
-*   **Numbers:**
-    *   `.toBeGreaterThan(n)`, `.toBeLessThanOrEqual(n)`, etc.
-    *   `.toBeCloseTo(n)`: Used for floating-point math to avoid rounding errors.
-
+- **Equality and Identity:**
+  - `.toBe(value)`: Uses `Object.is` to test exact equality. Ideal for primitives (strings, numbers, booleans).
+  - `.toEqual(value)`: Recursively checks every field of an object or array. This is known as "deep equality."
+- **Truthiness:**
+  - `.toBeNull()`: Matches only `null`.
+  - `.toBeUndefined()`: Matches only `undefined`.
+  - `.toBeDefined()`: The opposite of `toBeUndefined`.
+  - `.toBeTruthy()`: Matches anything that an `if` statement treats as true.
+  - `.toBeFalsy()`: Matches anything that an `if` statement treats as false.
+- **Numbers:**
+  - `.toBeGreaterThan(n)`, `.toBeLessThanOrEqual(n)`, etc.
+  - `.toBeCloseTo(n)`: Used for floating-point math to avoid rounding errors.
 
 ```masteryls
-{"id":"jest-matchers-001", "title":"Deep vs. Referential Equality", "type":"multiple-choice"}
+{"id":"f1d4d612-eb27-4943-b7cf-424168901cf6", "title":"Deep vs. Referential Equality", "type":"multiple-choice"}
 You are testing a function that returns a newly created array: `const getTags = () => ["node", "jest"];`. Which assertion will pass?
 
 - [ ] `expect(getTags()).toBe(["node", "jest"])`
@@ -215,7 +213,6 @@ You are testing a function that returns a newly created array: `const getTags = 
 - [ ] `expect(getTags()).toBeDefined(false)`
 - [ ] `expect(getTags()).toMatch(["node", "jest"])`
 ```
-
 
 ### Example: Testing a User Object
 
@@ -228,13 +225,13 @@ const getUser = (id) => {
 
 test('user object should have correct properties', () => {
   const data = getUser(1);
-  
+
   // This would FAIL because they are different object instances in memory
-  // expect(data).toBe({ id: 1, username: 'dev_user', active: true }); 
+  // expect(data).toBe({ id: 1, username: 'dev_user', active: true });
 
   // This PASSES because it checks the content
   expect(data).toEqual({ id: 1, username: 'dev_user', active: true });
-  
+
   // Checking specific properties
   expect(data.active).toBeTruthy();
   expect(data.username).toMatch(/dev/); // Regex support
@@ -251,7 +248,6 @@ test('registration should not allow short passwords', () => {
   expect(passwordLength).not.toBeGreaterThan(8);
 });
 ```
-
 
 ## Basic testing methodology
 
@@ -398,7 +394,6 @@ You can use the VS Code Jest extension to visualize what tests are passing, auto
 
 The great thing about test driven development (TDD) is that you can actually write your tests first and then write your code based upon the design represented by the tests. When your tests pass you know your code is complete. Additionally, when you make later modifications to your code you can simply run your tests again. If they pass then you can be confident that your code is still working without having to manually test everything yourself. With systems that have hundreds of endpoints and hundreds of thousands of lines of code, TDD becomes an indispensable part of the development process.
 
-
 ## Exercises
 
 ````masteryls
@@ -417,4 +412,3 @@ expect(result).______(config);
 - [ ] `.toMatch()`
 - [ ] `.toContain()`
 ````
-

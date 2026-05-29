@@ -1,10 +1,8 @@
-
 # Review and explore
 
 Learning HTML is more than memorizing a list of tags; it is about building a robust mental model of how the web is structured. HTML serves as the **backbone** of every website, providing the essential skeleton upon which CSS (styling) and JavaScript (behavior) are built. Without this structural foundation, the other technologies have nothing to hook onto. By exploring HTML through discovery—rather than rote memorization—you foster a sense of curiosity that allows you to see the web as a series of nested containers and relationships.
 
 ## Anatomy of a web page's structure
-
 
 ```masteryls
 {"id":"cd76a31c-c450-4d5a-a777-c8e86643971f", "title":"Structural elements", "type":"web-page" "height":500 }
@@ -123,22 +121,22 @@ Learning HTML is more than memorizing a list of tags; it is about building a rob
             background: #1976d2;
         }
 
-        .hidden-labels header::before, 
-        .hidden-labels nav::before, 
-        .hidden-labels main::before, 
-        .hidden-labels section::before, 
-        .hidden-labels article::before, 
-        .hidden-labels aside::before, 
+        .hidden-labels header::before,
+        .hidden-labels nav::before,
+        .hidden-labels main::before,
+        .hidden-labels section::before,
+        .hidden-labels article::before,
+        .hidden-labels aside::before,
         .hidden-labels footer::before {
             display: none;
         }
 
-        .hidden-labels header, 
-        .hidden-labels nav, 
-        .hidden-labels main, 
-        .hidden-labels section, 
-        .hidden-labels article, 
-        .hidden-labels aside, 
+        .hidden-labels header,
+        .hidden-labels nav,
+        .hidden-labels main,
+        .hidden-labels section,
+        .hidden-labels article,
+        .hidden-labels aside,
         .hidden-labels footer {
             border-style: solid;
             border-color: transparent;
@@ -155,7 +153,7 @@ Learning HTML is more than memorizing a list of tags; it is about building a rob
     <header data-label="header">
         <h1>Website Architecture</h1>
         <p>This page demonstrates how HTML5 semantic elements organize content.</p>
-        
+
         <nav data-label="nav">
             <ul>
                 <li><a href="#">Home</a></li>
@@ -171,7 +169,7 @@ Learning HTML is more than memorizing a list of tags; it is about building a rob
             <section data-label="section">
                 <h2>Introduction to Semantics</h2>
                 <p>Semantic HTML introduces meaning to the web page rather than just presentation. It helps search engines and assistive technologies understand the role of different content blocks.</p>
-                
+
                 <article data-label="article">
                     <h3>The Article Element</h3>
                     <p>An article represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable.</p>
@@ -205,15 +203,14 @@ Learning HTML is more than memorizing a list of tags; it is about building a rob
         const btn = document.getElementById('toggleLabels');
         btn.addEventListener('click', () => {
             document.body.classList.toggle('hidden-labels');
-            btn.textContent = document.body.classList.contains('hidden-labels') 
-                ? 'Show Structure Labels' 
+            btn.textContent = document.body.classList.contains('hidden-labels')
+                ? 'Show Structure Labels'
                 : 'Hide Structure Labels';
         });
     </script>
 </body>
 </html>
 ```
-
 
 An HTML document is typically comprised of a root element that contains zero or more children elements. Those children can then contain other children. This forms a "tree" of elements the define how the page is structured. When an HTML element is represented in a textual file format it is often refered to as a **tag**. The opening and closing tags show where the element starts and ends with the children represented in between The following code demonstrates a simple document.
 
@@ -232,7 +229,6 @@ An HTML document is typically comprised of a root element that contains zero or 
 
 When you write HTML, you are creating a blueprint. However, the browser doesn't just display your text file; it parses it into an in-memory representation called the **Document Object Model (DOM)**. Understanding the DOM is the "aha!" moment for many developers. It transforms your flat code into a branching tree structure where every element is a "node." JavaScript code and CSS styling directives interact with the nodes in the DOM to make the HTML come alive.
 
-
 ```mermaid
 graph TD
     classDef default fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1px;
@@ -246,7 +242,6 @@ graph TD
     Main --> P2[p element: Hello World]
     Main --> Img[img element]
 ```
-
 
 To explore this structure effectively, you should focus on the relationship between **Tags** and **Attributes**. Think of tags as the "nouns" (the objects themselves) and attributes as the "adjectives" (the properties or configurations of those objects). For example, an `<a>` tag defines a link, but the `href` attribute tells the browser where that link actually goes.
 
@@ -277,26 +272,23 @@ Note that both the unstyled and styled versions use the same HTML structural ele
 ~~~
 ```
 
-
-
 ```masteryls
 {"id":"9f5c55c8-27cb-4042-b75e-9844336409ce", "title":"Common elements", "type":"essay" }
 Describe the common HTML structural elements.
 ```
 
-
 ## Experiment on your own
 
 There are several active methods to explore HTML and deepen your understanding:
 
-*   **The "View Source" Method:** Right-click on any professional website and select "View Page Source." This allows you to see the raw backbone provided by the developers.
-*   **Browser DevTools (The Living DOM):** Use the `Inspect` tool (F12 or Cmd+Option+I) to see the DOM in real-time. You can double-click tags to change them or delete elements to see how the layout collapses, which reveals the structural importance of specific tags.
-*   **The "Break and Fix" Strategy:** Take a simple HTML template and intentionally remove closing tags or nest elements incorrectly. Observing how the browser tries to "fix" your mistakes (auto-closing tags) helps you understand the browser's parsing logic.
+- **The "View Source" Method:** Right-click on any professional website and select "View Page Source." This allows you to see the raw backbone provided by the developers.
+- **Browser DevTools (The Living DOM):** Use the `Inspect` tool (F12 or Cmd+Option+I) to see the DOM in real-time. You can double-click tags to change them or delete elements to see how the layout collapses, which reveals the structural importance of specific tags.
+- **The "Break and Fix" Strategy:** Take a simple HTML template and intentionally remove closing tags or nest elements incorrectly. Observing how the browser tries to "fix" your mistakes (auto-closing tags) helps you understand the browser's parsing logic.
 
 This exploratory approach leads to two major outcomes: **Curiosity** and **Creativity**. When you stop asking "What tag do I use?" and start asking "How is this structured?", you gain the creative freedom to build complex layouts. You begin to see the web not as a magic black box, but as a logical, hierarchical tree that you have the power to manipulate.
 
 ```masteryls
-{"id":"html-dom-mental-model", "title":"Understanding the DOM", "type":"multiple-choice"}
+{"id":"4cfe6080-6b5f-4296-97fc-9bc4cb11f559", "title":"Understanding the DOM", "type":"multiple-choice"}
 What is the primary difference between the HTML code you write and the Document Object Model (DOM)?
 
 - [ ] The HTML code is used for mobile devices, while the DOM is only used for desktop browsers.
