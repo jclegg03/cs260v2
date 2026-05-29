@@ -172,7 +172,10 @@ Another way to easily play with HTML is to use a sandbox like the interaction sh
 
 
 ```masteryls
-{"id":"77bcd45a-b7ef-4bc4-bdb2-4ad2adfda22e", "title":"Web page development", "type":"ai-web-page", "allowAiPrompt":false, "syncGrade":false, "autoGrade":false, "gradingCriteria":"Everything is valid HTML", "height":300 }
+{"id":"77bcd45a-b7ef-4bc4-bdb2-4ad2adfda22e", "title":"Web page development", "type":"ai-web-page", "allowAiPrompt":false, "syncGrade":false, "autoGrade":false, "gradingCriteria":"Everything is valid HTML. Includes tables, lists, links, and images.", "height":300 }
+
+Make sure you includes table, list, link, and image tags.
+
 ~~~html
 <!DOCTYPE html>
 <html lang="en">
