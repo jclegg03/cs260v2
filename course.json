@@ -134,10 +134,10 @@
           "id": "96e3a6d4-8b60-4cdb-9f2c-aedaa2cb8a15",
           "state": "published",
           "interactions": [
-            "ai-policy-understanding"
+            "2b2f6f12-7443-4269-a90f-9e88cd7b25b0"
           ],
           "description": "Explain why you want to use AI to build web apps, how to get a copilot educational license, and how to use copilot to build a web app interactively in vscode",
-          "commit": "5b2bd1979202e2e30c2c1e83aa2f456c960d742f"
+          "commit": "243eda7a58613336d4cf49269885e41d54fbf2b1"
         },
         {
           "title": "The Console",
