@@ -76,8 +76,9 @@ According to our AI policy, you must be able to explain every line of code you s
 *   **Required:** Total comprehension of the final product.
 *   **Risk:** If you are asked to explain a portion of your code during a review and cannot do so, you may fail the assignment or the class.
 
+
 ```masteryls
-{"id":"ai-policy-understanding", "title":"Defining the Partner Mindset", "type":"multiple-choice"}
+{"id":"2b2f6f12-7443-4269-a90f-9e88cd7b25b0", "title":"Defining the Partner Mindset", "type":"multiple-choice"}
 Under the 'Partner' level AI policy, which of the following scenarios is considered an acceptable use of AI in this course?
 
 - [ ] Asking the AI to generate the entire project and submitting it immediately because it works.
