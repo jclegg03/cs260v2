@@ -112,7 +112,7 @@ The `canvas` element was introduced to HTML in order to facilitate 2D drawing an
 
 
 ```masteryls
-{"id":"5cdb3b2d-c448-4dfb-a6f3-3bf87946e906", "title":"Web page development", "type":"ai-web-page", "allowAiPrompt":false, "syncGrade":false, "autoGrade":false, "gradingCriteria":"Change the image to something besides htmlImage.jpg. Change the video to something else besides htmlAudio.mp3. Change the canvas element to display a blue circle.", "height":1000 }
+{"id":"5cdb3b2d-c448-4dfb-a6f3-3bf87946e906", "title":"Web page development", "type":"ai-web-page", "allowAiPrompt":false, "syncGrade":false, "autoGrade":false, "gradingCriteria":"Change the image to something besides htmlImage.jpg. Change the video to something else besides park.mp4. Change the canvas element to display a blue circle.", "height":1000 }
 This interaction demonstrates the different media elements.
 
 1. Change the image to something else.
