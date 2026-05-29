@@ -94,3 +94,15 @@ Which of the following best describes **Caddy** and its primary distinguishing f
 - [x] An open-source, extensible web server written in Go that provides automatic HTTPS by default.
 ```
 
+
+```masteryls
+{"id":"2a9e30d3-27d0-47be-b272-479c14333b73", "title":"Reverse vs. Forward Proxies", "type":"multiple-choice"}
+In the context of web architecture and Caddy configuration, what is the primary functional difference between a reverse proxy and a forward proxy?
+
+- [ ] A reverse proxy is used by clients to bypass local firewalls, while a forward proxy is used by servers to hide their internal IP addresses.
+- [x] A reverse proxy sits in front of one or more web servers to intercept and route incoming requests from the internet, while a forward proxy sits in front of clients to manage and filter outgoing requests to the internet.
+- [ ] Caddy only supports reverse proxying for HTTPS traffic, whereas forward proxying is required for legacy HTTP/1.1 connections.
+- [ ] A forward proxy is used to distribute load across multiple backend instances, while a reverse proxy is used exclusively for encrypting traffic via TLS.
+```
+
+
