@@ -277,6 +277,7 @@ Note that both the unstyled and styled versions use the same HTML structural ele
 Describe the common HTML structural elements.
 ```
 
+
 ## Experiment on your own
 
 There are several active methods to explore HTML and deepen your understanding:
