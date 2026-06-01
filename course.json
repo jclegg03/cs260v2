@@ -149,7 +149,8 @@
           "state": "published",
           "interactions": [
             "39686cd9-b760-4b3a-a26d-5bd89b55f2fa"
-          ]
+          ],
+          "commit": "3011bf3760d70423fa542b14882f0bd423694bdc"
         },
         {
           "title": "GitHub",
