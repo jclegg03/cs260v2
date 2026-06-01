@@ -328,7 +328,8 @@
           "state": "published",
           "interactions": [
             "77bcd45a-b7ef-4bc4-bdb2-4ad2adfda22e"
-          ]
+          ],
+          "commit": "5531c5f2669c21ac20d67c7543b0935cb112d01e"
         },
         {
           "title": "Structure",
