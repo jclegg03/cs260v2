@@ -85,8 +85,7 @@
           "interactions": [
             "95f8915a-4870-461b-8c54-711a5b44ebf8"
           ],
-          "description": "",
-          "commit": "ce3dbfd8e806063f394454575a7eea0cb1d564a5"
+          "description": ""
         },
         {
           "title": "Late policy",
@@ -150,8 +149,7 @@
           "state": "published",
           "interactions": [
             "39686cd9-b760-4b3a-a26d-5bd89b55f2fa"
-          ],
-          "commit": "3011bf3760d70423fa542b14882f0bd423694bdc"
+          ]
         },
         {
           "title": "GitHub",
@@ -329,8 +327,7 @@
           "state": "published",
           "interactions": [
             "77bcd45a-b7ef-4bc4-bdb2-4ad2adfda22e"
-          ],
-          "commit": "5531c5f2669c21ac20d67c7543b0935cb112d01e"
+          ]
         },
         {
           "title": "Structure",
@@ -376,8 +373,7 @@
             "9f5c55c8-27cb-4042-b75e-9844336409ce",
             "4cfe6080-6b5f-4296-97fc-9bc4cb11f559"
           ],
-          "description": "",
-          "commit": "562747c4ca0d11c944f35da65c88c99a0778740a"
+          "description": ""
         },
         {
           "title": "Simon HTML",
