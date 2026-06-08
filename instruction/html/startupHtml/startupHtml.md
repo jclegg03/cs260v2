@@ -101,12 +101,24 @@ Doing this will make this deliverable of your startup available from `https://st
 
 ```masteryls
 {"id":"f92b8dce-237d-427c-b781-b25482026e5f", "title":"Startup HTML deliverable", "type":"url-submission", "syncGrade":true, "autoGrade":false, "urlPrompt":"Convert the user provided URL to create a URL that is the path to the raw GitHub content for the README.md file.", "gradingCriteria":"- The content contains a section named 'AWS Deliverable' that has a link to the students domain. The domain must not be 'yourdomainhere'. The domain must resolve.\n- The content contains a section named 'HTML Deliverable'\n- In the 'HTML Deliverable' section there is a checklist of rubric items.\n- Create a score based on the number of checked items and the description of what was done for each item."}
-Update your README.md with clear descriptions  of what you did for each of the rubric items. Then that is done, submit the URL to your startup repository.
+Update your README.md with clear descriptions  of what you did for each of the rubric items. When that is done, submit the URL to your startup repository.
 
 _Example: https://github.com/myaccount/startup_
 
 **Note:** If you are updating your repository after initially submitting, you may need to way a few minutes before GitHub will return the version with your latest changes.
 ```
+
+
+```masteryls
+{"id":"6c137756-4306-431c-bec8-bc44706cff71","title":"Startup HTML deliverable","type":"github-submission","syncGrade":true,"autoGrade":true,"gradingCriteria":"- The README.md file contains a section named 'AWS Deliverable' that has a link to the students domain. The domain must not be 'yourdomainhere'. The domain must resolve.\n- The README.md file contains a section named 'HTML Deliverable' containing a checklist of rubric items. For everything that is checked, use the learner's description of what they said they did to determine the resulting score. Check the code to verify that they actually did what they said they did.\n- Review the structure and quality of the code and modify the resulting score appropriately."}
+Update your README.md with clear descriptions  of what you did for each of the rubric items. When that is done, submit the URL to your startup repository.
+
+_Example: https://github.com/myaccount/startup_
+
+**Note:** If you are updating your repository after initially submitting, you may need to way a few minutes before GitHub will return the version with your latest changes.
+```       
+
+
 
 ## Go celebrate
 
