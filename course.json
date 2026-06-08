@@ -13,16 +13,14 @@
         "title": "📅 Winter 2026 Schedule",
         "path": "schedule/schedule.md",
         "default": true,
-        "state": "published",
-        "commit": "e1d51d6ccb6c3358ab40e08229712b7af90d3ab0"
+        "state": "published"
       },
       {
         "id": "144c7d47-63e1-4e38-b3bb-17f0ae5f6898",
         "title": "Summer 2026 Schedule",
         "path": "schedule/summer-2026-schedule.md",
         "default": false,
-        "state": "published",
-        "commit": "92fc533daca9beb20a93bd6c1f453e806c4af661"
+        "state": "published"
       }
     ]
   },
@@ -401,7 +399,8 @@
           "id": "bcb184b3-7d76-4313-b701-8f6172725344",
           "state": "published",
           "interactions": [
-            "f92b8dce-237d-427c-b781-b25482026e5f"
+            "f92b8dce-237d-427c-b781-b25482026e5f",
+            "6c137756-4306-431c-bec8-bc44706cff71"
           ],
           "description": "",
           "externalRefs": {
@@ -947,6 +946,7 @@
           "type": "embedded",
           "path": "https://leesjensen.com/demo/asyncFlow.html",
           "id": "6ea9b18b-c93f-4882-b6c1-6a296cc43c3c",
+          "state": "published",
           "description": "https://leesjensen.com/demo/asyncFlow.html"
         }
       ]
