@@ -7,6 +7,15 @@
 📱 [Simon](instruction/essentials/simon/simon.md) | 🚀 [Startup](instruction/essentials/startup/startup.md)
 
 Welcome to Introduction to Web Programming. In this course, you will learn to design, build, and deploy full-stack web applications that serve real users and solve meaningful problems. Along the way, you’ll engage in the practices of modern software developers—reasoning about system architecture, using AI as a collaborative tool, and taking responsibility for the security, performance, and impact of the systems you create. More than just learning technologies, this course is about developing the habits of thoughtful, capable engineers who can adapt, continue learning, and use their skills to contribute positively to others.
+## Learning with MasteryLS
+
+This course uses [MasteryLS](https://masteryls.com) for learning the content. To get started:
+
+1. Navigate to [MasteryLS](https://masteryls.com).
+1. Register for an account. Use your BYU email address so that your grades can be recorded in Canvas. This will send you a one-time password to your BYU email to complete the registration.
+1. Click on the `Web Programming` course for enrollment.
+1. Click on the newly enrolled `Web Programming` course to start learning.
+1. Read the [Learner Tutorial](https://github.com/leesjensen/masteryls/blob/main/docs/learnerTutorial.md) on how to use MasteryLS.
 
 ## Outcomes
 
