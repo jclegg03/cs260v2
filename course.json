@@ -1,5 +1,5 @@
 {
-  "title": "cs260v2",
+  "title": "Web Programming v2",
   "links": {},
   "externalRefs": {
     "canvasCourseId": "36027",
@@ -13,14 +13,16 @@
         "title": "📅 Winter 2026 Schedule",
         "path": "schedule/schedule.md",
         "default": true,
-        "state": "published",
-        "commit": "ad16a508e5906ae998c8498e727a0c6e064d9ac6"
+        "state": "published"
       }
     ]
   },
   "modules": [
     {
       "title": "Course info",
+      "externalRefs": {
+        "canvasModuleId": 393330
+      },
       "topics": [
         {
           "title": "Home",
@@ -30,7 +32,9 @@
           "interactions": [
             "ef2f9d20-99b5-4adc-ab98-3a6536234103"
           ],
-          "commit": "da8aaf4ffd95477977f6fe4274df7a71d26b304b"
+          "externalRefs": {
+            "canvasPageId": 1583371
+          }
         },
         {
           "title": "Syllabus",
@@ -40,14 +44,16 @@
           "interactions": [
             "cae08349-d561-4c4b-9a84-208fab172b36"
           ],
-          "commit": "116e194fc81d42308e939509d677d949adf14170"
+          "externalRefs": {
+            "canvasPageId": 1583372
+          }
         }
       ]
     },
     {
       "title": "Development essentials",
       "externalRefs": {
-        "canvasModuleId": 393202
+        "canvasModuleId": 393331
       },
       "topics": [
         {
@@ -59,8 +65,7 @@
           "interactions": [
             "6fdc2fdb-e3de-49c9-ba25-f66b0da68d1a"
           ],
-          "description": "",
-          "commit": "621d83545cc4204e80e0bd9393187ca0584bee5c"
+          "description": ""
         },
         {
           "title": "AWS account",
@@ -71,8 +76,7 @@
           "interactions": [
             "6fdc2fdb-e3de-49c9-ba25-f66b0da68d1a"
           ],
-          "description": "",
-          "commit": "7c89bb1bf3cbee247b1bc202c3b209a54839fb84"
+          "description": ""
         },
         {
           "title": "Late policy",
@@ -81,8 +85,7 @@
           "state": "published",
           "interactions": [
             "a819fd43-c894-4945-b851-3b513d659573"
-          ],
-          "commit": "e899bea0f5a431ac719d493a80d918b2ea9b1312"
+          ]
         },
         {
           "title": "Startup application",
@@ -91,8 +94,7 @@
           "state": "published",
           "interactions": [
             "e0524127-4cf0-4fc8-aa8d-bfcaee7ca4e2"
-          ],
-          "commit": "4d938597a460e6d583cbe09b462b6f371828548e"
+          ]
         },
         {
           "title": "Demo day",
@@ -101,8 +103,7 @@
           "id": "d154a1e4-1c7a-426d-ac79-ab43a739bd02",
           "state": "published",
           "interactions": [],
-          "description": "",
-          "commit": "993497db4ac5466f8b8d7909969c1d7bafdc828b"
+          "description": ""
         },
         {
           "title": "Let's play Simon",
@@ -119,8 +120,7 @@
           "interactions": [
             "ai-policy-understanding"
           ],
-          "description": "Explain why you want to use AI to build web apps, how to get a copilot educational license, and how to use copilot to build a web app interactively in vscode",
-          "commit": "5b2bd1979202e2e30c2c1e83aa2f456c960d742f"
+          "description": "Explain why you want to use AI to build web apps, how to get a copilot educational license, and how to use copilot to build a web app interactively in vscode"
         },
         {
           "title": "The Console",
@@ -131,8 +131,7 @@
           "interactions": [
             "17b331a2-c57e-4959-8b12-f9ea064e208b"
           ],
-          "description": "",
-          "commit": "617fc53a930115b622544c4fb02804e48197d0c4"
+          "description": ""
         },
         {
           "title": "Git",
@@ -141,8 +140,7 @@
           "state": "published",
           "interactions": [
             "39686cd9-b760-4b3a-a26d-5bd89b55f2fa"
-          ],
-          "commit": "c5d8debb0d1e9300828e23a73556693a211e7632"
+          ]
         },
         {
           "title": "GitHub",
@@ -154,8 +152,7 @@
             "4134acb2-3190-49b2-a22f-c31c1d9b51c2",
             "4134acb2-3190-49b2-a22f-c31c1d9b51c2"
           ],
-          "description": "",
-          "commit": "d359737758bb8852a8a6a4956dd3abaf91bf2230"
+          "description": ""
         },
         {
           "title": "🚀 Startup Specification",
@@ -168,9 +165,8 @@
             "6134acb2-3190-49b2-a22f-c31c1d9b51c2"
           ],
           "description": "",
-          "commit": "18fc04b7c01eeb891b929d95e34bb321a29e2c6a",
           "externalRefs": {
-            "canvasAssignmentId": 1373292
+            "canvasAssignmentId": 1373671
           }
         },
         {
@@ -180,8 +176,7 @@
           "state": "published",
           "interactions": [
             "9f35a1b4-8968-4829-b951-bd7a1ad2ee08"
-          ],
-          "commit": "6b52a70c2e2e50d71abe4161224c1cfc23045973"
+          ]
         },
         {
           "title": "Discord",
@@ -192,8 +187,7 @@
           "interactions": [
             "c15f1685-7ab3-4a61-90cb-f959fb03b62a"
           ],
-          "description": "",
-          "commit": "6ce3c414db08c20ae4a862cbbc564eb2a2c99937"
+          "description": ""
         },
         {
           "title": "Editors",
@@ -208,8 +202,7 @@
           "state": "published",
           "interactions": [
             "1383742c-41c4-458c-9af8-76c6be90b28d"
-          ],
-          "commit": "8575121c35333168cd333d7e9e13156bc1a6ca76"
+          ]
         },
         {
           "title": "Demonstration",
@@ -218,15 +211,14 @@
           "state": "published",
           "interactions": [
             "eecac632-b04b-49a9-a0b6-3c3961cb3e58"
-          ],
-          "commit": "8010c3dadb2096c6a499ca3b47912a44758493e4"
+          ]
         }
       ]
     },
     {
       "title": "Web server setup",
       "externalRefs": {
-        "canvasModuleId": 393203
+        "canvasModuleId": 393332
       },
       "topics": [
         {
@@ -236,8 +228,7 @@
           "state": "published",
           "interactions": [
             "22f24721-5dc0-4595-bf54-7761b265fc6e"
-          ],
-          "commit": "1533e32cbc6c2c09cca1e79aa55bdbcc670dac0e"
+          ]
         },
         {
           "title": "The internet",
@@ -254,8 +245,7 @@
           "interactions": [
             "2ef4a23e-17f9-4d97-bf73-a981e1b3312e"
           ],
-          "description": "",
-          "commit": "523c7024cac9d7216fe529591c4d4b1e5f743052"
+          "description": ""
         },
         {
           "title": "Domain names",
@@ -264,8 +254,7 @@
           "state": "published",
           "interactions": [
             "40be2110-3597-41ed-afbc-91f0daf97ed0"
-          ],
-          "commit": "f5f011d7f18c780bb50fcaa8301dce6e4f84519b"
+          ]
         },
         {
           "title": "Amazon Web Services - Route 53",
@@ -276,8 +265,7 @@
           "interactions": [
             "2c001816-b07f-4ac0-b2b0-34c7b74d7c32"
           ],
-          "description": "",
-          "commit": "6cf862906822926669423d46d145924903d61f10"
+          "description": ""
         },
         {
           "title": "Caddy",
@@ -286,8 +274,7 @@
           "state": "published",
           "interactions": [
             "80a1daab-820f-4804-b2b2-4e85c42e57ec"
-          ],
-          "commit": "eeec26ac1451b73dcd832b08bc5beea14eb7fafb"
+          ]
         },
         {
           "title": "HTTPS, TLS, and certificates",
@@ -298,8 +285,7 @@
           "interactions": [
             "66953e86-234d-4c50-b2a2-d37afec943f0"
           ],
-          "description": "",
-          "commit": "2e27ccd3b95363c4230f5d96541c758b478684b3"
+          "description": ""
         },
         {
           "title": "🚀 Startup AWS",
@@ -312,9 +298,8 @@
             "6edadab4-91ee-46f0-952e-469f42dc841e"
           ],
           "description": "",
-          "commit": "ae7b17aa15e5792af6da1808de3a5ceb4b357682",
           "externalRefs": {
-            "canvasAssignmentId": 1373293
+            "canvasAssignmentId": 1373672
           }
         }
       ]
@@ -322,7 +307,7 @@
     {
       "title": "HTML",
       "externalRefs": {
-        "canvasModuleId": 393204
+        "canvasModuleId": 393333
       },
       "topics": [
         {
@@ -332,8 +317,7 @@
           "state": "published",
           "interactions": [
             "77bcd45a-b7ef-4bc4-bdb2-4ad2adfda22e"
-          ],
-          "commit": "1ca244eee90b0afd0d6e5dba4d6feee1cddea5ed"
+          ]
         },
         {
           "title": "Structure",
@@ -344,8 +328,7 @@
           "interactions": [
             "a6fc521e-33ca-4116-bc6b-9a6507f58642"
           ],
-          "description": "",
-          "commit": "9f75aa7e017e74e983fe17165c47ce18ba53f21e"
+          "description": ""
         },
         {
           "title": "Input",
@@ -356,8 +339,7 @@
           "interactions": [
             "0875ed29-b9fb-4b47-a3bf-05cd622d574b"
           ],
-          "description": "",
-          "commit": "6677529cde99abd24927d729029baf3e2d7ede20"
+          "description": ""
         },
         {
           "title": "Media",
@@ -368,8 +350,7 @@
           "interactions": [
             "5cdb3b2d-c448-4dfb-a6f3-3bf87946e906"
           ],
-          "description": "",
-          "commit": "3af21c94df0bd52b442a4f385569af2f8188b782"
+          "description": ""
         },
         {
           "title": "Review and explore",
@@ -382,8 +363,7 @@
             "9f5c55c8-27cb-4042-b75e-9844336409ce",
             "html-dom-mental-model"
           ],
-          "description": "",
-          "commit": "bf5eb42a1a31c01d179b6cdc98e149f4157c7392"
+          "description": ""
         },
         {
           "title": "Simon HTML",
@@ -393,8 +373,7 @@
           "interactions": [
             "9c16c49d-eed4-4852-9843-c994c9542dfd",
             "83677e81-fe42-4657-be14-d4537d10f7d9"
-          ],
-          "commit": "e23bfbac2445bea3a10a86c5b3bb5dec3d2e6879"
+          ]
         },
         {
           "title": "Simon HTML video",
@@ -415,9 +394,8 @@
             "f92b8dce-237d-427c-b781-b25482026e5f"
           ],
           "description": "",
-          "commit": "0df300cee1c30a517de33e3c45144ad5a05f3ddc",
           "externalRefs": {
-            "canvasAssignmentId": 1373294
+            "canvasAssignmentId": 1373673
           }
         }
       ]
@@ -425,7 +403,7 @@
     {
       "title": "CSS",
       "externalRefs": {
-        "canvasModuleId": 393205
+        "canvasModuleId": 393334
       },
       "topics": [
         {
@@ -436,8 +414,7 @@
           "interactions": [
             "900199ab-aebe-4b11-968f-768deff00b11",
             "438b7332-5266-4185-b951-c2c399c7c72a"
-          ],
-          "commit": "98cb05f4e6c15caeb2bf9c49310fde750a6f77b3"
+          ]
         },
         {
           "title": "Selectors",
@@ -446,8 +423,7 @@
           "state": "published",
           "interactions": [
             "9bc25c74-548c-4430-b7e0-6cc8971a5cc4"
-          ],
-          "commit": "2620e59550318a7530fd08ec07fe4bc4f65bdc91"
+          ]
         },
         {
           "title": "Declarations",
@@ -457,8 +433,7 @@
           "interactions": [
             "d63220b7-a462-46bc-a70f-ad675f9bc072",
             "49513c22-eef3-47e6-8e87-3531954e7660"
-          ],
-          "commit": "e1f71632ff96bdc9f8fc4b353dbc16ffa36f8805"
+          ]
         },
         {
           "title": "Fonts",
@@ -467,8 +442,7 @@
           "state": "published",
           "interactions": [
             "13b69025-c7e6-403a-aae3-a463a1f5f7ec"
-          ],
-          "commit": "a7fa47c8c24e1e14799b75a2aa9dabe8b33c9d2c"
+          ]
         },
         {
           "title": "Animation",
@@ -479,16 +453,14 @@
             "37433cdd-9dd1-4009-857a-f36bd4c97ab6",
             "c7c8584b-11a9-424e-89cb-c8adfb13e2b6",
             "a8b4122a-c249-4f5c-a35d-3107fc95715a"
-          ],
-          "commit": "d9d954f63706bcf778dd90cd5eaa801fcf2b81e8"
+          ]
         },
         {
           "title": "Debugging CSS",
           "path": "instruction/css/debuggingCss/debuggingCss.md",
           "id": "642673c9-afde-4635-86fa-4dba7c5a4137",
           "state": "published",
-          "interactions": [],
-          "commit": "066c94526e09a83209b36fdba96a551e5202690f"
+          "interactions": []
         },
         {
           "title": "CSS practice",
@@ -499,8 +471,7 @@
           "interactions": [
             "37a86410-ae62-446a-a8d4-69325c4a0157"
           ],
-          "description": "",
-          "commit": "e94690331b084756519e159f92d03898ad0e7e7d"
+          "description": ""
         },
         {
           "title": "Responsive design",
@@ -509,8 +480,7 @@
           "state": "published",
           "interactions": [
             "e75c7257-bc32-4b55-9f35-bf535b7bc571"
-          ],
-          "commit": "837ffbdbc86965ef4c36612ae936e9400769f39a"
+          ]
         },
         {
           "title": "Grid",
@@ -519,8 +489,7 @@
           "state": "published",
           "interactions": [
             "7bcb0c87-2acf-4c83-8134-20059674a5a2"
-          ],
-          "commit": "bc3d0b8ba4b8897918a9998744818cee66b0b6c4"
+          ]
         },
         {
           "title": "Flex",
@@ -531,8 +500,7 @@
           "interactions": [
             "6332b90a-e5af-423d-9d1c-27e3ac6ef8aa"
           ],
-          "description": "",
-          "commit": "0da6bbad8433b775e479b02964eff313684d8d19"
+          "description": ""
         },
         {
           "title": "Responsive design demo",
@@ -549,8 +517,7 @@
           "state": "published",
           "interactions": [
             "e790f0e1-a84b-4046-9149-c1cc0bbdb01f"
-          ],
-          "commit": "f1d5bd99e779815cb9ea6d496c3f2edc32bf88f8"
+          ]
         },
         {
           "title": "Tailwind",
@@ -560,8 +527,7 @@
           "interactions": [
             "34a35a7b-6a78-4f40-bf6d-1fef7be61963",
             "bfc61aa3-7da1-41f5-922b-630c5bcd4db4"
-          ],
-          "commit": "d1c3c4497b9d83760e3bcd9beb7797db93f10899"
+          ]
         },
         {
           "title": "Simon CSS",
@@ -570,8 +536,7 @@
           "state": "published",
           "interactions": [
             "ac16c49d-eed4-4852-9843-c994c9542dfd"
-          ],
-          "commit": "b9f0d253659c51d747fbd9cf05895dda80ecba8c"
+          ]
         },
         {
           "title": "Simon CSS video",
@@ -592,9 +557,8 @@
             "b249b114-0510-4280-bd69-06e557e7bbd4"
           ],
           "description": "",
-          "commit": "52b3ec3d0bdff7202d19028ca7168b247713c3c1",
           "externalRefs": {
-            "canvasAssignmentId": 1373295
+            "canvasAssignmentId": 1373674
           }
         }
       ]
@@ -602,7 +566,7 @@
     {
       "title": "JavaScript & Web frameworks",
       "externalRefs": {
-        "canvasModuleId": 393206
+        "canvasModuleId": 393335
       },
       "topics": [
         {
@@ -610,8 +574,7 @@
           "path": "instruction/javascript/introduction/introduction.md",
           "id": "846ac3d3-8703-4a2e-ae53-0144967cbee2",
           "state": "published",
-          "interactions": [],
-          "commit": "15ba791c870ebaff6a867d7902ef6278a796ccbe"
+          "interactions": []
         },
         {
           "title": "Adding JavaScript to HTML",
@@ -642,8 +605,7 @@
           "path": "instruction/webFrameworks/introduction/introduction.md",
           "id": "f972436f-fd9c-45ca-a51a-156b1e6cbb03",
           "state": "published",
-          "interactions": [],
-          "commit": "1d33b94276d0a8a6ffdb22ffcc1cd04322b9df96"
+          "interactions": []
         },
         {
           "title": "Toolchains",
@@ -680,8 +642,7 @@
           "path": "instruction/simon/simonReact/simonReactP1.md",
           "id": "a2ba4351-fc02-41b7-8795-3d9ac17be2ff",
           "state": "published",
-          "interactions": [],
-          "commit": "5adac5afac4461e92c9369dbfa5d123a8291fdd9"
+          "interactions": []
         },
         {
           "title": "Simon React P1 video",
@@ -702,9 +663,8 @@
             "8a3b15ea-b4cf-4a2c-a151-3e2c8c27ecd5"
           ],
           "description": "",
-          "commit": "023c8e15fd68a22e8a2d8a436a59775636f00b82",
           "externalRefs": {
-            "canvasAssignmentId": 1373296
+            "canvasAssignmentId": 1373675
           }
         },
         {
@@ -712,8 +672,7 @@
           "path": "instruction/javascript/console/console.md",
           "id": "a200c81b-f154-4699-beb7-8f9142ad164a",
           "state": "published",
-          "interactions": [],
-          "commit": "4cad509836710a1209446981d8733a8979de47c8"
+          "interactions": []
         },
         {
           "title": "Functions",
@@ -762,8 +721,7 @@
           "path": "instruction/webFrameworks/react/reactivity/reactivity.md",
           "id": "ca717d53-f9d9-46d0-836b-72403a07edf5",
           "state": "published",
-          "interactions": [],
-          "commit": "d509f4e29611fc3f7e4e486d11c6fd04b257fc1f"
+          "interactions": []
         },
         {
           "title": "JSON",
@@ -802,9 +760,8 @@
             "fe301f80-87fe-4afd-86af-492a6de0167f"
           ],
           "description": "",
-          "commit": "aa6c208199e59566692e6844ef2dc4ab5c7ff4a3",
           "externalRefs": {
-            "canvasAssignmentId": 1373297
+            "canvasAssignmentId": 1373676
           }
         },
         {
@@ -812,8 +769,7 @@
           "path": "instruction/javascript/promises/promises.md",
           "id": "c1f64a19-98db-4202-ace7-0a4a08b44def",
           "state": "published",
-          "interactions": [],
-          "commit": "479a54b0db55b6cef607581bfa790390049d7d7e"
+          "interactions": []
         },
         {
           "title": "☑ Async/await",
@@ -874,7 +830,7 @@
     {
       "title": "HTTP service",
       "externalRefs": {
-        "canvasModuleId": 393207
+        "canvasModuleId": 393336
       },
       "topics": [
         {
@@ -888,8 +844,7 @@
           "path": "instruction/webServices/introduction/introduction.md",
           "id": "a7579774-12fd-46f0-acb4-079134627322",
           "state": "published",
-          "interactions": [],
-          "commit": "21f2be42024223e998cc73d71ffa9ef73516e623"
+          "interactions": []
         },
         {
           "title": "URL",
@@ -932,8 +887,7 @@
           "path": "instruction/webServices/express/express.md",
           "id": "426345d8-1b55-4aed-9d93-a61812aa6269",
           "state": "published",
-          "interactions": [],
-          "commit": "67bdb2fbfca9dcdb1b18e8fba768d93b3c4d4330"
+          "interactions": []
         },
         {
           "title": "Modules",
@@ -970,8 +924,7 @@
           "path": "instruction/webServices/login/login.md",
           "id": "bf3c6e69-dcd2-4ec1-9ebe-a65d1bcbeb01",
           "state": "published",
-          "interactions": [],
-          "commit": "afebbdce858481621958b58d12786e41cabb5c5b"
+          "interactions": []
         },
         {
           "title": "Simon service",
@@ -998,9 +951,8 @@
             "ba062a75-fe02-4b7f-9e05-326a8532fcc6"
           ],
           "description": "",
-          "commit": "9096a8702789ae792a5ff931a2e45b50f0ceb71f",
           "externalRefs": {
-            "canvasAssignmentId": 1373298
+            "canvasAssignmentId": 1373677
           }
         }
       ]
@@ -1008,7 +960,7 @@
     {
       "title": "Data and authentication services",
       "externalRefs": {
-        "canvasModuleId": 393208
+        "canvasModuleId": 393337
       },
       "topics": [
         {
@@ -1034,8 +986,7 @@
           "path": "instruction/webServices/dataServices/dataServices.md",
           "id": "741b24ae-2a81-4c5c-9ab7-4941b8644bc1",
           "state": "published",
-          "interactions": [],
-          "commit": "18deed7eb55cec24b7fe1222f0e1d3de219ee43a"
+          "interactions": []
         },
         {
           "title": "Simon DB",
@@ -1062,9 +1013,8 @@
             "90f3f025-d33e-4972-a341-57e3ebcb8991"
           ],
           "description": "",
-          "commit": "77ea8641357f0c695e983fc332da9f495ceb4686",
           "externalRefs": {
-            "canvasAssignmentId": 1373299
+            "canvasAssignmentId": 1373678
           }
         },
         {
@@ -1084,7 +1034,7 @@
     {
       "title": "WebSocket",
       "externalRefs": {
-        "canvasModuleId": 393209
+        "canvasModuleId": 393338
       },
       "topics": [
         {
@@ -1104,8 +1054,7 @@
           "path": "instruction/webServices/webSocket/chat/chat.md",
           "id": "7d94fe22-b7ad-422c-ba77-6f3fb6be8ab7",
           "state": "published",
-          "interactions": [],
-          "commit": "f972215b92897ce0d38dbe3cfa82a646f591190a"
+          "interactions": []
         },
         {
           "title": "Simon WebSocket",
@@ -1132,9 +1081,8 @@
             "ecdf0aea-adc2-49b2-a624-f8649aaf165f"
           ],
           "description": "",
-          "commit": "1d5e64326d3274b1a8ae8fae4a8e6dc4baa599d1",
           "externalRefs": {
-            "canvasAssignmentId": 1373300
+            "canvasAssignmentId": 1373679
           }
         }
       ]
@@ -1165,7 +1113,7 @@
     {
       "title": "Assorted topics",
       "externalRefs": {
-        "canvasModuleId": 393210
+        "canvasModuleId": 393339
       },
       "topics": [
         {
@@ -1173,8 +1121,7 @@
           "path": "instruction/webFrameworks/typeScript/typeScript.md",
           "id": "4c655e0b-ce2c-490a-b4a7-17e6e7808d4a",
           "state": "published",
-          "interactions": [],
-          "commit": "bf989d35e3e9632069be91fd8d513346bb482bb6"
+          "interactions": []
         },
         {
           "title": "Performance monitoring",
@@ -1217,9 +1164,8 @@
             "ad1c7f8d-ce04-40de-9412-f092b40bcffa"
           ],
           "description": "",
-          "commit": "0a159c2a9278bf53cb6f91f6a3b7c64730fa3cc3",
           "externalRefs": {
-            "canvasAssignmentId": 1373301
+            "canvasAssignmentId": 1373680
           }
         },
         {
@@ -1232,7 +1178,10 @@
           "title": "☑ Wrap up",
           "path": "instruction/webFrameworks/wrapUp/wrapUp.md",
           "id": "9f5ce2b1-4812-4b5b-94e2-eef6257e01c1",
-          "state": "published"
+          "state": "published",
+          "externalRefs": {
+            "canvasPageId": 1583373
+          }
         }
       ]
     }
