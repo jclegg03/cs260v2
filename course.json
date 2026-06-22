@@ -47,7 +47,7 @@
     {
       "title": "Development essentials",
       "externalRefs": {
-        "canvasModuleId": 393193
+        "canvasModuleId": 393202
       },
       "topics": [
         {
@@ -170,7 +170,7 @@
           "description": "",
           "commit": "18fc04b7c01eeb891b929d95e34bb321a29e2c6a",
           "externalRefs": {
-            "canvasAssignmentId": 1373282
+            "canvasAssignmentId": 1373292
           }
         },
         {
@@ -226,7 +226,7 @@
     {
       "title": "Web server setup",
       "externalRefs": {
-        "canvasModuleId": 393194
+        "canvasModuleId": 393203
       },
       "topics": [
         {
@@ -314,7 +314,7 @@
           "description": "",
           "commit": "ae7b17aa15e5792af6da1808de3a5ceb4b357682",
           "externalRefs": {
-            "canvasAssignmentId": 1373283
+            "canvasAssignmentId": 1373293
           }
         }
       ]
@@ -322,7 +322,7 @@
     {
       "title": "HTML",
       "externalRefs": {
-        "canvasModuleId": 393195
+        "canvasModuleId": 393204
       },
       "topics": [
         {
@@ -417,7 +417,7 @@
           "description": "",
           "commit": "0df300cee1c30a517de33e3c45144ad5a05f3ddc",
           "externalRefs": {
-            "canvasAssignmentId": 1373284
+            "canvasAssignmentId": 1373294
           }
         }
       ]
@@ -425,7 +425,7 @@
     {
       "title": "CSS",
       "externalRefs": {
-        "canvasModuleId": 393196
+        "canvasModuleId": 393205
       },
       "topics": [
         {
@@ -594,7 +594,7 @@
           "description": "",
           "commit": "52b3ec3d0bdff7202d19028ca7168b247713c3c1",
           "externalRefs": {
-            "canvasAssignmentId": 1373285
+            "canvasAssignmentId": 1373295
           }
         }
       ]
@@ -602,7 +602,7 @@
     {
       "title": "JavaScript & Web frameworks",
       "externalRefs": {
-        "canvasModuleId": 393197
+        "canvasModuleId": 393206
       },
       "topics": [
         {
@@ -704,7 +704,7 @@
           "description": "",
           "commit": "023c8e15fd68a22e8a2d8a436a59775636f00b82",
           "externalRefs": {
-            "canvasAssignmentId": 1373286
+            "canvasAssignmentId": 1373296
           }
         },
         {
@@ -804,7 +804,7 @@
           "description": "",
           "commit": "aa6c208199e59566692e6844ef2dc4ab5c7ff4a3",
           "externalRefs": {
-            "canvasAssignmentId": 1373287
+            "canvasAssignmentId": 1373297
           }
         },
         {
@@ -874,7 +874,7 @@
     {
       "title": "HTTP service",
       "externalRefs": {
-        "canvasModuleId": 393198
+        "canvasModuleId": 393207
       },
       "topics": [
         {
@@ -1000,7 +1000,7 @@
           "description": "",
           "commit": "9096a8702789ae792a5ff931a2e45b50f0ceb71f",
           "externalRefs": {
-            "canvasAssignmentId": 1373288
+            "canvasAssignmentId": 1373298
           }
         }
       ]
@@ -1008,7 +1008,7 @@
     {
       "title": "Data and authentication services",
       "externalRefs": {
-        "canvasModuleId": 393199
+        "canvasModuleId": 393208
       },
       "topics": [
         {
@@ -1064,7 +1064,7 @@
           "description": "",
           "commit": "77ea8641357f0c695e983fc332da9f495ceb4686",
           "externalRefs": {
-            "canvasAssignmentId": 1373289
+            "canvasAssignmentId": 1373299
           }
         },
         {
@@ -1084,7 +1084,7 @@
     {
       "title": "WebSocket",
       "externalRefs": {
-        "canvasModuleId": 393200
+        "canvasModuleId": 393209
       },
       "topics": [
         {
@@ -1134,7 +1134,7 @@
           "description": "",
           "commit": "1d5e64326d3274b1a8ae8fae4a8e6dc4baa599d1",
           "externalRefs": {
-            "canvasAssignmentId": 1373290
+            "canvasAssignmentId": 1373300
           }
         }
       ]
@@ -1165,7 +1165,7 @@
     {
       "title": "Assorted topics",
       "externalRefs": {
-        "canvasModuleId": 393201
+        "canvasModuleId": 393210
       },
       "topics": [
         {
@@ -1219,7 +1219,7 @@
           "description": "",
           "commit": "0a159c2a9278bf53cb6f91f6a3b7c64730fa3cc3",
           "externalRefs": {
-            "canvasAssignmentId": 1373291
+            "canvasAssignmentId": 1373301
           }
         },
         {
