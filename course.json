@@ -12,6 +12,13 @@
         "id": "7491e895-8aab-400d-9b9b-1dcdfdf78b65",
         "title": "📅 Winter 2026 Schedule",
         "path": "schedule/schedule.md",
+        "default": false,
+        "state": "published"
+      },
+      {
+        "id": "144c7d47-63e1-4e38-b3bb-17f0ae5f6898",
+        "title": "Summer 2026 Schedule",
+        "path": "schedule/summer-2026-schedule.md",
         "default": true,
         "state": "published"
       }
@@ -29,9 +36,7 @@
           "path": "README.md",
           "id": "84e8268d-0a0e-4c94-a9b1-34e31c78bb12",
           "state": "published",
-          "interactions": [
-            "ef2f9d20-99b5-4adc-ab98-3a6536234103"
-          ],
+          "interactions": ["ef2f9d20-99b5-4adc-ab98-3a6536234103"],
           "externalRefs": {
             "canvasPageId": 1583371
           }
@@ -41,9 +46,7 @@
           "path": "instruction/syllabus/syllabus.md",
           "id": "2a2c0a38-93b4-4e6c-987f-630bf4fc9a2c",
           "state": "published",
-          "interactions": [
-            "cae08349-d561-4c4b-9a84-208fab172b36"
-          ],
+          "interactions": ["cae08349-d561-4c4b-9a84-208fab172b36"],
           "externalRefs": {
             "canvasPageId": 1583372
           }
@@ -62,9 +65,7 @@
           "path": "instruction/essentials/introduction/introduction.md",
           "id": "43d47065-2706-45b4-a06c-a9aa279a6358",
           "state": "published",
-          "interactions": [
-            "6fdc2fdb-e3de-49c9-ba25-f66b0da68d1a"
-          ],
+          "interactions": ["6fdc2fdb-e3de-49c9-ba25-f66b0da68d1a"],
           "description": ""
         },
         {
@@ -73,9 +74,7 @@
           "path": "instruction/essentials/awsAccount/awsAccount.md",
           "id": "3c862f0a-66ef-4478-8fd3-a3a4293f1197",
           "state": "published",
-          "interactions": [
-            "6fdc2fdb-e3de-49c9-ba25-f66b0da68d1a"
-          ],
+          "interactions": ["6fdc2fdb-e3de-49c9-ba25-f66b0da68d1a"],
           "description": ""
         },
         {
@@ -83,18 +82,14 @@
           "path": "instruction/essentials/latePolicy/latePolicy.md",
           "id": "297e8bbb-24b0-44f0-8b1d-cec497a23a29",
           "state": "published",
-          "interactions": [
-            "a819fd43-c894-4945-b851-3b513d659573"
-          ]
+          "interactions": ["a819fd43-c894-4945-b851-3b513d659573"]
         },
         {
           "title": "Startup application",
           "path": "instruction/essentials/startup/startup.md",
           "id": "5d60f39a-7825-4f87-99e2-66760c91b945",
           "state": "published",
-          "interactions": [
-            "e0524127-4cf0-4fc8-aa8d-bfcaee7ca4e2"
-          ]
+          "interactions": ["e0524127-4cf0-4fc8-aa8d-bfcaee7ca4e2"]
         },
         {
           "title": "Demo day",
@@ -117,9 +112,7 @@
           "path": "instruction/partnering-with-ai/partnering-with-ai.md",
           "id": "96e3a6d4-8b60-4cdb-9f2c-aedaa2cb8a15",
           "state": "published",
-          "interactions": [
-            "ai-policy-understanding"
-          ],
+          "interactions": ["ai-policy-understanding"],
           "description": "Explain why you want to use AI to build web apps, how to get a copilot educational license, and how to use copilot to build a web app interactively in vscode"
         },
         {
@@ -128,9 +121,7 @@
           "path": "instruction/essentials/console/console.md",
           "id": "2824abc8-ef18-443d-8cb2-744bcc4102ba",
           "state": "published",
-          "interactions": [
-            "17b331a2-c57e-4959-8b12-f9ea064e208b"
-          ],
+          "interactions": ["17b331a2-c57e-4959-8b12-f9ea064e208b"],
           "description": ""
         },
         {
@@ -138,9 +129,7 @@
           "path": "instruction/essentials/git/git.md",
           "id": "de621ad4-595f-4347-b852-b9b88981813f",
           "state": "published",
-          "interactions": [
-            "39686cd9-b760-4b3a-a26d-5bd89b55f2fa"
-          ]
+          "interactions": ["39686cd9-b760-4b3a-a26d-5bd89b55f2fa"]
         },
         {
           "title": "GitHub",
@@ -148,10 +137,7 @@
           "path": "instruction/essentials/gitHub/gitHub.md",
           "id": "d77e713c-1ffa-4982-a26b-cc8d5817f05a",
           "state": "published",
-          "interactions": [
-            "4134acb2-3190-49b2-a22f-c31c1d9b51c2",
-            "4134acb2-3190-49b2-a22f-c31c1d9b51c2"
-          ],
+          "interactions": ["4134acb2-3190-49b2-a22f-c31c1d9b51c2", "4134acb2-3190-49b2-a22f-c31c1d9b51c2"],
           "description": ""
         },
         {
@@ -161,9 +147,7 @@
           "path": "instruction/essentials/startupSpec/startupSpec.md",
           "id": "7cbe0e92-3536-45ad-b38c-d28f1be714b5",
           "state": "published",
-          "interactions": [
-            "6134acb2-3190-49b2-a22f-c31c1d9b51c2"
-          ],
+          "interactions": ["6134acb2-3190-49b2-a22f-c31c1d9b51c2"],
           "description": "",
           "externalRefs": {
             "canvasAssignmentId": 1373671
@@ -174,9 +158,7 @@
           "path": "instruction/essentials/askingQuestions/askingQuestions.md",
           "id": "0150c66e-d356-4d5b-87f2-3edec7bc8763",
           "state": "published",
-          "interactions": [
-            "9f35a1b4-8968-4829-b951-bd7a1ad2ee08"
-          ]
+          "interactions": ["9f35a1b4-8968-4829-b951-bd7a1ad2ee08"]
         },
         {
           "title": "Discord",
@@ -184,9 +166,7 @@
           "path": "instruction/essentials/discord/discord.md",
           "id": "d2dc86f2-7876-4833-9453-8c08be34b867",
           "state": "published",
-          "interactions": [
-            "c15f1685-7ab3-4a61-90cb-f959fb03b62a"
-          ],
+          "interactions": ["c15f1685-7ab3-4a61-90cb-f959fb03b62a"],
           "description": ""
         },
         {
@@ -200,18 +180,14 @@
           "path": "instruction/essentials/history/history.md",
           "id": "89cc51de-a431-4c8e-be10-da9a1ca6bd89",
           "state": "published",
-          "interactions": [
-            "1383742c-41c4-458c-9af8-76c6be90b28d"
-          ]
+          "interactions": ["1383742c-41c4-458c-9af8-76c6be90b28d"]
         },
         {
           "title": "Demonstration",
           "path": "instruction/essentials/demo/demo.md",
           "id": "e627317e-e5df-4895-b786-27c13681470d",
           "state": "published",
-          "interactions": [
-            "eecac632-b04b-49a9-a0b6-3c3961cb3e58"
-          ]
+          "interactions": ["eecac632-b04b-49a9-a0b6-3c3961cb3e58"]
         }
       ]
     },
@@ -226,9 +202,7 @@
           "path": "instruction/essentials/techStack/techStack.md",
           "id": "3ba0daf2-c9cb-4b57-aff7-c4d1715d497f",
           "state": "published",
-          "interactions": [
-            "22f24721-5dc0-4595-bf54-7761b265fc6e"
-          ]
+          "interactions": ["22f24721-5dc0-4595-bf54-7761b265fc6e"]
         },
         {
           "title": "The internet",
@@ -242,9 +216,7 @@
           "path": "instruction/webServers/amazonWebServicesEc2/amazonWebServicesEc2.md",
           "id": "36d1da56-eddc-44c4-bf5c-d093ef8b6d0f",
           "state": "published",
-          "interactions": [
-            "2ef4a23e-17f9-4d97-bf73-a981e1b3312e"
-          ],
+          "interactions": ["2ef4a23e-17f9-4d97-bf73-a981e1b3312e"],
           "description": ""
         },
         {
@@ -252,9 +224,7 @@
           "path": "instruction/webServers/domainNames/domainNames.md",
           "id": "b01f4f7e-f4d5-40d6-8550-80bbbbd4e87e",
           "state": "published",
-          "interactions": [
-            "40be2110-3597-41ed-afbc-91f0daf97ed0"
-          ]
+          "interactions": ["40be2110-3597-41ed-afbc-91f0daf97ed0"]
         },
         {
           "title": "Amazon Web Services - Route 53",
@@ -262,9 +232,7 @@
           "path": "instruction/webServers/amazonWebServicesRoute53/amazonWebServicesRoute53.md",
           "id": "9813019c-cbcb-4cc5-8992-958d05e60e8a",
           "state": "published",
-          "interactions": [
-            "2c001816-b07f-4ac0-b2b0-34c7b74d7c32"
-          ],
+          "interactions": ["2c001816-b07f-4ac0-b2b0-34c7b74d7c32"],
           "description": ""
         },
         {
@@ -272,9 +240,7 @@
           "path": "instruction/webServers/caddy/caddy.md",
           "id": "809544f1-3f67-458c-ad8a-b2d3c700707b",
           "state": "published",
-          "interactions": [
-            "80a1daab-820f-4804-b2b2-4e85c42e57ec"
-          ]
+          "interactions": ["80a1daab-820f-4804-b2b2-4e85c42e57ec"]
         },
         {
           "title": "HTTPS, TLS, and certificates",
@@ -282,9 +248,7 @@
           "path": "instruction/webServers/https/https.md",
           "id": "f195faf7-3f38-42dc-9a05-4480a426beb7",
           "state": "published",
-          "interactions": [
-            "66953e86-234d-4c50-b2a2-d37afec943f0"
-          ],
+          "interactions": ["66953e86-234d-4c50-b2a2-d37afec943f0"],
           "description": ""
         },
         {
@@ -294,9 +258,7 @@
           "path": "instruction/webServers/startupAWS/startupAWS.md",
           "id": "8eff8b18-8645-4fd6-aff4-d4ad25df9860",
           "state": "published",
-          "interactions": [
-            "6edadab4-91ee-46f0-952e-469f42dc841e"
-          ],
+          "interactions": ["6edadab4-91ee-46f0-952e-469f42dc841e"],
           "description": "",
           "externalRefs": {
             "canvasAssignmentId": 1373672
@@ -315,9 +277,7 @@
           "path": "instruction/html/introduction/introduction.md",
           "id": "d99df9c2-1cd1-4da2-9e25-3cc8c5d3e902",
           "state": "published",
-          "interactions": [
-            "77bcd45a-b7ef-4bc4-bdb2-4ad2adfda22e"
-          ]
+          "interactions": ["77bcd45a-b7ef-4bc4-bdb2-4ad2adfda22e"]
         },
         {
           "title": "Structure",
@@ -325,9 +285,7 @@
           "path": "instruction/html/structure/structure.md",
           "id": "4339fab0-841c-48e2-993c-7b9310cd5f26",
           "state": "published",
-          "interactions": [
-            "a6fc521e-33ca-4116-bc6b-9a6507f58642"
-          ],
+          "interactions": ["a6fc521e-33ca-4116-bc6b-9a6507f58642"],
           "description": ""
         },
         {
@@ -336,9 +294,7 @@
           "path": "instruction/html/input/input.md",
           "id": "392e4c96-5bf6-48db-8496-82346b40e7e8",
           "state": "published",
-          "interactions": [
-            "0875ed29-b9fb-4b47-a3bf-05cd622d574b"
-          ],
+          "interactions": ["0875ed29-b9fb-4b47-a3bf-05cd622d574b"],
           "description": ""
         },
         {
@@ -347,9 +303,7 @@
           "path": "instruction/html/media/media.md",
           "id": "b4981931-3b9b-4498-8ad8-44b37be1ef5c",
           "state": "published",
-          "interactions": [
-            "5cdb3b2d-c448-4dfb-a6f3-3bf87946e906"
-          ],
+          "interactions": ["5cdb3b2d-c448-4dfb-a6f3-3bf87946e906"],
           "description": ""
         },
         {
@@ -358,11 +312,7 @@
           "path": "instruction/html-exploration/html-exploration.md",
           "id": "d3769d1e-6e36-40e2-8a07-377013608f8a",
           "state": "published",
-          "interactions": [
-            "b9b2c3d4-e5f6-7890-1234-567890123465",
-            "9f5c55c8-27cb-4042-b75e-9844336409ce",
-            "html-dom-mental-model"
-          ],
+          "interactions": ["b9b2c3d4-e5f6-7890-1234-567890123465", "9f5c55c8-27cb-4042-b75e-9844336409ce", "html-dom-mental-model"],
           "description": ""
         },
         {
@@ -370,10 +320,7 @@
           "path": "instruction/simon/simonHtml/simonHtml.md",
           "id": "58c0002c-5d62-44c7-be44-e773ee8a6cb8",
           "state": "published",
-          "interactions": [
-            "9c16c49d-eed4-4852-9843-c994c9542dfd",
-            "83677e81-fe42-4657-be14-d4537d10f7d9"
-          ]
+          "interactions": ["9c16c49d-eed4-4852-9843-c994c9542dfd", "83677e81-fe42-4657-be14-d4537d10f7d9"]
         },
         {
           "title": "Simon HTML video",
@@ -390,9 +337,7 @@
           "path": "instruction/html/startupHtml/startupHtml.md",
           "id": "bcb184b3-7d76-4313-b701-8f6172725344",
           "state": "published",
-          "interactions": [
-            "f92b8dce-237d-427c-b781-b25482026e5f"
-          ],
+          "interactions": ["f92b8dce-237d-427c-b781-b25482026e5f"],
           "description": "",
           "externalRefs": {
             "canvasAssignmentId": 1373673
@@ -411,49 +356,35 @@
           "path": "instruction/css/introduction/introduction.md",
           "id": "95954169-d374-4d01-9a62-a35a79e2b1dd",
           "state": "published",
-          "interactions": [
-            "900199ab-aebe-4b11-968f-768deff00b11",
-            "438b7332-5266-4185-b951-c2c399c7c72a"
-          ]
+          "interactions": ["900199ab-aebe-4b11-968f-768deff00b11", "438b7332-5266-4185-b951-c2c399c7c72a"]
         },
         {
           "title": "Selectors",
           "path": "instruction/css/selectors/selectors.md",
           "id": "c89f3fee-c8f5-4e12-b17c-018ddb4cc70a",
           "state": "published",
-          "interactions": [
-            "9bc25c74-548c-4430-b7e0-6cc8971a5cc4"
-          ]
+          "interactions": ["9bc25c74-548c-4430-b7e0-6cc8971a5cc4"]
         },
         {
           "title": "Declarations",
           "path": "instruction/css/declarations/declarations.md",
           "id": "eaf32abc-95ed-4550-afeb-699e77e9dc40",
           "state": "published",
-          "interactions": [
-            "d63220b7-a462-46bc-a70f-ad675f9bc072",
-            "49513c22-eef3-47e6-8e87-3531954e7660"
-          ]
+          "interactions": ["d63220b7-a462-46bc-a70f-ad675f9bc072", "49513c22-eef3-47e6-8e87-3531954e7660"]
         },
         {
           "title": "Fonts",
           "path": "instruction/css/fonts/fonts.md",
           "id": "d94887e3-ca21-4365-bb20-ebb9cf6b5654",
           "state": "published",
-          "interactions": [
-            "13b69025-c7e6-403a-aae3-a463a1f5f7ec"
-          ]
+          "interactions": ["13b69025-c7e6-403a-aae3-a463a1f5f7ec"]
         },
         {
           "title": "Animation",
           "path": "instruction/css/animation/animation.md",
           "id": "65265215-42bc-4199-8a3c-0bb3c5f65073",
           "state": "published",
-          "interactions": [
-            "37433cdd-9dd1-4009-857a-f36bd4c97ab6",
-            "c7c8584b-11a9-424e-89cb-c8adfb13e2b6",
-            "a8b4122a-c249-4f5c-a35d-3107fc95715a"
-          ]
+          "interactions": ["37433cdd-9dd1-4009-857a-f36bd4c97ab6", "c7c8584b-11a9-424e-89cb-c8adfb13e2b6", "a8b4122a-c249-4f5c-a35d-3107fc95715a"]
         },
         {
           "title": "Debugging CSS",
@@ -468,9 +399,7 @@
           "path": "instruction/css/practice/practice.md",
           "id": "59544ce5-cbb6-4bf2-9e15-b9b5cd310bd1",
           "state": "published",
-          "interactions": [
-            "37a86410-ae62-446a-a8d4-69325c4a0157"
-          ],
+          "interactions": ["37a86410-ae62-446a-a8d4-69325c4a0157"],
           "description": ""
         },
         {
@@ -478,18 +407,14 @@
           "path": "instruction/css/responsive/responsive.md",
           "id": "990fa327-84c9-45f0-aefd-880d3a01ac25",
           "state": "published",
-          "interactions": [
-            "e75c7257-bc32-4b55-9f35-bf535b7bc571"
-          ]
+          "interactions": ["e75c7257-bc32-4b55-9f35-bf535b7bc571"]
         },
         {
           "title": "Grid",
           "path": "instruction/css/grid/grid.md",
           "id": "abe420f5-495a-4727-8931-0cea766ea843",
           "state": "published",
-          "interactions": [
-            "7bcb0c87-2acf-4c83-8134-20059674a5a2"
-          ]
+          "interactions": ["7bcb0c87-2acf-4c83-8134-20059674a5a2"]
         },
         {
           "title": "Flex",
@@ -497,9 +422,7 @@
           "path": "instruction/css/flexbox/flexbox.md",
           "id": "32bc9d1d-4f52-4285-9708-10c252e999a4",
           "state": "published",
-          "interactions": [
-            "6332b90a-e5af-423d-9d1c-27e3ac6ef8aa"
-          ],
+          "interactions": ["6332b90a-e5af-423d-9d1c-27e3ac6ef8aa"],
           "description": ""
         },
         {
@@ -515,28 +438,21 @@
           "path": "instruction/css/frameworks/frameworks.md",
           "id": "172ab5b4-04bc-4c42-9b5f-57c4a8989d54",
           "state": "published",
-          "interactions": [
-            "e790f0e1-a84b-4046-9149-c1cc0bbdb01f"
-          ]
+          "interactions": ["e790f0e1-a84b-4046-9149-c1cc0bbdb01f"]
         },
         {
           "title": "Tailwind",
           "path": "instruction/css/tailwind/tailwind.md",
           "id": "29c105f5-3d98-4743-8947-3bad1efd169b",
           "state": "published",
-          "interactions": [
-            "34a35a7b-6a78-4f40-bf6d-1fef7be61963",
-            "bfc61aa3-7da1-41f5-922b-630c5bcd4db4"
-          ]
+          "interactions": ["34a35a7b-6a78-4f40-bf6d-1fef7be61963", "bfc61aa3-7da1-41f5-922b-630c5bcd4db4"]
         },
         {
           "title": "Simon CSS",
           "path": "instruction/simon/simonCss/simonCss.md",
           "id": "12bd61d7-e363-4f7f-9e2b-927386e4ecea",
           "state": "published",
-          "interactions": [
-            "ac16c49d-eed4-4852-9843-c994c9542dfd"
-          ]
+          "interactions": ["ac16c49d-eed4-4852-9843-c994c9542dfd"]
         },
         {
           "title": "Simon CSS video",
@@ -553,9 +469,7 @@
           "path": "instruction/css/startupCss/startupCss.md",
           "id": "ce71d22f-df42-4835-9d7c-a3afe572dc88",
           "state": "published",
-          "interactions": [
-            "b249b114-0510-4280-bd69-06e557e7bbd4"
-          ],
+          "interactions": ["b249b114-0510-4280-bd69-06e557e7bbd4"],
           "description": "",
           "externalRefs": {
             "canvasAssignmentId": 1373674
@@ -659,9 +573,7 @@
           "path": "instruction/webFrameworks/startupReact/startupReactP1.md",
           "id": "a0744c55-1f96-424b-81fe-570ee3870963",
           "state": "published",
-          "interactions": [
-            "8a3b15ea-b4cf-4a2c-a151-3e2c8c27ecd5"
-          ],
+          "interactions": ["8a3b15ea-b4cf-4a2c-a151-3e2c8c27ecd5"],
           "description": "",
           "externalRefs": {
             "canvasAssignmentId": 1373675
@@ -756,9 +668,7 @@
           "path": "instruction/webFrameworks/startupReact/startupReactP2.md",
           "id": "0997511e-7167-46df-8ce8-6d2530513332",
           "state": "published",
-          "interactions": [
-            "fe301f80-87fe-4afd-86af-492a6de0167f"
-          ],
+          "interactions": ["fe301f80-87fe-4afd-86af-492a6de0167f"],
           "description": "",
           "externalRefs": {
             "canvasAssignmentId": 1373676
@@ -947,9 +857,7 @@
           "path": "instruction/webServices/startupService/startupService.md",
           "id": "3abe736d-a06a-4ac5-aabe-a0c5d9e4e4a2",
           "state": "published",
-          "interactions": [
-            "ba062a75-fe02-4b7f-9e05-326a8532fcc6"
-          ],
+          "interactions": ["ba062a75-fe02-4b7f-9e05-326a8532fcc6"],
           "description": "",
           "externalRefs": {
             "canvasAssignmentId": 1373677
@@ -1009,9 +917,7 @@
           "path": "instruction/webServices/startupDb/startupDb.md",
           "id": "ae723843-89a4-4fae-9651-c9ffa9d79eb9",
           "state": "published",
-          "interactions": [
-            "90f3f025-d33e-4972-a341-57e3ebcb8991"
-          ],
+          "interactions": ["90f3f025-d33e-4972-a341-57e3ebcb8991"],
           "description": "",
           "externalRefs": {
             "canvasAssignmentId": 1373678
@@ -1077,9 +983,7 @@
           "path": "instruction/webServices/startupWebSocket/startupWebSocket.md",
           "id": "83386005-5844-4ba7-a92e-5e3f6b2d31ad",
           "state": "published",
-          "interactions": [
-            "ecdf0aea-adc2-49b2-a624-f8649aaf165f"
-          ],
+          "interactions": ["ecdf0aea-adc2-49b2-a624-f8649aaf165f"],
           "description": "",
           "externalRefs": {
             "canvasAssignmentId": 1373679
@@ -1160,9 +1064,7 @@
           "path": "instruction/demo-day-submission/demo-day-submission.md",
           "id": "27ab9b08-4dd9-4906-8fe9-507aa8d68db3",
           "state": "published",
-          "interactions": [
-            "ad1c7f8d-ce04-40de-9412-f092b40bcffa"
-          ],
+          "interactions": ["ad1c7f8d-ce04-40de-9412-f092b40bcffa"],
           "description": "",
           "externalRefs": {
             "canvasAssignmentId": 1373680
