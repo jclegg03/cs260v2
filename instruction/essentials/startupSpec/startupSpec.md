@@ -88,7 +88,7 @@ Make sure you push your changes to the file so that it can be reviewed.
 - 30% - One or more rough sketches of your application. Images must be embedded in your `README.md`.
 
 ```masteryls
-{"id":"6134acb2-3190-49b2-a22f-c31c1d9b51c2", "title":"Specification deliverable", "type":"url-submission", "urlPrompt":"Convert the user provided URL to create a URL that is the path to the raw GitHub content for the README.md file.", "syncGrade":true, "autoGrade":true, "gradingCriteria":"- the content contains a section named \"Specification Deliverable\"\n- In the \"Specification Deliverable\" section there is a checklist of rubric items.\n- Create a score based on the number of checked items and the description of what was done for each item."}
+{"id":"6134acb2-3190-49b2-a22f-c31c1d9b51c2", "title":"Specification deliverable", "type":"url-submission", "urlPrompt":"Convert the user provided URL to create a URL that is the path to the raw GitHub content for the README.md file.", "syncGrade":true, "autoGrade":true, "gradingCriteria":"- the content contains a section named \"Specification Deliverable\"\n- In the \"Specification Deliverable\" section there is a checklist of rubric items.\n- Make sure that there is a clearly defined third party API that is going to be used by their startup\n- Create a score based on the number of checked items and the description of what was done for each item."}
 Update your README.md with clear descriptions  of what you did for each of the rubric items. Then that is done, submit the URL to your startup repository.
 
 _Example: https://github.com/myaccount/startup_
