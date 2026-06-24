@@ -28,7 +28,7 @@
 |  | Mon Jul 27, 2026 | `WebSocket` |  | [WebSocket](../instruction/webServices/webSocket/webSocket/webSocket.md)</br>[Debugging WebSocket](../instruction/webServices/webSocket/debugging/debugging.md)</br>[WebSocket chat](../instruction/webServices/webSocket/chat/chat.md)</br>[Simon WebSocket](../instruction/simon/simonWebSocket/simonWebSocket.md)</br>[🚀 Startup WebSocket](../instruction/webServices/startupWebSocket/startupWebSocket.md) | [WebSocket](../instruction/webServices/webSocket/webSocket/webSocket.md) |
 |  | Wed Jul 29, 2026 |  | [🚀 Startup DB](../instruction/webServices/startupDb/startupDb.md) | **In class DB/WebSocket help session** |  |
 |  | Wed Jul 29, 2026 |  |  | [TypeScript](../instruction/webFrameworks/typeScript/typeScript.md)</br>[Performance monitoring](../instruction/webFrameworks/performanceMonitoring/performanceMonditoring.md) | [TypeScript](../instruction/webFrameworks/typeScript/typeScript.md) |
-|  | Fri Jul 31, 2026 |  |  | No Class - OOO |  |
+|  | Fri Jul 31, 2026 |  |  | No Class |  |
 | 7 | Mon Aug 3, 2026 | `Security` |  | [Security](../instruction/security/overview/overview.md)</br>[OWASP top 10](../instruction/security/owasp/owasp.md) | [Security](../instruction/security/overview/overview.md) |
 |  | Mon Aug 3, 2026 |  |  | [Security practice](../instruction/security/practice/practice.md) | [Security practice](../instruction/security/practice/practice.md) |
 |  | Wed Aug 5, 2026 |  | [🚀 Startup WebSocket](../instruction/webServices/startupWebSocket/startupWebSocket.md)</br>[Demo day submission](../instruction/demo-day-submission/demo-day-submission.md) | [UX design](../instruction/uxdesign/uxdesign.md) | [UX design](../instruction/uxdesign/uxdesign.md) |
