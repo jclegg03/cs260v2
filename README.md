@@ -78,7 +78,7 @@ The course covers a full stack of web programming technologies and topics.
 
 # Acknowledgements
 
-The instruction makes extensive use of [MDN Web Docs](https://developer.mozilla.org/) and we highly encourage you to spend many hours getting lost in their exceptional content.
+The instruction makes extensive use of [MDN Web Docs](https://developer.mozilla.org/) and we highly encourage you to spend many hours studying in their exceptional content.
 
 [React](https://reactjs.org) is used to demonstrate the power of web frameworks. Without the significant contributions of the React community we would not be able to stand on the shoulders of giants.
 
