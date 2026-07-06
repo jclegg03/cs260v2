@@ -5,6 +5,17 @@ The landscape of web programming is shifting from a focus on manual syntax memor
 In this instruction, we will explore the strategic advantages of using AI in your development workflow, how to access professional-grade tools for free as a student, and the practical steps to integrate these tools into your daily coding routine within Visual Studio Code.
 
 
+## Why Use AI to Build Web Apps?
+
+Modern web development involves a massive ecosystem of languages (HTML, CSS, JavaScript), frameworks, and cloud services. For a beginner, the sheer volume of syntax and configuration can be overwhelming. AI tools like GitHub Copilot serve as an "always-on" mentor that understands the context of your project.
+
+Using AI provides several distinct advantages:
+
+*   **Accelerated Learning:** Instead of spending hours searching through documentation for a specific CSS property, you can ask the AI to explain a concept or provide a snippet. This tightens the feedback loop between curiosity and implementation.
+*   **Boilerplate Reduction:** Web apps often require repetitive setup code (like HTML headers or standard API fetch structures). AI can generate these patterns instantly, allowing you to focus on the unique logic of your application.
+*   **Debugging Assistance:** When your code fails, you can provide the error message to the AI. It can often identify logical fallacies or syntax errors that are difficult for human eyes to spot after hours of coding.
+*   **Exploration of Best Practices:** By observing the code an AI suggests, you are often exposed to modern ES6+ syntax and industry-standard patterns that you might not have encountered yet in basic tutorials.
+
 
 ## AI Usage Policy
 
@@ -111,17 +122,6 @@ The following table comes from an [Anthropic AI Fluency Index Study](https://www
 1. **Staying in the conversation**: Treat your interaction as a dialogue rather than a one-off search query. If a suggested function doesn't work or you don't understand a specific line, don't just discard the output. Instead, provide the error message back to the AI or ask, "Can you explain why you used a `map` function here instead of a `forEach` loop?" This iterative process keeps the context alive and helps you learn the underlying logic.
 2. **Questioning polished outputs**: AI is designed to be helpful and confident, even when it is wrong. Just because code is formatted beautifully and follows standard conventions doesn't mean it is bug-free or follows the best security practices. For example, if Copilot suggests a snippet for fetching data, you should critically ask: "Does this handle a 404 error correctly?" or "Is this library actually installed in my project?" Always verify "hallucinated" functions or deprecated syntax before committing the code.
 3. **Setting the terms of the collaboration**: You are the lead developer and the "Architect of Record." You can and should dictate how the AI assists you. If you find yourself "tabbing" through suggestions without thinking, reset the terms of the chat: "I want to practice my CSS Grid skills. Give me a high-level strategy for this layout, but don't provide the actual CSS properties yet." By setting these boundaries, you ensure the AI serves your educational goals rather than just finishing the task for you.
-
-## Why Use AI to Build Web Apps?
-
-Modern web development involves a massive ecosystem of languages (HTML, CSS, JavaScript), frameworks, and cloud services. For a beginner, the sheer volume of syntax and configuration can be overwhelming. AI tools like GitHub Copilot serve as an "always-on" mentor that understands the context of your project.
-
-Using AI provides several distinct advantages:
-
-*   **Accelerated Learning:** Instead of spending hours searching through documentation for a specific CSS property, you can ask the AI to explain a concept or provide a snippet. This tightens the feedback loop between curiosity and implementation.
-*   **Boilerplate Reduction:** Web apps often require repetitive setup code (like HTML headers or standard API fetch structures). AI can generate these patterns instantly, allowing you to focus on the unique logic of your application.
-*   **Debugging Assistance:** When your code fails, you can provide the error message to the AI. It can often identify logical fallacies or syntax errors that are difficult for human eyes to spot after hours of coding.
-*   **Exploration of Best Practices:** By observing the code an AI suggests, you are often exposed to modern ES6+ syntax and industry-standard patterns that you might not have encountered yet in basic tutorials.
 
 ## Securing Your GitHub Copilot Subscription
 
