@@ -91,6 +91,26 @@ Under the 'Partner' level AI policy, which of the following scenarios is conside
 
 Developing AI fluency is about more than just knowing which buttons to click; it's about building a sophisticated mental model for how to interact with Large Language Models. True fluency allows you to maintain control over the codebase while benefiting from the speed of AI, ensuring that you are directing the tool rather than being led by it.
 
+There are many behaviors that you can use to maximize the value you get from using AI.
+
+The following table comes from the [Anthropic AI Fluency Index Study](https://www.anthropic.com/research/AI-fluency-index) that examined the use of AI across thousands of users and codebases. The 
+
+| Behavioral indicator                        | Category    | Prevalence |
+| ------------------------------------------- | ----------- | ---------: |
+| Iterates and refines                        | Description |      85.7% |
+| Clarifies goal before asking for help       | Delegation  |      51.1% |
+| Provides examples of what good looks like   | Description |      41.1% |
+| Specifies format and structure needed       | Description |        30% |
+| Sets interaction mode                       | Description |        30% |
+| Communicates tone and style preferences     | Description |      22.7% |
+| Identifies when AI might be missing context | Discernment |      20.3% |
+| Defines audience for the output             | Description |      17.6% |
+| Questions when AI reasoning doesn’t hold up | Discernment |      15.8% |
+| Consults AI on approach before execution    | Delegation  |      10.1% |
+| Checks facts and claims that matter         | Discernment |       8.7% |
+
+### Key techniques
+
 1. **Staying in the conversation**: Treat your interaction as a dialogue rather than a one-off search query. If a suggested function doesn't work or you don't understand a specific line, don't just discard the output. Instead, provide the error message back to the AI or ask, "Can you explain why you used a `map` function here instead of a `forEach` loop?" This iterative process keeps the context alive and helps you learn the underlying logic.
 2. **Questioning polished outputs**: AI is designed to be helpful and confident, even when it is wrong. Just because code is formatted beautifully and follows standard conventions doesn't mean it is bug-free or follows the best security practices. For example, if Copilot suggests a snippet for fetching data, you should critically ask: "Does this handle a 404 error correctly?" or "Is this library actually installed in my project?" Always verify "hallucinated" functions or deprecated syntax before committing the code.
 3. **Setting the terms of the collaboration**: You are the lead developer and the "Architect of Record." You can and should dictate how the AI assists you. If you find yourself "tabbing" through suggestions without thinking, reset the terms of the chat: "I want to practice my CSS Grid skills. Give me a high-level strategy for this layout, but don't provide the actual CSS properties yet." By setting these boundaries, you ensure the AI serves your educational goals rather than just finishing the task for you.
