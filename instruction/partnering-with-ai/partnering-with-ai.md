@@ -95,17 +95,17 @@ The following table comes from an [Anthropic AI Fluency Index Study](https://www
 
 | Behavioral indicator | Example and Usage |
 | :--- | :--- |
-| **Iterates and refines** | If the AI provides a function that is too complex or doesn't quite fit, provide feedback: "Can you simplify this so it doesn't use any external libraries?" |
-| **Clarifies goal before asking for help** | Start with the "big picture" before the specifics: "I'm building a Simon game and I need to track the sequence of colors. My goal is to store these in an array." |
-| **Provides examples of what good looks like** | Share a snippet of your existing work: "Here is how I formatted my previous functions. Please use the same arrow function syntax for this new one." |
-| **Specifies format and structure needed** | Request specific organization: "Give me the HTML structure first, then the CSS in a separate block, and finally the JavaScript." |
-| **Sets interaction mode** | Use the AI as a teacher: "I want to learn. Don't give me the code yet; instead, give me three hints on how to solve this logic error." |
-| **Communicates tone and style preferences** | "Write the code comments in a way that explains the logic clearly to a beginner developer." |
-| **Identifies when AI might be missing context** | Provide environment details: "Note that I am working in a Vite environment, so use ES modules for the imports." |
-| **Defines audience for the output** | "Explain this error message as if you were talking to a student who just started learning JavaScript yesterday." |
-| **Questions when AI reasoning doesn’t hold up** | Challenge the output: "You recommended using `var` here, but isn't `let` or `const` preferred in modern JavaScript? Why did you choose `var`?" |
+| **Iterates and refines** | If the AI provides a function that is too complex or doesn't quite fit, provide feedback:<br/> "Can you simplify this so it doesn't use any external libraries?" |
+| **Clarifies goal before asking for help** | Start with the "big picture" before the specifics:<br/> "I'm building a Simon game and I need to track the sequence of colors. My goal is to store these in an array." |
+| **Provides examples of what good looks like** | Share a snippet of your existing work:<br/> "Here is how I formatted my previous functions. Please use the same arrow function syntax for this new one." |
+| **Specifies format and structure needed** | Request specific organization:<br/> "Give me the HTML structure first, then the CSS in a separate block, and finally the JavaScript." |
+| **Sets interaction mode** | Use the AI as a teacher:<br/> "I want to learn. Don't give me the code yet; instead, give me three hints on how to solve this logic error." |
+| **Communicates tone and style preferences** | Shape the response:<br/>"Write the code comments in a way that explains the logic clearly to a beginner developer." |
+| **Identifies when AI might be missing context** | Provide environment details:<br/> "Note that I am working in a Vite environment, so use ES modules for the imports." |
+| **Defines audience for the output** | Define a role:<br/>"I am a beginning JavaScript user. Explain this error message." |
+| **Questions when AI reasoning doesn’t hold up** | Challenge the output:<br/> "You recommended using `var` here, but isn't `let` or `const` preferred in modern JavaScript? Why did you choose `var`?" |
 | **Consults AI on approach before execution** | "Before we write any code, let's discuss the pros and cons of using a `switch` statement versus an `if/else` chain for this game logic." |
-| **Checks facts and claims that matter** | Verify technical details: "You mentioned a `fetchPriority` attribute. Is that supported in all modern browsers, or do I need a fallback?" |
+| **Checks facts and claims that matter** | Verify technical details:<br/> "You mentioned a `fetchPriority` attribute. Is that supported in all modern browsers, or do I need a fallback?" |
 ### Key techniques
 
 1. **Staying in the conversation**: Treat your interaction as a dialogue rather than a one-off search query. If a suggested function doesn't work or you don't understand a specific line, don't just discard the output. Instead, provide the error message back to the AI or ask, "Can you explain why you used a `map` function here instead of a `forEach` loop?" This iterative process keeps the context alive and helps you learn the underlying logic.
