@@ -87,6 +87,14 @@ Under the 'Partner' level AI policy, which of the following scenarios is conside
 - [ ] Telling the instructor that you don't know how a specific part of your code works because "I didn't write that part."
 ```
 
+## Developing your own AI fluency
+
+Developing AI fluency is about more than just knowing which buttons to click; it's about building a sophisticated mental model for how to interact with Large Language Models. True fluency allows you to maintain control over the codebase while benefiting from the speed of AI, ensuring that you are directing the tool rather than being led by it.
+
+1. **Staying in the conversation**: Treat your interaction as a dialogue rather than a one-off search query. If a suggested function doesn't work or you don't understand a specific line, don't just discard the output. Instead, provide the error message back to the AI or ask, "Can you explain why you used a `map` function here instead of a `forEach` loop?" This iterative process keeps the context alive and helps you learn the underlying logic.
+2. **Questioning polished outputs**: AI is designed to be helpful and confident, even when it is wrong. Just because code is formatted beautifully and follows standard conventions doesn't mean it is bug-free or follows the best security practices. For example, if Copilot suggests a snippet for fetching data, you should critically ask: "Does this handle a 404 error correctly?" or "Is this library actually installed in my project?" Always verify "hallucinated" functions or deprecated syntax before committing the code.
+3. **Setting the terms of the collaboration**: You are the lead developer and the "Architect of Record." You can and should dictate how the AI assists you. If you find yourself "tabbing" through suggestions without thinking, reset the terms of the chat: "I want to practice my CSS Grid skills. Give me a high-level strategy for this layout, but don't provide the actual CSS properties yet." By setting these boundaries, you ensure the AI serves your educational goals rather than just finishing the task for you.
+
 ## Why Use AI to Build Web Apps?
 
 Modern web development involves a massive ecosystem of languages (HTML, CSS, JavaScript), frameworks, and cloud services. For a beginner, the sheer volume of syntax and configuration can be overwhelming. AI tools like GitHub Copilot serve as an "always-on" mentor that understands the context of your project.
@@ -98,17 +106,22 @@ Using AI provides several distinct advantages:
 *   **Debugging Assistance:** When your code fails, you can provide the error message to the AI. It can often identify logical fallacies or syntax errors that are difficult for human eyes to spot after hours of coding.
 *   **Exploration of Best Practices:** By observing the code an AI suggests, you are often exposed to modern ES6+ syntax and industry-standard patterns that you might not have encountered yet in basic tutorials.
 
-## Securing Your GitHub Copilot Educational License
+## Securing Your GitHub Copilot Subscription
 
-As a student, you have access to one of the most powerful AI coding assistants in the world—GitHub Copilot—at no cost. This is provided through the **GitHub Student Developer Pack**.
+> [!NOTE]
+>
+> There is no requirement for you to use GitHub Copilot for this course. You can chose to use any AI provider, or none at all as you desire.
+
+To use GitHub Copilot, you will need to purchase a subscription through your personal GitHub account. This provides you with a professional-grade AI coding assistant that integrates directly into your development environment.
 
 To get started, follow these steps:
 
-1.  **Verify your Student Status:** Visit the [GitHub Education](https://education.github.com/pack) website and apply for the Student Developer Pack using your institutional email address. You may need to provide a picture of your student ID or other proof of enrollment.
-2.  **Wait for Approval:** Verification can take anywhere from a few hours to a few days. Once approved, you will receive an email confirming your benefits.
-3.  **Activate Copilot:** Once your pack is active, navigate to your GitHub account settings. Under the "Code, planning, and automation" section, look for "Copilot." If you are eligible through the student pack, it will allow you to enable the service for free.
+1.  **Access Billing Settings:** Sign in to your GitHub account and navigate to your **Settings**.
+2.  **Navigate to Copilot:** In the left-hand sidebar, under the "Code, planning, and automation" section, click on **Copilot**.
+3.  **Choose a Plan:** Click the button to set up a subscription. You can typically choose between a monthly or yearly billing cycle.
+4.  **Complete Purchase:** Follow the prompts to provide your payment information and authorize the service.
 
-Having a professional license ensures you have access to the latest models and features, such as GitHub Copilot Chat, which provides a more conversational interface for complex architectural questions.
+Having a professional subscription ensures you have access to the latest models and features, such as GitHub Copilot Chat, which provides a more conversational interface for complex architectural questions.
 
 ## Integrating Copilot into Visual Studio Code
 
