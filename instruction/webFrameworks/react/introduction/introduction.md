@@ -66,7 +66,7 @@ The following interactions demonstrate how JSX simplifies the complexity of repr
 {"id":"b55d56f9-ade3-4b8a-8b54-18e448995a11", "title":"ReactDOM functions", "type":"ai-web-page", "allowAiPrompt":false, "gradingCriteria":"The word 'byu' must be included in the list and the color be blue.", "height":75 }
 This code demonstrates using the React library functions to inject dynamically created DOM elements into an HTML `div`. In this case a **list** element is created and added as a child to the div with ID of root. The list has a style attribute that sets its color to green.
 
-Go ahead and play with the code. Manipulate it so that the list contains the word `BYU`. Set the color is set to blue.
+Go ahead and play with the code. Manipulate it so that the list contains the word `BYU`. Set the color to blue.
 ~~~html
 <body>
   <div id="root">...loading</div>
