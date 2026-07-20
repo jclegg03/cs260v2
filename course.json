@@ -612,7 +612,9 @@
           "path": "instruction/webFrameworks/introduction/introduction.md",
           "id": "f972436f-fd9c-45ca-a51a-156b1e6cbb03",
           "state": "published",
-          "interactions": []
+          "interactions": [
+            "9ad21eaa-cd4f-4e2f-8ede-ece0177ef6a5"
+          ]
         },
         {
           "title": "Toolchains",
