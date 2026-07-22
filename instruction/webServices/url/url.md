@@ -38,9 +38,9 @@ You will sometimes hear the use of URN or URI when talking about web resources. 
 In the URL `https://www.example.com/shop/search?category=books#top`, which component is specifically used to pass data parameters to the server-side application?
 
 - [ ] The anchor/fragment ID (`#top`)
-- [x] The query string (`?category=books`)
+- [ ] The query string (`?category=books`)
 - [ ] The path (`/shop/search`)
-- [ ] The protocol (`https`)
+- [x] The protocol (`https`)
 ```
 
 
