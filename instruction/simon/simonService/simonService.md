@@ -502,7 +502,7 @@ Get familiar with what the example code teaches.
 
 
 ```masteryls
-{"id":"4beff8d87-8a17-4b86-b2b4-1dfed2f63f9a", "title":"Simon Service", "type":"url-submission", "syncGrade":false, "autoGrade":false, "validateUrl":true, "gradingCriteria":"The title contains 'Simon Service'" }
+{"id":"312a7d56-8c0f-4e7b-8f69-e0b7c3ac25e9", "title":"Simon Service", "type":"url-submission", "syncGrade":false, "autoGrade":false, "validateUrl":true, "gradingCriteria":"The title contains 'Simon Service'" }
 After you have deployed _Simon Service_, verify that it is accessible by providing the URL.
 
 _Example: https://simon.yourdomain.click_
