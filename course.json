@@ -917,14 +917,6 @@
           "path": "instruction/javascript/scope/scope.md",
           "id": "8e2b708a-94df-42a7-86ab-11321d9fdacc",
           "state": "published"
-        },
-        {
-          "title": "Tic-tac-toe tutorial",
-          "type": "instruction",
-          "path": "instruction/webFrameworks/react/ticTacToe/ticTacToe.md",
-          "id": "c5dba7e9-c4ed-4f7a-be84-4b6f27478cbc",
-          "state": "published",
-          "description": ""
         }
       ]
     },
