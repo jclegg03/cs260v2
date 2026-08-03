@@ -1416,13 +1416,15 @@
           "state": "published"
         },
         {
-          "title": "☑ Wrap up",
+          "title": "Wrap up",
+          "type": "instruction",
           "path": "instruction/webFrameworks/wrapUp/wrapUp.md",
           "id": "9f5ce2b1-4812-4b5b-94e2-eef6257e01c1",
           "state": "published",
           "interactions": [
             "c979acf0-1bec-47a5-8660-5f49e74de47f"
           ],
+          "description": "",
           "externalRefs": {
             "canvasPageId": 1583373
           }
