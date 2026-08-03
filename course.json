@@ -672,13 +672,15 @@
           ]
         },
         {
-          "title": "☑ Simon React P1: Routing",
+          "title": "Simon React P1: Routing",
+          "type": "instruction",
           "path": "instruction/simon/simonReact/simonReactP1.md",
           "id": "a2ba4351-fc02-41b7-8795-3d9ac17be2ff",
           "state": "published",
           "interactions": [
             "bc16c49e-eed4-4852-9843-c994c9542dfd"
-          ]
+          ],
+          "description": ""
         },
         {
           "title": "Simon React P1 video",
