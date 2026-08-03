@@ -983,13 +983,15 @@
           ]
         },
         {
-          "title": "☑ Fetch",
+          "title": "Fetch",
+          "type": "instruction",
           "path": "instruction/webServices/fetch/fetch.md",
           "id": "437f53a9-65b8-4139-afdb-ac604eddcc26",
           "state": "published",
           "interactions": [
             "99869011-3a94-40f9-b48f-6e34c9127943"
-          ]
+          ],
+          "description": ""
         },
         {
           "title": "Service design",
