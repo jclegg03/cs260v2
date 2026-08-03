@@ -919,10 +919,12 @@
           "state": "published"
         },
         {
-          "title": "☑ Tic-tac-toe tutorial",
+          "title": "Tic-tac-toe tutorial",
+          "type": "instruction",
           "path": "instruction/webFrameworks/react/ticTacToe/ticTacToe.md",
           "id": "c5dba7e9-c4ed-4f7a-be84-4b6f27478cbc",
-          "state": "published"
+          "state": "published",
+          "description": ""
         }
       ]
     },
