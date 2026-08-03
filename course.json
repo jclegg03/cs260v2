@@ -1011,7 +1011,8 @@
           ]
         },
         {
-          "title": "☑ Express",
+          "title": "Express",
+          "type": "instruction",
           "path": "instruction/webServices/express/express.md",
           "id": "426345d8-1b55-4aed-9d93-a61812aa6269",
           "state": "published",
@@ -1020,7 +1021,8 @@
             "ee3c9493-9904-4ef9-b2f4-5e99bbda4d01",
             "ea3c9493-9904-4ef9-b2f4-5e99bbda4d01",
             "ed3c9493-9904-4ef9-b2f4-5e99bbda4d01"
-          ]
+          ],
+          "description": ""
         },
         {
           "title": "Modules",
