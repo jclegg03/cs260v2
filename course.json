@@ -848,13 +848,15 @@
           ]
         },
         {
-          "title": "☑ Async/await",
+          "title": "Async/await",
+          "type": "instruction",
           "path": "instruction/javascript/asyncAwait/asyncAwait.md",
           "id": "01b3ded8-f148-413e-b1c3-1c4f9674836c",
           "state": "published",
           "interactions": [
             "ad1e6e3d-9473-41ae-83f9-c074b95dafab"
-          ]
+          ],
+          "description": ""
         },
         {
           "title": "String",
