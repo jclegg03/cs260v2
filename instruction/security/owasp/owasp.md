@@ -270,8 +270,9 @@ To mitigate risks, developers should avoid using floating versions (e.g., `^1.2.
 3.  **Digital Signatures:** Ensure that all artifacts, including code commits and container images, are signed and verified before being deployed.
 4.  **Vulnerability Disclosure Programs:** Monitor the security advisories of the third-party projects you consume.
 
+
 ```masteryls
-{"id":"1939da71-7d93-4588-ac37-db525a0cfdfa","title":"Identifying Supply Chain Risks","type":"multiple-choice"}
+{"id":"50b6fc38-1c88-4aa0-aa67-6a43240373f3", "title":"Identifying Supply Chain Risks", "type":"multiple-choice"}
 A developer notices that their build system automatically downloads the "latest" version of a popular logging library every time the CI/CD pipeline runs. Which of the following best describes the primary security risk in this scenario?
 
 - [ ] The build will fail if the library's server goes offline, causing a Denial of Service.
@@ -653,7 +654,7 @@ function loadSecureSession(sessionJson, providedMac) {
 4.  **Avoid Deserializing Untrusted Data:** If you must deserialize, use a language-agnostic format like JSON or Protobuf that does not allow for arbitrary code execution.
 
 ```masteryls
-{"id":"4b87d204-d32d-46aa-892b-e42109d00af1","title":"Identifying Integrity Failures","type":"multiple-choice"}
+{"id":"8d034b7e-4e3f-4264-8059-cfaf6ea1788d","title":"Identifying Integrity Failures","type":"multiple-choice"}
 Which of the following scenarios best describes a Software and Data Integrity Failure?
 
 - [ ] A user bypasses a login screen by entering ' OR 1=1 -- into the username field.
@@ -755,7 +756,7 @@ To mitigate logging and alerting failures, organizations should adopt a "detect 
 4.  **Protect Log Integrity:** Ensure logs do not contain sensitive data like passwords, session tokens, or personally identifiable information (PII), which could make the logs themselves a target for attackers.
 
 ```masteryls
-{"id":"e1c9221a-2fbe-4cd9-a380-ecf651a7213b","title":"Identifying Logging Failures","type":"multiple-choice"}
+{"id":"3147b67f-cb2a-4475-9bb9-39002455e7c5","title":"Identifying Logging Failures","type":"multiple-choice"}
 A security auditor notices that an application logs every "File Upload" event, but the logs only contain the filename and a timestamp. Which of the following best describes why this is a Logging Failure?
 
 - [ ] The logs are being generated too frequently, causing "log bloat."
