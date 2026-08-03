@@ -519,13 +519,15 @@
           "description": "https://leesjensen.com/demo/responsive.html"
         },
         {
-          "title": "☑ CSS frameworks",
+          "title": "CSS frameworks",
+          "type": "instruction",
           "path": "instruction/css/frameworks/frameworks.md",
           "id": "172ab5b4-04bc-4c42-9b5f-57c4a8989d54",
           "state": "published",
           "interactions": [
             "e790f0e1-a84b-4046-9149-c1cc0bbdb01f"
-          ]
+          ],
+          "description": ""
         },
         {
           "title": "Tailwind",
