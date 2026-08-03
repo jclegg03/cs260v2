@@ -362,6 +362,6 @@ You can find this complete example [here](https://github.com/webprogramming260/w
 {"id":"a135bbc5-88f3-4574-9ca3-91b033444c08", "title":"WebSocket chat", "type":"multiple-select" }
 I have successfully done the following:
 
-- [ ] Created, executed, and debugged a chat program that uses the WebSocket protocol
+- [x] Created, executed, and debugged a chat program that uses the WebSocket protocol
 ```
 
