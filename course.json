@@ -839,13 +839,15 @@
           }
         },
         {
-          "title": "☑ Promises",
+          "title": "Promises",
+          "type": "instruction",
           "path": "instruction/javascript/promises/promises.md",
           "id": "c1f64a19-98db-4202-ace7-0a4a08b44def",
           "state": "published",
           "interactions": [
             "0d1e6e3d-8473-41ae-83f9-c074b95dafaa"
-          ]
+          ],
+          "description": ""
         },
         {
           "title": "Async/await",
