@@ -733,14 +733,16 @@
           ]
         },
         {
-          "title": "☑ Arrays",
+          "title": "Arrays",
+          "type": "instruction",
           "path": "instruction/javascript/array/array.md",
           "id": "1f2e58f8-c29e-47f7-aee5-d7e86fff3745",
           "state": "published",
           "interactions": [
             "3aa165a2-34b3-4395-a23a-e8c5018785e0",
             "c0e860ee-dea3-4211-8b96-aa97828347b8"
-          ]
+          ],
+          "description": ""
         },
         {
           "title": "Objects and classes",
