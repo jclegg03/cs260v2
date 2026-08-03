@@ -653,14 +653,16 @@
           ]
         },
         {
-          "title": "☑ Components",
+          "title": "Components",
+          "type": "instruction",
           "path": "instruction/webFrameworks/react/components/components.md",
           "id": "ef3d76f9-2d32-4b26-a1b1-2a279b742a9e",
           "state": "published",
           "interactions": [
             "cf497eee-ab3e-4a39-b2f3-f6f00a5eb6f6",
             "cc76e021-8012-43be-bb3b-8427ee7aabbf"
-          ]
+          ],
+          "description": ""
         },
         {
           "title": "Router",
