@@ -271,7 +271,7 @@ To mitigate risks, developers should avoid using floating versions (e.g., `^1.2.
 4.  **Vulnerability Disclosure Programs:** Monitor the security advisories of the third-party projects you consume.
 
 ```masteryls
-{"id":"ssc-001", "title":"Identifying Supply Chain Risks", "type":"multiple-choice"}
+{"id":"4bb77136-06dd-400b-b73c-2c8a322d34e0","title":"Identifying Supply Chain Risks","type":"multiple-choice"}
 A developer notices that their build system automatically downloads the "latest" version of a popular logging library every time the CI/CD pipeline runs. Which of the following best describes the primary security risk in this scenario?
 
 - [ ] The build will fail if the library's server goes offline, causing a Denial of Service.
@@ -653,7 +653,7 @@ function loadSecureSession(sessionJson, providedMac) {
 4.  **Avoid Deserializing Untrusted Data:** If you must deserialize, use a language-agnostic format like JSON or Protobuf that does not allow for arbitrary code execution.
 
 ```masteryls
-{"id":"a08-integrity-01", "title":"Identifying Integrity Failures", "type":"multiple-choice"}
+{"id":"9d2629d2-7f1d-4a29-8308-6ca24c07d518","title":"Identifying Integrity Failures","type":"multiple-choice"}
 Which of the following scenarios best describes a Software and Data Integrity Failure?
 
 - [ ] A user bypasses a login screen by entering ' OR 1=1 -- into the username field.
@@ -755,7 +755,7 @@ To mitigate logging and alerting failures, organizations should adopt a "detect 
 4.  **Protect Log Integrity:** Ensure logs do not contain sensitive data like passwords, session tokens, or personally identifiable information (PII), which could make the logs themselves a target for attackers.
 
 ```masteryls
-{"id":"a09-logging-01", "title":"Identifying Logging Failures", "type":"multiple-choice"}
+{"id":"ed6ede0f-4662-4b5b-bc5d-951b10811c96","title":"Identifying Logging Failures","type":"multiple-choice"}
 A security auditor notices that an application logs every "File Upload" event, but the logs only contain the filename and a timestamp. Which of the following best describes why this is a Logging Failure?
 
 - [ ] The logs are being generated too frequently, causing "log bloat."
@@ -851,8 +851,9 @@ To defend against the mishandling of exceptional conditions, organizations shoul
 3.  **Fail-Safe Defaults:** Ensure that if a security-sensitive function fails, it defaults to the most restrictive state (e.g., `access_denied = true`).
 4.  **Standardized Response Codes:** Return consistent HTTP status codes and messages to prevent side-channel attacks like timing analysis or account enumeration.
 
+
 ```masteryls
-{"id":"a10-2025-01", "title":"Identifying Secure Exception Handling", "type":"multiple-choice"}
+{"id":"d423a5d4-858a-4773-bb60-cd4036d764e1","title":"Identifying Secure Exception Handling","type":"multiple-choice"}
 An application's payment processing module encounters an unexpected timeout while communicating with a 3rd-party API. Which response demonstrates the most secure handling of this exceptional condition?
 
 - [ ] The application displays the API endpoint URL and the timeout duration to the user so they can report it to support.
