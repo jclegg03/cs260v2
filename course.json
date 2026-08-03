@@ -663,13 +663,15 @@
           ]
         },
         {
-          "title": "☑ Router",
+          "title": "Router",
+          "type": "instruction",
           "path": "instruction/webFrameworks/react/router/router.md",
           "id": "41c73fe0-dd77-477a-85ae-8046eed7ccc7",
           "state": "published",
           "interactions": [
             "f1da9f1e-e9e2-49ac-b3ec-99cded897e4c"
-          ]
+          ],
+          "description": ""
         },
         {
           "title": "Simon React P1: Routing",
