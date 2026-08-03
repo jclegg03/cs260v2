@@ -633,13 +633,15 @@
           ]
         },
         {
-          "title": "☑ Vite",
+          "title": "Vite",
+          "type": "instruction",
           "path": "instruction/webFrameworks/react/vite/vite.md",
           "id": "94d58212-317a-4744-a172-00ca145f2858",
           "state": "published",
           "interactions": [
             "d16e7f1e-e689-4862-bf06-7ceda139a4de"
-          ]
+          ],
+          "description": ""
         },
         {
           "title": "React",
