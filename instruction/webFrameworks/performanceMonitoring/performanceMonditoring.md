@@ -139,7 +139,9 @@ In the modern web landscape, the success of an application is inextricably linke
 
 You can view the network requests made by your application and the time required for each by using the browser's developer tools. This shows which files and endpoints are requested and how long they take. Sorting by `Time` or `Size` helps identify areas needing attention. Ensure you clear your cache before testing to see real latency rather than load times from local storage.
 
-![Performance](../../uxdesign/designPerformanceNetwork.jpg)
+
+![chromeNetworkTab.png](chromeNetworkTab.png)
+
 
 ### Simulating real users
 
@@ -152,8 +154,6 @@ Throttling is essential because developers often use high-end computers and high
 ### Chrome Lighthouse
 
 The Lighthouse tool in Chrome DevTools runs an automated analysis of your application. It provides an average performance rating based on metrics like initial load time, Largest Contentful Paint (LCP), and Time to Interactive (TTI).
-
-![Performance](../../uxdesign/designPerformance.jpg)
 
 ### Chrome Performance tab
 
