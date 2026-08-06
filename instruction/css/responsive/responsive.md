@@ -135,7 +135,7 @@ You can also use media queries to make entire pieces of your application disappe
 
 ```masteryls
 {"id":"e75c7257-bc32-4b55-9f35-bf535b7bc571", "title":"Responsive design", "type":"ai-web-page", "allowAiPrompt":false, "syncGrade":false, "autoGrade":false, "gradingCriteria":"background color of the section element is green when in portrait mode.", "height":500, "file":"responsive.html" }
-Use the slider to resize the height of the demo to view the impact of the responsive design. Modify the media query to change the background color of the section element to green when in portrait mode.
+Resize the window to modify the height and width of the demo to view the impact of the responsive design. Modify the media query to change the background color of the section element to green when in portrait mode.
 ```
 
 ## Grid and Flexbox
