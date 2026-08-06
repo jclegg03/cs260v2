@@ -43,6 +43,7 @@ When you are finished, the placeholder for your startup will be available from `
 > Submit your Startup URL that includes your domain name for this deliverable (e.g. `https://startup.yourdomain`). **Do not** submit your GitHub repository URL.
 
 - **Prerequisite**: Notes in your startup Git repository README.md file documenting what you modified and added with this deliverable. The TAs will only grade things that have been clearly described as being completed. Review the [voter app](https://github.com/webprogramming260/startup-example) as an example.
+- **Prerequisite**: Updated the top of your README with the link to your server.
 
 - 10% Rented an EC2 server from AWS and it is accessible.
 - 10% Leased a domain name and associated it with my server.
